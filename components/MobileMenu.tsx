@@ -70,7 +70,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigateTo, to
       >
         <header className="flex items-center justify-between p-4 border-b border-border-light dark:border-border-dark">
           <div className="flex items-center cursor-pointer" onClick={() => handleNavigate('home')}>
-            <img src="./assets/logo.png" alt="MOSSO Logo" className="h-7 w-auto" />
+            <img src="./logo.png" alt="MOSSO Logo" className="h-7 w-auto" />
           </div>
           <button onClick={onClose} aria-label="Close menu" className="p-2 rounded-full hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
             <span className="material-symbols-outlined text-text-light dark:text-text-dark text-2xl">close</span>
