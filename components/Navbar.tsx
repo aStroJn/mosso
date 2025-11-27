@@ -51,15 +51,15 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   return (
     <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid ${borderColorClass} py-4`}>
       <div className="flex items-center cursor-pointer" onClick={() => navigateTo('home')}>
-        <img src="./assets/logo.svg" alt="MOSSO Logo" className="h-14 w-auto" />
+        <img src="./public/logo.svg" alt="MOSSO Logo" className="h-14 w-auto" />
       </div>
       <div className="hidden md:flex flex-1 justify-end gap-6 items-center">
-        <div className="flex gap-6 items-center">
-          <a className={`${textColorClass} ${activeLinkClass('home')} text-base cursor-pointer ${hoverTextColorClass} transition-colors`} onClick={() => navigateTo('home')}>Home</a>
-          <a className={`${textColorClass} ${activeLinkClass('collections')} text-base ${isHomePage ? 'text-white/90' : 'text-text-secondary-light dark:text-text-secondary-dark'} ${hoverTextColorClass} cursor-pointer transition-colors`} onClick={() => navigateTo('collections')}>Collections</a>
+        <div className="flex gap-6">
+          <a className={`${textColorClass} ${activeLinkClass('home')} text-sm cursor-pointer ${hoverTextColorClass} transition-colors`} onClick={() => navigateTo('home')}>Home</a>
+          <a className={`${textColorClass} ${activeLinkClass('collections')} text-sm ${isHomePage ? 'text-white/90' : 'text-text-secondary-light dark:text-text-secondary-dark'} ${hoverTextColorClass} cursor-pointer transition-colors`} onClick={() => navigateTo('collections')}>Collections</a>
 
           <div className="group relative">
-            <button className={`${textColorClass} text-base ${isHomePage ? 'text-white/90' : 'text-text-secondary-light dark:text-text-secondary-dark'} ${hoverTextColorClass} ${isProductPage ? 'font-bold' : 'font-medium'} leading-normal cursor-pointer transition-colors flex items-center gap-1`}>
+            <button className={`${textColorClass} text-sm ${isHomePage ? 'text-white/90' : 'text-text-secondary-light dark:text-text-secondary-dark'} ${hoverTextColorClass} ${isProductPage ? 'font-bold' : 'font-medium'} leading-normal cursor-pointer transition-colors flex items-center gap-1`}>
               Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 group-hover:rotate-180`}>expand_more</span>
             </button>
 

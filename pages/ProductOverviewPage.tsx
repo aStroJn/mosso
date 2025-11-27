@@ -1,4 +1,5 @@
-import React, { useState, useEffect, useRef, useMemo } from 'react';
+
+import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Page, Product } from '../types';
 import { PRODUCTS } from '../constants';
 import Navbar from '../components/Navbar';
@@ -15,6 +16,15 @@ interface ProductOverviewPageProps {
   productId: number;
 }
 
+// Helper to get high resolution image for zooming
+const getHighResUrl = (url: string) => {
+  if (url.includes('picsum.photos')) {
+    // Replace the dimensions at the end of the URL with double the size
+    return url.replace(/\/(\d+)\/(\d+)$/, (_, w, h) => `/${Number(w) * 2}/${Number(h) * 2}`);
+  }
+  return url;
+};
+
 const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, toggleTheme, productId }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
@@ -26,6 +36,10 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   }, [product]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isHovering, setIsHovering] = useState(false);
+  const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
+  const [zoomLevel, setZoomLevel] = useState(2.5); // Default zoom level (250%)
+
   const { isWishlisted, toggleWishlist } = useWishlist();
   const { addToCart } = useCart();
   const relatedProductsRef = useRef<HTMLDivElement>(null);
@@ -50,6 +64,9 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   }, [allProductImages]);
 
   useEffect(() => {
+    // Reset zoom level when image changes
+    setZoomLevel(2.5);
+    
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
@@ -63,6 +80,15 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
         });
     }
   }, [currentIndex]);
+
+  // Preload high resolution image for the current index to prevent flicker on hover
+  useEffect(() => {
+    if (!product || allProductImages.length === 0) return;
+    const currentImg = allProductImages[currentIndex];
+    const highResUrl = getHighResUrl(currentImg);
+    const img = new Image();
+    img.src = highResUrl;
+  }, [currentIndex, product, allProductImages]);
   
   useEffect(() => {
     if (isMobileMenuOpen) {
@@ -98,10 +124,31 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
         window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  // Handle wheel zoom
+  useEffect(() => {
+    const container = imageContainerRef.current;
+    if (!container) return;
+
+    const onWheel = (e: WheelEvent) => {
+        if (isHovering) {
+            e.preventDefault();
+            e.stopPropagation();
+            // Adjust zoom sensitivity
+            const ZOOM_SPEED = 0.2;
+            const delta = e.deltaY > 0 ? -ZOOM_SPEED : ZOOM_SPEED;
+            setZoomLevel(prev => Math.min(Math.max(1.5, prev + delta), 5));
+        }
+    };
+    
+    // Use { passive: false } to allow preventDefault to block scrolling
+    container.addEventListener('wheel', onWheel, { passive: false });
+    return () => container.removeEventListener('wheel', onWheel);
+  }, [isHovering]);
   
 
   if (!product) {
-    return null; // Or a loading spinner, navigateTo('error404') handles this
+    return null;
   }
   
   const isProductWishlisted = isWishlisted(product.id);
@@ -144,12 +191,51 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     }
   };
 
-  const handlePrev = () => {
+  const handlePrev = useCallback(() => {
     setCurrentIndex((prev) => (prev === 0 ? allProductImages.length - 1 : prev - 1));
+  }, [allProductImages.length]);
+
+  const handleNext = useCallback(() => {
+    setCurrentIndex((prev) => (prev === allProductImages.length - 1 ? 0 : prev + 1));
+  }, [allProductImages.length]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Prevent navigation if menu is open or focus is on an input
+      if (isMobileMenuOpen) return;
+      if (document.activeElement instanceof HTMLInputElement || document.activeElement instanceof HTMLTextAreaElement) return;
+
+      if (e.key === 'ArrowLeft') {
+        handlePrev();
+      } else if (e.key === 'ArrowRight') {
+        handleNext();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [handlePrev, handleNext, isMobileMenuOpen]);
+
+  const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    if (imageContainerRef.current) {
+      const rect = imageContainerRef.current.getBoundingClientRect();
+      // Calculate percentage position
+      const x = ((e.clientX - rect.left) / rect.width) * 100;
+      const y = ((e.clientY - rect.top) / rect.height) * 100;
+      // Clamp values between 0 and 100
+      const clampedX = Math.max(0, Math.min(100, x));
+      const clampedY = Math.max(0, Math.min(100, y));
+      
+      setMousePosition({ x: clampedX, y: clampedY });
+      setIsHovering(true);
+    }
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => (prev === allProductImages.length - 1 ? 0 : prev + 1));
+  const handleMouseLeave = () => {
+    setIsHovering(false);
+    // Optional: Reset zoom level on leave, or keep it for next hover
+    // setZoomLevel(2.5); 
   };
 
 
@@ -175,36 +261,60 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
             <AnimatedSection>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
                 <div className="flex flex-col gap-4">
-                  <div ref={imageContainerRef} className="relative group overflow-hidden bg-background-light dark:bg-background-dark/50 rounded-xl aspect-[4/5] w-full">
+                  <div 
+                    ref={imageContainerRef} 
+                    className="relative group overflow-hidden bg-background-light dark:bg-background-dark/50 rounded-xl aspect-[4/5] w-full cursor-crosshair"
+                    onMouseMove={handleMouseMove}
+                    onMouseLeave={handleMouseLeave}
+                  >
                     <div className="flex h-full transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                        {allProductImages.map((img, index) => (
-                            <div key={index} className="w-full h-full flex-shrink-0 overflow-hidden">
-                              <div
-                                className="w-full h-full bg-cover bg-center"
-                                style={{
-                                  backgroundImage: `url("${img}")`,
-                                  transform: `scale(1.2) translateY(${parallaxOffset}px)`,
-                                  willChange: 'transform',
-                                }}
-                                aria-label={`${product.altText} - image ${index + 1}`}
-                              />
-                            </div>
-                        ))}
+                        {allProductImages.map((img, index) => {
+                            const isCurrent = index === currentIndex;
+                            // Only load high-res URL if current and hovering to save bandwidth/memory
+                            const displayUrl = isCurrent && isHovering ? getHighResUrl(img) : img;
+                            
+                            return (
+                                <div key={index} className="w-full h-full flex-shrink-0 overflow-hidden">
+                                    <div
+                                        className="w-full h-full bg-cover bg-center"
+                                        style={{
+                                            backgroundImage: `url("${displayUrl}")`,
+                                            backgroundSize: isCurrent && isHovering ? `${zoomLevel * 100}%` : 'cover',
+                                            backgroundPosition: isCurrent && isHovering ? `${mousePosition.x}% ${mousePosition.y}%` : 'center center',
+                                            // Disable parallax and scale transition when hovering to give user control
+                                            transform: `scale(1.2) translateY(${isCurrent && isHovering ? 0 : parallaxOffset}px)`,
+                                            transition: isCurrent && isHovering 
+                                              ? 'background-size 0.2s ease, background-position 0.1s ease' // Faster transition for zoom
+                                              : 'background-size 0.3s ease, background-position 0.3s ease, transform 0.5s ease-out',
+                                            willChange: 'transform, background-position, background-size',
+                                        }}
+                                        aria-label={`${product.altText} - image ${index + 1}`}
+                                    />
+                                </div>
+                            );
+                        })}
                     </div>
                     
+                    {/* Zoom Hint */}
+                    <div className={`absolute bottom-6 left-0 right-0 flex justify-center pointer-events-none transition-opacity duration-300 ${isHovering ? 'opacity-100' : 'opacity-0'}`}>
+                        <div className="bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                           Scroll to zoom • {Math.round(zoomLevel * 100)}%
+                        </div>
+                    </div>
+
                     {allProductImages.length > 1 && (
                       <>
                         <button 
                           onClick={handlePrev} 
                           aria-label="Previous image" 
-                          className="absolute top-1/2 left-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-110"
+                          className={`absolute top-1/2 left-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 ${isHovering ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'}`}
                         >
                             <span className="material-symbols-outlined text-xl">arrow_back_ios_new</span>
                         </button>
                         <button 
                           onClick={handleNext} 
                           aria-label="Next image" 
-                          className="absolute top-1/2 right-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-110"
+                          className={`absolute top-1/2 right-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 ${isHovering ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'}`}
                         >
                             <span className="material-symbols-outlined text-xl">arrow_forward_ios</span>
                         </button>
@@ -215,8 +325,6 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                     <div ref={imageGalleryRef} className="flex items-center gap-4 overflow-x-auto scroll-smooth scrollbar-hide py-1">
                         {allProductImages.map((img, index) => (
                             <div
-                                // FIX: The ref callback for a functional component should not return a value.
-                                // Encapsulated the assignment in a block statement to ensure an implicit `undefined` return.
                                 ref={el => { thumbnailRefs.current[index] = el; }}
                                 key={index}
                                 className={`bg-cover bg-center rounded-lg aspect-square cursor-pointer shrink-0 w-[23%] ${currentIndex === index ? 'border-2 border-primary' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
