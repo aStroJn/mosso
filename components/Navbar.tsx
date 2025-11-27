@@ -51,7 +51,11 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   return (
     <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid ${borderColorClass} py-4`}>
       <div className="flex items-center cursor-pointer" onClick={() => navigateTo('home')}>
+<<<<<<< HEAD
         <img src="./public/logo.svg" alt="MOSSO Logo" className="h-14 w-auto" />
+=======
+        <img src="./assets/logo.png" alt="MOSSO Logo" className="h-14 w-auto" />
+>>>>>>> f08d3fd3bcaa11834b532e0aaded3df379fdd793
       </div>
       <div className="hidden md:flex flex-1 justify-end gap-6 items-center">
         <div className="flex gap-6">
