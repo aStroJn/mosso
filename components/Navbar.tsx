@@ -1,12 +1,12 @@
 import React, { useState, useEffect, useMemo } from 'react';
-import { Page, Product } from '../types';
-import { PRODUCTS, PRODUCT_STYLES } from '../constants';
+import { Page, Collection } from '../types';
+import { COLLECTIONS, PRODUCT_STYLES } from '../constants';
 import ThemeToggle from './ThemeToggle';
 import { useWishlist } from '../hooks/useWishlist';
 import { useCart } from '../hooks/useCart';
 
 interface NavbarProps {
-  navigateTo: (page: Page, params?: { productId?: number }) => void;
+  navigateTo: (page: Page, params?: { productId?: number; collectionId?: number }) => void;
   toggleTheme: () => void;
   currentPage: Page;
   setIsMobileMenuOpen: (isOpen: boolean) => void;
@@ -16,10 +16,11 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const { wishlist } = useWishlist();
   const { cartCount } = useCart();
   const isHomePage = currentPage === 'home';
-  const isProductPage = currentPage === 'product-overview' || currentPage === 'collections';
   
   const getNavLinkClasses = (page: string) => {
-    const isActive = currentPage === page || (page === 'products' && isProductPage);
+    // 'collections' link is bold only when exactly on the collections listing page
+    // 'products' mega-menu trigger is never auto-bolded
+    const isActive = currentPage === page;
     if (isHomePage) {
       return `text-sm cursor-pointer transition-colors ${isActive ? 'text-white font-bold' : 'text-white/90 hover:text-white font-medium'}`;
     } else {
@@ -31,27 +32,28 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const iconColorClass = isHomePage ? 'text-white' : 'text-text-light dark:text-text-dark';
   const buttonHoverBgClass = isHomePage ? 'hover:bg-white/10' : 'hover:bg-black/10 dark:hover:bg-white/10';
 
-  const productsByStyle = PRODUCT_STYLES.reduce((acc, style) => {
-    const prods = PRODUCTS.filter(p => p.style === style);
-    if (prods.length > 0) {
-      acc[style] = prods;
+  const collectionsByStyle = PRODUCT_STYLES.reduce((acc, style) => {
+    const cols = COLLECTIONS.filter(c => c.style === style);
+    if (cols.length > 0) {
+      acc[style] = cols;
     }
     return acc;
-  }, {} as Record<string, Product[]>);
-  const featuredProducts = useMemo(() => PRODUCTS.filter(p => [1, 2, 7, 8].includes(p.id)), []);
-  const [featuredProductIndex, setFeaturedProductIndex] = useState(0);
+  }, {} as Record<string, Collection[]>);
+
+  const featuredCollections = useMemo(() => COLLECTIONS.filter(c => [1, 2, 7, 8].includes(c.id)), []);
+  const [featuredIndex, setFeaturedIndex] = useState(0);
 
   useEffect(() => {
-    if (featuredProducts.length < 2) return;
+    if (featuredCollections.length < 2) return;
 
     const intervalId = setInterval(() => {
-      setFeaturedProductIndex(prevIndex => (prevIndex + 1) % featuredProducts.length);
+      setFeaturedIndex(prevIndex => (prevIndex + 1) % featuredCollections.length);
     }, 6000);
 
     return () => clearInterval(intervalId);
-  }, [featuredProducts.length]);
+  }, [featuredCollections.length]);
 
-  const featuredProduct = featuredProducts[featuredProductIndex];
+  const featuredCollection = featuredCollections[featuredIndex];
 
   return (
     <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid ${borderColorClass} py-4`}>
@@ -59,31 +61,31 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
         <img src="./logo-mosso.svg" alt="MOSSO Logo" className="h-14 w-auto" />
       </div>
       <div className="hidden md:flex flex-1 justify-end gap-6 items-center">
-        <div className="flex gap-6">
+        <div className="flex gap-6 items-baseline">
           <a className={getNavLinkClasses('home')} onClick={() => navigateTo('home')}>Home</a>
           <a className={getNavLinkClasses('collections')} onClick={() => navigateTo('collections')}>Collections</a>
 
           <div className="group relative">
-            <button className={`${getNavLinkClasses('products')} leading-normal flex items-center gap-1`}>
+            <a className={`${getNavLinkClasses('products')} leading-normal inline-flex items-center gap-1`}>
               Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 group-hover:rotate-180`}>expand_more</span>
-            </button>
+            </a>
 
             <div className="absolute top-full -right-20 w-[64rem] max-w-4xl z-30 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
               <div className="bg-secondary-background-light dark:bg-secondary-background-dark shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10">
                 <div className="grid grid-cols-3">
                   <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-6 p-8">
-                    {Object.entries(productsByStyle).map(([style, products]) => (
+                    {Object.entries(collectionsByStyle).map(([style, collections]) => (
                       <div key={style}>
                         <h3 className="text-sm font-semibold tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h3>
                         <ul className="mt-4 space-y-2">
-                          {products.map(product => (
-                            <li key={product.id}>
+                          {collections.map(collection => (
+                            <li key={collection.id}>
                               <a
                                 href="#"
-                                onClick={(e) => { e.preventDefault(); navigateTo('product-overview', { productId: product.id }); }}
+                                onClick={(e) => { e.preventDefault(); navigateTo('collection-detail', { collectionId: collection.id }); }}
                                 className="text-sm text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light transition-colors"
                               >
-                                {product.name}
+                                {collection.name}
                               </a>
                             </li>
                           ))}
@@ -92,16 +94,16 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
                     ))}
                   </div>
                   <div className="col-span-1 bg-background-light dark:bg-background-dark p-4">
-                    {featuredProduct && (
+                    {featuredCollection && (
                       <div
-                        key={featuredProduct.id}
+                        key={featuredCollection.id}
                         className="bg-cover bg-center rounded-lg aspect-[4/5] w-full flex flex-col justify-end p-6 text-white h-full animate-fade-in"
-                        style={{ backgroundImage: `url('${featuredProduct.imageUrl}')` }}
+                        style={{ backgroundImage: `url('${featuredCollection.heroImageUrl}')` }}
                       >
                         <div className="bg-black/50 p-4 rounded-md backdrop-blur-sm overflow-hidden">
-                          <h4 className="font-bold text-lg truncate">{featuredProduct.name}</h4>
-                          <p className="text-sm mt-1 mb-3 break-words min-h-[40px]">{featuredProduct.description}</p>
-                          <button onClick={() => navigateTo('product-overview', { productId: featuredProduct.id })} className="text-sm font-bold bg-white text-black px-4 py-2 rounded hover:bg-opacity-90 transition-colors">
+                          <h4 className="font-bold text-lg truncate">{featuredCollection.name}</h4>
+                          <p className="text-sm mt-1 mb-3 break-words min-h-[40px]">{featuredCollection.tagline}</p>
+                          <button onClick={() => navigateTo('collection-detail', { collectionId: featuredCollection.id })} className="text-sm font-bold bg-white text-black px-4 py-2 rounded hover:bg-opacity-90 transition-colors">
                             Explore Now
                           </button>
                         </div>

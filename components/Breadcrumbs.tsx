@@ -4,12 +4,12 @@ import { Page } from '../types';
 interface BreadcrumbItem {
   label: string;
   page?: Page;
-  params?: { productId?: number };
+  params?: { productId?: number; collectionId?: number };
 }
 
 interface BreadcrumbsProps {
   items: BreadcrumbItem[];
-  navigateTo: (page: Page, params?: { productId?: number }) => void;
+  navigateTo: (page: Page, params?: { productId?: number; collectionId?: number }) => void;
 }
 
 const Breadcrumbs: React.FC<BreadcrumbsProps> = ({ items, navigateTo }) => {

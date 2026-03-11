@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import HomePage from './pages/HomePage';
 import CollectionsPage from './pages/CollectionsPage';
+import CollectionDetailPage from './pages/CollectionDetailPage';
 import Error404Page from './pages/Error404Page';
 import ProductOverviewPage from './pages/ProductOverviewPage';
 import WishlistPage from './pages/WishlistPage';
@@ -13,6 +14,7 @@ const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
   const [page, setPage] = useState<Page>('home');
   const [productId, setProductId] = useState<number | undefined>(undefined);
+  const [collectionId, setCollectionId] = useState<number | undefined>(undefined);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('color-theme');
@@ -39,9 +41,10 @@ const App: React.FC = () => {
     });
   }, []);
   
-  const navigateTo = (newPage: Page, params?: { productId?: number }) => {
+  const navigateTo = (newPage: Page, params?: { productId?: number; collectionId?: number }) => {
     setPage(newPage);
     setProductId(params?.productId);
+    setCollectionId(params?.collectionId);
     window.scrollTo(0, 0);
   };
 
@@ -51,6 +54,11 @@ const App: React.FC = () => {
         return <HomePage navigateTo={navigateTo} toggleTheme={toggleTheme} />;
       case 'collections':
         return <CollectionsPage navigateTo={navigateTo} toggleTheme={toggleTheme} />;
+      case 'collection-detail':
+        if (collectionId) {
+          return <CollectionDetailPage navigateTo={navigateTo} toggleTheme={toggleTheme} collectionId={collectionId} />;
+        }
+        return <Error404Page navigateTo={navigateTo} />;
       case 'product-overview':
         if (productId) {
           return <ProductOverviewPage navigateTo={navigateTo} toggleTheme={toggleTheme} productId={productId} />;

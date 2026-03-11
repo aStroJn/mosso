@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Page, Product } from '../types';
-import { PRODUCTS, PRODUCT_STYLES } from '../constants';
+import { Page, Collection } from '../types';
+import { COLLECTIONS, PRODUCT_STYLES } from '../constants';
 import ThemeToggle from './ThemeToggle';
 import { useWishlist } from '../hooks/useWishlist';
 import { useCart } from '../hooks/useCart';
@@ -8,7 +8,7 @@ import { useCart } from '../hooks/useCart';
 interface MobileMenuProps {
   isOpen: boolean;
   onClose: () => void;
-  navigateTo: (page: Page, params?: { productId?: number }) => void;
+  navigateTo: (page: Page, params?: { productId?: number; collectionId?: number }) => void;
   toggleTheme: () => void;
   currentPage: Page;
 }
@@ -31,20 +31,20 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigateTo, to
     };
   }, [onClose]);
 
-  const handleNavigate = (page: Page, params?: { productId?: number }) => {
+  const handleNavigate = (page: Page, params?: { productId?: number; collectionId?: number }) => {
     navigateTo(page, params);
     onClose();
   };
 
-  const productsByStyle = PRODUCT_STYLES.reduce((acc, style) => {
-    const prods = PRODUCTS.filter(p => p.style === style);
-    if (prods.length > 0) {
-      acc[style] = prods;
+  const collectionsByStyle = PRODUCT_STYLES.reduce((acc, style) => {
+    const cols = COLLECTIONS.filter(c => c.style === style);
+    if (cols.length > 0) {
+      acc[style] = cols;
     }
     return acc;
-  }, {} as Record<string, Product[]>);
+  }, {} as Record<string, Collection[]>);
 
-  const isProductPage = currentPage === 'product-overview' || currentPage === 'collections';
+  const isProductPage = currentPage === 'product-overview' || currentPage === 'collection-detail';
 
   return (
     <div
@@ -94,18 +94,18 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigateTo, to
                 </button>
                 {isProductsOpen && (
                   <ul className="pl-4 mt-2 space-y-4 border-l border-border-light dark:border-border-dark">
-                    {Object.entries(productsByStyle).map(([style, products]) => (
+                    {Object.entries(collectionsByStyle).map(([style, collections]) => (
                       <li key={style}>
                         <h4 className="px-2 text-sm font-semibold tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h4>
                         <ul className="mt-2 space-y-1">
-                          {products.map(product => (
-                            <li key={product.id}>
+                          {collections.map(collection => (
+                            <li key={collection.id}>
                               <a
                                 href="#"
-                                onClick={(e) => { e.preventDefault(); handleNavigate('product-overview', { productId: product.id }); }}
+                                onClick={(e) => { e.preventDefault(); handleNavigate('collection-detail', { collectionId: collection.id }); }}
                                 className="block text-base font-normal text-text-secondary-light dark:text-text-secondary-dark p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-text-light dark:hover:text-text-dark transition-colors cursor-pointer"
                               >
-                                {product.name}
+                                {collection.name}
                               </a>
                             </li>
                           ))}

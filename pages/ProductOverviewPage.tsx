@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Page, Product } from '../types';
-import { PRODUCTS } from '../constants';
+import { PRODUCTS, COLLECTIONS } from '../constants';
 import Navbar from '../components/Navbar';
 import MobileMenu from '../components/MobileMenu';
 import Footer from '../components/Footer';
@@ -11,7 +11,7 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import AnimatedSection from '../components/AnimatedSection';
 
 interface ProductOverviewPageProps {
-  navigateTo: (page: Page, params?: { productId?: number }) => void;
+  navigateTo: (page: Page, params?: { productId?: number; collectionId?: number }) => void;
   toggleTheme: () => void;
   productId: number;
 }
@@ -163,11 +163,16 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     }
   };
 
-  const relatedProducts = PRODUCTS.filter(p => p.id !== product.id);
+  // Find parent collection for this product
+  const parentCollection = COLLECTIONS.find(c => c.products.some(p => p.id === product.id));
+  const relatedProducts = parentCollection
+    ? parentCollection.products.filter(p => p.id !== product.id)
+    : PRODUCTS.filter(p => p.id !== product.id);
 
   const breadcrumbItems = [
     { label: 'Home', page: 'home' as Page },
     { label: 'Collections', page: 'collections' as Page },
+    ...(parentCollection ? [{ label: parentCollection.name, page: 'collection-detail' as Page, params: { collectionId: parentCollection.id } }] : []),
     { label: product.name },
   ];
 

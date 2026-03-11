@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Page } from '../types';
 import Navbar from '../components/Navbar';
 import MobileMenu from '../components/MobileMenu';
-import { PRODUCTS } from '../constants';
+import { COLLECTIONS } from '../constants';
 import Footer from '../components/Footer';
 import AnimatedSection from '../components/AnimatedSection';
 
@@ -130,14 +130,14 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo, toggleTheme }) => {
                   <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark">Explore our curated collections, each with a unique personality.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                  {PRODUCTS.slice(0, 6).map((product) => (
-                    <div key={product.id} onClick={() => navigateTo('product-overview', { productId: product.id })} className="bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark group cursor-pointer">
+                  {COLLECTIONS.slice(0, 6).map((collection) => (
+                    <div key={collection.id} onClick={() => navigateTo('collection-detail', { collectionId: collection.id })} className="bg-secondary-background-light dark:bg-secondary-background-dark rounded-xl overflow-hidden border border-border-light dark:border-border-dark group cursor-pointer">
                       <div className="overflow-hidden aspect-[4/5]">
-                        <img alt={product.altText} className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src={product.imageUrl} />
+                        <img alt={collection.name} className="w-full h-full object-cover transition-transform duration-500 ease-in-out group-hover:scale-110" src={collection.heroImageUrl} />
                       </div>
                       <div className="p-6">
-                        <h3 className="font-display text-2xl font-semibold mb-2 text-text-light dark:text-text-dark">{product.name}</h3>
-                        <p className="mb-4 text-text-secondary-light dark:text-text-secondary-dark">{product.description}</p>
+                        <h3 className="font-display text-2xl font-semibold mb-2 text-text-light dark:text-text-dark">{collection.name}</h3>
+                        <p className="mb-4 text-text-secondary-light dark:text-text-secondary-dark">{collection.tagline}</p>
                         <div className="font-medium text-primary inline-flex items-center gap-2">
                           View Collection
                           <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
