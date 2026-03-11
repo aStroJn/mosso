@@ -128,21 +128,6 @@ MOSSO uses a custom Tailwind theme built around a cohesive set of design tokens:
 
 ---
 
-## 📸 Product Lines
-
-| # | Collection | Style | Price |
-|---|-----------|-------|-------|
-| 1 | Aura Series | Modern | ₹185 |
-| 2 | Metropolis Line | Classic | ₹240 |
-| 3 | Zenith Collection | Minimalist | ₹195 |
-| 4 | Terra Collection | Natural | ₹210 |
-| 5 | Aqua Line | Avant-Garde | ₹280 |
-| 6 | Etherea Series | Minimalist | ₹220 |
-| 7 | Heritage Range | Classic | ₹260 |
-| 8 | Forge Collection | Industrial | ₹200 |
-
----
-
 ## 📄 License
 
 This project is proprietary. All rights reserved.
