@@ -87,7 +87,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose, navig
           <div className="flex flex-col">
             <h2 id="quick-view-title" className="text-3xl font-bold text-text-light dark:text-text-dark font-display">{product.name}</h2>
             <p className="mt-2 text-text-secondary-light dark:text-text-secondary-dark">{product.description}</p>
-            <p className="text-2xl font-bold text-text-light dark:text-text-dark mt-4">${product.price.toFixed(2)}</p>
+            <p className="text-2xl font-bold text-text-light dark:text-text-dark mt-4">₹{product.price.toFixed(2)}</p>
             
             <div className="mt-6 border-t border-border-light dark:border-border-dark pt-6">
               <div className="flex items-center gap-4">

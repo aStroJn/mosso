@@ -99,7 +99,7 @@ const CartPage: React.FC<CartPageProps> = ({ navigateTo, toggleTheme }) => {
                                 <p className="text-lg font-bold text-text-light dark:text-text-dark">{item.name}</p>
                                 <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">{item.style}</p>
                               </div>
-                              <p className="text-lg font-bold shrink-0 ml-4 text-text-light dark:text-text-dark">${(item.price * item.quantity).toFixed(2)}</p>
+                              <p className="text-lg font-bold shrink-0 ml-4 text-text-light dark:text-text-dark">₹{(item.price * item.quantity).toFixed(2)}</p>
                             </div>
                             <div className="flex justify-between items-end">
                               <div className="flex items-center gap-2 border border-border-light dark:border-border-dark rounded-lg">
@@ -124,7 +124,7 @@ const CartPage: React.FC<CartPageProps> = ({ navigateTo, toggleTheme }) => {
                       <div className="mt-6 space-y-4">
                         <div className="flex justify-between text-base text-text-light dark:text-text-dark">
                           <span>Subtotal</span>
-                          <span>${subtotal.toFixed(2)}</span>
+                          <span>₹{subtotal.toFixed(2)}</span>
                         </div>
                         <div className="flex justify-between text-base">
                           <span className="text-text-light dark:text-text-dark">Shipping</span>
@@ -133,7 +133,7 @@ const CartPage: React.FC<CartPageProps> = ({ navigateTo, toggleTheme }) => {
                         <div className="border-t border-border-light dark:border-border-dark my-4"></div>
                         <div className="flex justify-between text-lg font-bold text-text-light dark:text-text-dark">
                           <span>Total</span>
-                          <span>${subtotal.toFixed(2)}</span>
+                          <span>₹{subtotal.toFixed(2)}</span>
                         </div>
                       </div>
                       <div className="mt-8">

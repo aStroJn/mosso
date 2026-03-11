@@ -4,6 +4,7 @@
     <meta charset="utf-t-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MOSSO Collections</title>
+    <link rel="icon" type="image/svg+xml" href="/logo-mosso.svg" />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,6 +110,14 @@
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
       }
+
+      /* Fully hidden scrollbar (page still scrolls) */
+      html {
+        scrollbar-width: none; /* Firefox */
+      }
+      ::-webkit-scrollbar {
+        display: none; /* Chrome, Edge, Safari */
+      }
     </style>
   <script type="importmap">
 {
@@ -124,5 +133,6 @@
   <body class="bg-background-light dark:bg-background-dark font-sans text-text-light dark:text-text-dark">
     <div id="root"></div>
   <script type="module" src="/index.tsx"></script>
+
 </body>
 </html>

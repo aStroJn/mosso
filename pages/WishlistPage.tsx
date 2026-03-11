@@ -61,7 +61,7 @@ const WishlistProductCard: React.FC<{
                     <p className="text-lg font-bold leading-tight tracking-tight text-text-light dark:text-text-dark group-hover:text-primary transition-colors">{product.name}</p>
                 </div>
                 <div className="mt-4 flex items-center justify-between">
-                    <p className="text-lg font-semibold text-text-light dark:text-text-dark">${product.price.toFixed(2)}</p>
+                    <p className="text-lg font-semibold text-text-light dark:text-text-dark">₹{product.price.toFixed(2)}</p>
                     <button onClick={handleAddToCartClick} className="flex h-10 min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg bg-primary px-4 text-sm font-bold text-white transition-opacity hover:opacity-90">
                         <span className="truncate">Add to Cart</span>
                     </button>

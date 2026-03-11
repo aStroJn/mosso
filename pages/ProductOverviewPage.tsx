@@ -362,7 +362,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                     </p>
                   </div>
                   <div className="mt-6">
-                    <p className="text-3xl font-bold text-text-light dark:text-text-dark">${product.price.toFixed(2)}</p>
+                    <p className="text-3xl font-bold text-text-light dark:text-text-dark">₹{product.price.toFixed(2)}</p>
                   </div>
                   <div className="mt-8 border-t border-border-light dark:border-border-dark pt-8">
                     <div className="flex items-center gap-6">
@@ -449,7 +449,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                         ></div>
                         <div className="pt-4 text-center">
                           <h3 className="font-bold text-base text-text-light dark:text-text-dark group-hover:text-primary transition-colors">{relatedProduct.name}</h3>
-                          <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">${relatedProduct.price.toFixed(2)}</p>
+                          <p className="text-sm text-text-secondary-light dark:text-text-secondary-dark mt-1">₹{relatedProduct.price.toFixed(2)}</p>
                         </div>
                       </div>
                     ))}
