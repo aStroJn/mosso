@@ -108,7 +108,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo, toggleTheme }) => {
               <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-20 items-center">
                   <div className="rounded-xl overflow-hidden aspect-[4/5]">
-                    <img src="https://picsum.photos/seed/mossoabout/800/1000" alt="Elegant bathroom interior with natural light" className="w-full h-full object-cover" />
+                    <img src="home/two-home-mosso.webp" alt="Elegant bathroom interior with natural light" className="w-full h-full object-cover" />
                   </div>
                   <div className="text-center md:text-left">
                     <h2 className="font-display text-4xl sm:text-5xl font-semibold mb-6 text-text-light dark:text-text-dark">Your Bathroom, Made Extraordinarily Good</h2>

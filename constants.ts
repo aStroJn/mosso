@@ -9,7 +9,7 @@ export const PRODUCTS: Product[] = [
     id: 1,
     name: "Aura Series",
     description: "Where fluidity meets form.",
-    imageUrl: "https://picsum.photos/seed/product1main/800/1000",
+    imageUrl: "products/aura/aura-three-mosso.webp",
     altText: "A modern chrome faucet with a sleek, minimalist design against a dark tiled wall.",
     style: "Modern",
     price: 185.00,

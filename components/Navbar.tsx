@@ -16,9 +16,17 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const { wishlist } = useWishlist();
   const { cartCount } = useCart();
   const isHomePage = currentPage === 'home';
-  const textColorClass = isHomePage ? 'text-white' : 'text-text-light dark:text-text-dark';
-  const hoverTextColorClass = isHomePage ? 'hover:text-white' : 'hover:text-text-light dark:hover:text-text-dark';
-  const activeLinkClass = (page: Page) => currentPage === page ? 'font-bold' : 'font-medium';
+  const isProductPage = currentPage === 'product-overview' || currentPage === 'collections';
+  
+  const getNavLinkClasses = (page: string) => {
+    const isActive = currentPage === page || (page === 'products' && isProductPage);
+    if (isHomePage) {
+      return `text-sm cursor-pointer transition-colors ${isActive ? 'text-white font-bold' : 'text-white/90 hover:text-white font-medium'}`;
+    } else {
+      return `text-sm cursor-pointer transition-colors ${isActive ? 'text-text-light dark:text-text-dark font-bold' : 'text-text-secondary-light dark:text-text-secondary-dark hover:text-text-light dark:hover:text-text-dark font-medium'}`;
+    }
+  };
+
   const borderColorClass = isHomePage ? 'border-white/20' : 'border-border-light dark:border-border-dark';
   const iconColorClass = isHomePage ? 'text-white' : 'text-text-light dark:text-text-dark';
   const buttonHoverBgClass = isHomePage ? 'hover:bg-white/10' : 'hover:bg-black/10 dark:hover:bg-white/10';
@@ -30,9 +38,6 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
     }
     return acc;
   }, {} as Record<string, Product[]>);
-
-  const isProductPage = currentPage === 'product-overview' || currentPage === 'collections';
-
   const featuredProducts = useMemo(() => PRODUCTS.filter(p => [1, 2, 7, 8].includes(p.id)), []);
   const [featuredProductIndex, setFeaturedProductIndex] = useState(0);
 
@@ -55,11 +60,11 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
       </div>
       <div className="hidden md:flex flex-1 justify-end gap-6 items-center">
         <div className="flex gap-6">
-          <a className={`${textColorClass} ${activeLinkClass('home')} text-sm cursor-pointer ${hoverTextColorClass} transition-colors`} onClick={() => navigateTo('home')}>Home</a>
-          <a className={`${textColorClass} ${activeLinkClass('collections')} text-sm ${isHomePage ? 'text-white/90' : 'text-text-secondary-light dark:text-text-secondary-dark'} ${hoverTextColorClass} cursor-pointer transition-colors`} onClick={() => navigateTo('collections')}>Collections</a>
+          <a className={getNavLinkClasses('home')} onClick={() => navigateTo('home')}>Home</a>
+          <a className={getNavLinkClasses('collections')} onClick={() => navigateTo('collections')}>Collections</a>
 
           <div className="group relative">
-            <button className={`${textColorClass} text-sm ${isHomePage ? 'text-white/90' : 'text-text-secondary-light dark:text-text-secondary-dark'} ${hoverTextColorClass} ${isProductPage ? 'font-bold' : 'font-medium'} leading-normal cursor-pointer transition-colors flex items-center gap-1`}>
+            <button className={`${getNavLinkClasses('products')} leading-normal flex items-center gap-1`}>
               Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 group-hover:rotate-180`}>expand_more</span>
             </button>
 
@@ -105,7 +110,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
                   </div>
                 </div>
                 <div className="bg-background-light dark:bg-background-dark px-8 py-4 border-t border-border-light dark:border-border-dark">
-                  <a onClick={() => navigateTo('collections')} className="text-sm font-semibold text-primary inline-flex items-center gap-2 group/link cursor-pointer hover:underline">
+                  <a href="#" onClick={(e) => { e.preventDefault(); navigateTo('collections'); }} className="text-sm font-semibold text-primary inline-flex items-center gap-2 group/link cursor-pointer hover:underline">
                     View All Collections
                     <span className="material-symbols-outlined transition-transform duration-300 group-hover/link:translate-x-1">arrow_forward</span>
                   </a>

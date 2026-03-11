@@ -35,9 +35,9 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           <div>
             <h4 className="font-bold text-sm tracking-wider uppercase text-white/90">Connect</h4>
             <ul className="mt-4 space-y-2 text-sm">
-              <li><a className="text-background-light/70 dark:text-text-secondary-dark/60 hover:text-white dark:hover:text-text-dark cursor-pointer">Facebook</a></li>
-              <li><a className="text-background-light/70 dark:text-text-secondary-dark/60 hover:text-white dark:hover:text-text-dark cursor-pointer">Instagram</a></li>
-              <li><a className="text-background-light/70 dark:text-text-secondary-dark/60 hover:text-white dark:hover:text-text-dark cursor-pointer">Pinterest</a></li>
+              <li><a href="https://www.facebook.com/share/18HK9EFekc/" target="_blank" rel="noopener noreferrer" className="text-background-light/70 dark:text-text-secondary-dark/60 hover:text-white dark:hover:text-text-dark cursor-pointer">Facebook</a></li>
+              <li><a href="https://www.instagram.com/mossobath_in?igsh=MTY4eGlzdDJjaXlzcw==" target="_blank" rel="noopener noreferrer" className="text-background-light/70 dark:text-text-secondary-dark/60 hover:text-white dark:hover:text-text-dark cursor-pointer">Instagram</a></li>
+              <li><a href="https://wa.me/message/JGAZH5NMDTMNI1" target="_blank" rel="noopener noreferrer" className="text-background-light/70 dark:text-text-secondary-dark/60 hover:text-white dark:hover:text-text-dark cursor-pointer">WhatsApp</a></li>
             </ul>
           </div>
         </div>
