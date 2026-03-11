@@ -1,4 +1,4 @@
-<div align="center">  <img src="public/logo.png" alt="MOSSO Logo" width="160" />
+<div align="center">  <img src="public/logo-mosso.svg" alt="MOSSO Logo" width="160" />
 
   # MOSSO Collections
 
@@ -125,21 +125,6 @@ MOSSO uses a custom Tailwind theme built around a cohesive set of design tokens:
 | Secondary Text | `#666666` | `#A0A0A0` |
 | Border | `#E0E0E0` | `#333333` |
 | Primary | `#00AEF0` | — |
-
----
-
-## 📸 Product Lines
-
-| # | Collection | Style | Price |
-|---|-----------|-------|-------|
-| 1 | Aura Series | Modern | ₹185 |
-| 2 | Metropolis Line | Classic | ₹240 |
-| 3 | Zenith Collection | Minimalist | ₹195 |
-| 4 | Terra Collection | Natural | ₹210 |
-| 5 | Aqua Line | Avant-Garde | ₹280 |
-| 6 | Etherea Series | Minimalist | ₹220 |
-| 7 | Heritage Range | Classic | ₹260 |
-| 8 | Forge Collection | Industrial | ₹200 |
 
 ---
 
