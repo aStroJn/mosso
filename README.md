@@ -1,4 +1,4 @@
-<div align="center">  <img src="public/logo-mosso.png" alt="MOSSO Logo" width="160" />
+<div align="center">  <img src="public/logo-mosso.svg" alt="MOSSO Logo" width="160" />
 
   # MOSSO Collections
 
