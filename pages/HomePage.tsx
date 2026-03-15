@@ -206,15 +206,15 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo, toggleTheme }) => {
                     <h2 className="font-display text-4xl sm:text-5xl font-semibold mb-4 text-white">Ready to Build Your Better Life?</h2>
                     <p className="mb-10 max-w-2xl mx-auto text-white/80 text-lg">Begin your journey with MOSSO today. Our experts are ready to assist you in creating the bathroom of your dreams.</p>
 
-                    <div className="flex flex-col sm:flex-row items-center justify-center gap-6 w-full max-w-3xl mx-auto">
+                    <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 w-full max-w-3xl mx-auto">
                       <button className="bg-primary text-white px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-primary/30 w-full sm:w-auto shrink-0">
                         REQUEST A FREE CONSULTATION
                       </button>
 
-                      <div className="flex items-center gap-4 w-full sm:w-auto opacity-70">
-                        <div className="h-px w-12 bg-white/30 hidden sm:block"></div>
+                      <div className="flex items-center justify-center gap-4 w-full lg:w-auto opacity-70 my-2 lg:my-0">
+                        <div className="h-px w-16 sm:w-24 lg:w-12 bg-white/30"></div>
                         <span className="text-white/60 text-sm font-medium uppercase tracking-widest shrink-0">Or</span>
-                        <div className="h-px w-12 bg-white/30 hidden sm:block"></div>
+                        <div className="h-px w-16 sm:w-24 lg:w-12 bg-white/30"></div>
                       </div>
 
                       <button className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-lg text-base font-medium hover:bg-white/20 transition-all backdrop-blur-md w-full sm:w-auto shrink-0">
