@@ -10,11 +10,22 @@ import CartPage from './pages/CartPage';
 import { Page } from './types';
 import ScrollToTopButton from './components/ScrollToTopButton';
 
+const getInitialUrlState = () => {
+  if (typeof window === 'undefined') return { initialPage: 'home' as Page, initialProductId: undefined, initialCollectionId: undefined };
+  const searchParams = new URLSearchParams(window.location.search);
+  const initialPage = (searchParams.get('page') as Page) || 'home';
+  const initialProductId = searchParams.get('productId') ? parseInt(searchParams.get('productId')!, 10) : undefined;
+  const initialCollectionId = searchParams.get('collectionId') ? parseInt(searchParams.get('collectionId')!, 10) : undefined;
+  return { initialPage, initialProductId, initialCollectionId };
+};
+
 const App: React.FC = () => {
   const [theme, setTheme] = useState<'light' | 'dark'>('light');
-  const [page, setPage] = useState<Page>('home');
-  const [productId, setProductId] = useState<number | undefined>(undefined);
-  const [collectionId, setCollectionId] = useState<number | undefined>(undefined);
+  
+  const { initialPage, initialProductId, initialCollectionId } = getInitialUrlState();
+  const [page, setPage] = useState<Page>(initialPage);
+  const [productId, setProductId] = useState<number | undefined>(initialProductId);
+  const [collectionId, setCollectionId] = useState<number | undefined>(initialCollectionId);
 
   useEffect(() => {
     const savedTheme = localStorage.getItem('color-theme');
@@ -26,6 +37,32 @@ const App: React.FC = () => {
       setTheme('light');
       document.documentElement.classList.remove('dark');
     }
+  }, []);
+
+  useEffect(() => {
+    const handlePopState = (event: PopStateEvent) => {
+      const state = event.state;
+      if (state) {
+        setPage(state.page || 'home');
+        setProductId(state.productId);
+        setCollectionId(state.collectionId);
+      } else {
+        const { initialPage, initialProductId, initialCollectionId } = getInitialUrlState();
+        setPage(initialPage);
+        setProductId(initialProductId);
+        setCollectionId(initialCollectionId);
+      }
+    };
+
+    const { initialPage, initialProductId, initialCollectionId } = getInitialUrlState();
+    window.history.replaceState({ 
+      page: initialPage, 
+      productId: initialProductId,
+      collectionId: initialCollectionId
+    }, '');
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
   const toggleTheme = useCallback(() => {
@@ -41,11 +78,27 @@ const App: React.FC = () => {
     });
   }, []);
   
-  const navigateTo = (newPage: Page, params?: { productId?: number; collectionId?: number }) => {
+  const navigateTo = (newPage: Page, params?: { productId?: number; collectionId?: number }, pushHistory: boolean = true) => {
     setPage(newPage);
     setProductId(params?.productId);
     setCollectionId(params?.collectionId);
     window.scrollTo(0, 0);
+
+    if (pushHistory) {
+      const searchParams = new URLSearchParams();
+      if (newPage !== 'home') {
+        searchParams.set('page', newPage);
+      }
+      if (params?.productId) {
+        searchParams.set('productId', params.productId.toString());
+      }
+      if (params?.collectionId) {
+        searchParams.set('collectionId', params.collectionId.toString());
+      }
+      
+      const newUrl = window.location.pathname + (searchParams.toString() ? `?${searchParams.toString()}` : '');
+      window.history.pushState({ page: newPage, productId: params?.productId, collectionId: params?.collectionId }, '', newUrl);
+    }
   };
 
   const renderCurrentPage = () => {
