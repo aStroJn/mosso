@@ -171,15 +171,15 @@ const CollectionDetailPage: React.FC<CollectionDetailPageProps> = ({ navigateTo,
                 <img
                   src={collection.heroImageUrl}
                   alt={collection.name}
-                  className="w-full h-64 sm:h-80 md:h-96 object-cover"
+                  className="w-full h-[500px] sm:h-[450px] md:h-96 object-cover"
                 />
                 <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center text-white px-4">
-                  <div className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm text-sm font-medium tracking-wider uppercase mb-4">
+                  <div className="inline-block px-4 py-1.5 rounded-full bg-white/15 backdrop-blur-sm text-xs sm:text-sm font-medium tracking-wider uppercase mb-3 sm:mb-4">
                     {collection.style} Collection
                   </div>
-                  <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold mb-4">{collection.name}</h1>
-                  <p className="max-w-2xl text-base sm:text-lg text-white/85 leading-relaxed">{collection.description}</p>
-                  <div className="mt-6 flex items-center gap-6 text-sm text-white/70">
+                  <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-3 sm:mb-4">{collection.name}</h1>
+                  <p className="max-w-xl text-sm sm:text-base md:text-lg text-white/85 leading-relaxed">{collection.description}</p>
+                  <div className="mt-4 sm:mt-6 flex flex-col sm:flex-row items-center gap-3 sm:gap-6 text-sm text-white/70">
                     <span className="flex items-center gap-1.5">
                       <span className="material-symbols-outlined text-lg">inventory_2</span>
                       {products.length} Products

@@ -56,7 +56,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const featuredCollection = featuredCollections[featuredIndex];
 
   return (
-    <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid ${borderColorClass} py-4`}>
+    <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid ${borderColorClass} py-4 relative`}>
       <div className="flex items-center cursor-pointer" onClick={() => navigateTo('home')}>
         <img src="./logo-mosso.svg" alt="MOSSO Logo" className="h-14 w-auto" />
       </div>
@@ -65,13 +65,13 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
           <a className={getNavLinkClasses('home')} onClick={() => navigateTo('home')}>Home</a>
           <a className={getNavLinkClasses('collections')} onClick={() => navigateTo('collections')}>Collections</a>
 
-          <div className="group relative">
+          <div className="group">
             <a className={`${getNavLinkClasses('products')} leading-normal inline-flex items-center gap-1`}>
               Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 group-hover:rotate-180`}>expand_more</span>
             </a>
 
-            <div className="absolute top-full -right-20 w-[64rem] max-w-4xl z-30 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0">
-              <div className="bg-secondary-background-light dark:bg-secondary-background-dark shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10">
+            <div className="absolute top-[80%] right-0 w-[calc(100vw-2rem)] md:w-[46rem] lg:w-[60rem] xl:w-[64rem] max-w-full z-30 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 text-left">
+              <div className="bg-secondary-background-light dark:bg-secondary-background-dark shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10 whitespace-normal">
                 <div className="grid grid-cols-3">
                   <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-6 p-8">
                     {Object.entries(collectionsByStyle).map(([style, collections]) => (
@@ -102,7 +102,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
                       >
                         <div className="bg-black/50 p-4 rounded-md backdrop-blur-sm overflow-hidden">
                           <h4 className="font-bold text-lg truncate">{featuredCollection.name}</h4>
-                          <p className="text-sm mt-1 mb-3 break-words min-h-[40px]">{featuredCollection.tagline}</p>
+                          <p className="text-sm mt-1 mb-3 break-words min-h-[40px] whitespace-normal">{featuredCollection.tagline}</p>
                           <button onClick={() => navigateTo('collection-detail', { collectionId: featuredCollection.id })} className="text-sm font-bold bg-white text-black px-4 py-2 rounded hover:bg-opacity-90 transition-colors">
                             Explore Now
                           </button>
