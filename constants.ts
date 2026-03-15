@@ -7,7 +7,7 @@ export const PRODUCT_STYLES: ProductStyle[] = ['Modern', 'Classic', 'Minimalist'
 export const COLLECTIONS: Collection[] = [
   {
     id: 1,
-    name: "Aura Series",
+    name: "Arya Series",
     description: "Where fluidity meets form. The Aura Series embodies the philosophy of water as an art form, with designs that flow seamlessly from aesthetic beauty to functional precision.",
     tagline: "Where fluidity meets form.",
     heroImageUrl: "products/aura/aura-three-mosso.webp",
@@ -15,7 +15,7 @@ export const COLLECTIONS: Collection[] = [
     products: [
       {
         id: 101,
-        name: "Aura Basin Mixer",
+        name: "Arya Basin Mixer",
         description: "A sleek single-lever basin mixer with a polished chrome finish, designed for modern bathrooms.",
         imageUrl: "products/aura/aura-three-mosso.webp",
         altText: "Aura Basin Mixer - polished chrome single-lever faucet",
@@ -35,9 +35,9 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 102,
-        name: "Aura Tall Boy",
+        name: "Arya Pillar Cock",
         description: "An elevated tall boy faucet perfect for vessel basins, offering a graceful arc.",
-        imageUrl: "https://picsum.photos/seed/aura102/800/1000",
+        imageUrl: "products/arya/arya-piller-cock-four.webp",
         altText: "Aura Tall Boy - elevated chrome faucet for vessel basins",
         style: "Modern",
         price: 225.00,
@@ -48,13 +48,14 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Single-hole" },
         ],
         galleryImages: [
-          "https://picsum.photos/seed/aura102g1/800/1000",
-          "https://picsum.photos/seed/aura102g2/800/1000",
+          "products/arya/arya-piller-cock-two.webp",
+          "products/arya/arya-piller-cock-three.webp",
+          "products/arya/arya-piller-cock-one.webp",
         ],
       },
       {
         id: 103,
-        name: "Aura Wall Mixer",
+        name: "Arya Wall Mixer",
         description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space.",
         imageUrl: "https://picsum.photos/seed/aura103/800/1000",
         altText: "Aura Wall Mixer - concealed chrome shower mixer",
@@ -73,7 +74,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 104,
-        name: "Aura Shower Set",
+        name: "Arya Shower Set",
         description: "Complete overhead shower system with rain head and handheld combo for the ultimate shower experience.",
         imageUrl: "https://picsum.photos/seed/aura104/800/1000",
         altText: "Aura Shower Set - chrome rain shower system",
@@ -92,7 +93,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 105,
-        name: "Aura Bib Cock",
+        name: "Arya Bib Cock",
         description: "A utility bib cock with the signature Aura finish for kitchens and utility areas.",
         imageUrl: "https://picsum.photos/seed/aura105/800/1000",
         altText: "Aura Bib Cock - chrome utility faucet",
@@ -111,7 +112,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 106,
-        name: "Aura Angle Valve",
+        name: "Arya Angle Valve",
         description: "Precision-engineered angle valve with quarter-turn ceramic disc for smooth operation.",
         imageUrl: "https://picsum.photos/seed/aura106/800/1000",
         altText: "Aura Angle Valve - chrome angle valve",

@@ -120,19 +120,19 @@ const CartPage: React.FC<CartPageProps> = ({ navigateTo, toggleTheme }) => {
                   
                   <div className="col-span-1 lg:col-span-1">
                     <div className="sticky top-24 rounded-xl border border-border-light dark:border-border-dark p-6 lg:p-8 bg-secondary-background-light dark:bg-secondary-background-dark">
-                      <h2 className="text-2xl font-bold tracking-tight text-text-light dark:text-text-dark font-display">Order Summary</h2>
+                      <h2 className="text-2xl font-bold tracking-tight text-text-light dark:text-text-dark font-display">
+                        Order Summary <span className="text-text-secondary-light dark:text-text-secondary-dark font-normal text-lg">({cartItems.reduce((acc, item) => acc + item.quantity, 0)} Items)</span>
+                      </h2>
                       <div className="mt-6 space-y-4">
-                        <div className="flex justify-between text-base text-text-light dark:text-text-dark">
-                          <span>Subtotal</span>
-                          <span>₹{subtotal.toFixed(2)}</span>
-                        </div>
-                        <div className="flex justify-between text-base">
-                          <span className="text-text-light dark:text-text-dark">Shipping</span>
-                          <span className="text-text-secondary-light dark:text-text-secondary-dark">Calculated at next step</span>
-                        </div>
+                        {cartItems.map((item) => (
+                          <div key={item.id} className="flex justify-between text-base text-text-light dark:text-text-dark">
+                            <span className="truncate pr-4">{item.name}</span>
+                            <span className="whitespace-nowrap">₹{(item.price * item.quantity).toFixed(2)}</span>
+                          </div>
+                        ))}
                         <div className="border-t border-border-light dark:border-border-dark my-4"></div>
                         <div className="flex justify-between text-lg font-bold text-text-light dark:text-text-dark">
-                          <span>Total</span>
+                          <span>Total Amount</span>
                           <span>₹{subtotal.toFixed(2)}</span>
                         </div>
                       </div>

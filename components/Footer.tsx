@@ -42,7 +42,7 @@ const Footer: React.FC<FooterProps> = ({ navigateTo }) => {
           </div>
         </div>
         <div className="mt-12 border-t border-white/10 dark:border-text-dark/10 pt-8 flex flex-col sm:flex-row justify-between items-center text-sm text-background-light/50 dark:text-text-secondary-dark/50">
-          <p>© 2024 MOSSO Sanitary Ware. All rights reserved.</p>
+          <p>Copyright © Maa Padma Metals. All Rights Reserved.</p>
           <div className="flex gap-4 mt-4 sm:mt-0">
             <a className="hover:text-white dark:hover:text-text-dark cursor-pointer">Privacy Policy</a>
             <a className="hover:text-white dark:hover:text-text-dark cursor-pointer">Terms of Service</a>
