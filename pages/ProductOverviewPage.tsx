@@ -38,7 +38,8 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
   const [mousePosition, setMousePosition] = useState({ x: 50, y: 50 });
-  const [zoomLevel, setZoomLevel] = useState(2.5); // Default zoom level (250%)
+  const [zoomLevel, setZoomLevel] = useState(2.0); // Default zoom level (200%)
+  const [isLargeScreen, setIsLargeScreen] = useState(true); // Track screen size
 
   const { isWishlisted, toggleWishlist } = useWishlist();
   const { addToCart } = useCart();
@@ -64,8 +65,20 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   }, [allProductImages]);
 
   useEffect(() => {
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint in Tailwind
+    };
+    
+    // Initial check
+    handleResize();
+    
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
     // Reset zoom level when image changes
-    setZoomLevel(2.5);
+    setZoomLevel(2.0);
     
     if (isInitialMount.current) {
       isInitialMount.current = false;
@@ -131,7 +144,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     if (!container) return;
 
     const onWheel = (e: WheelEvent) => {
-        if (isHovering) {
+        if (isHovering && isLargeScreen) {
             e.preventDefault();
             e.stopPropagation();
             // Adjust zoom sensitivity
@@ -144,7 +157,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     // Use { passive: false } to allow preventDefault to block scrolling
     container.addEventListener('wheel', onWheel, { passive: false });
     return () => container.removeEventListener('wheel', onWheel);
-  }, [isHovering]);
+  }, [isHovering, isLargeScreen]);
   
 
   if (!product) {
@@ -223,7 +236,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   }, [handlePrev, handleNext, isMobileMenuOpen]);
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-    if (imageContainerRef.current) {
+    if (imageContainerRef.current && isLargeScreen) {
       const rect = imageContainerRef.current.getBoundingClientRect();
       // Calculate percentage position
       const x = ((e.clientX - rect.left) / rect.width) * 100;
@@ -276,7 +289,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                         {allProductImages.map((img, index) => {
                             const isCurrent = index === currentIndex;
                             // Only load high-res URL if current and hovering to save bandwidth/memory
-                            const displayUrl = isCurrent && isHovering ? getHighResUrl(img) : img;
+                            const displayUrl = isCurrent && isHovering && isLargeScreen ? getHighResUrl(img) : img;
                             
                             return (
                                 <div key={index} className="w-full h-full flex-shrink-0 overflow-hidden">
@@ -284,11 +297,11 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                                         className="w-full h-full bg-cover bg-center"
                                         style={{
                                             backgroundImage: `url("${displayUrl}")`,
-                                            backgroundSize: isCurrent && isHovering ? `${zoomLevel * 100}%` : 'cover',
-                                            backgroundPosition: isCurrent && isHovering ? `${mousePosition.x}% ${mousePosition.y}%` : 'center center',
+                                            backgroundSize: isCurrent && isHovering && isLargeScreen ? `${zoomLevel * 100}%` : 'cover',
+                                            backgroundPosition: isCurrent && isHovering && isLargeScreen ? `${mousePosition.x}% ${mousePosition.y}%` : 'center center',
                                             // Disable parallax and scale transition when hovering to give user control
-                                            transform: `scale(1.2) translateY(${isCurrent && isHovering ? 0 : parallaxOffset}px)`,
-                                            transition: isCurrent && isHovering 
+                                            transform: `scale(1.2) translateY(${isCurrent && isHovering && isLargeScreen ? 0 : parallaxOffset}px)`,
+                                            transition: isCurrent && isHovering && isLargeScreen
                                               ? 'background-size 0.2s ease, background-position 0.1s ease' // Faster transition for zoom
                                               : 'background-size 0.3s ease, background-position 0.3s ease, transform 0.5s ease-out',
                                             willChange: 'transform, background-position, background-size',
@@ -300,8 +313,8 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                         })}
                     </div>
                     
-                    {/* Zoom Hint */}
-                    <div className={`absolute bottom-6 left-0 right-0 flex justify-center pointer-events-none transition-opacity duration-300 ${isHovering ? 'opacity-100' : 'opacity-0'}`}>
+                    {/* Zoom Hint - Only on Large Screens */}
+                    <div className={`absolute bottom-6 left-0 right-0 lg:flex justify-center pointer-events-none transition-opacity duration-300 hidden ${isHovering ? 'opacity-100' : 'opacity-0'}`}>
                         <div className="bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
                            Scroll to zoom • {Math.round(zoomLevel * 100)}%
                         </div>
@@ -312,14 +325,14 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                         <button 
                           onClick={handlePrev} 
                           aria-label="Previous image" 
-                          className={`absolute top-1/2 left-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 ${isHovering ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'}`}
+                          className={`absolute top-1/2 left-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 lg:hidden opacity-100`}
                         >
                             <span className="material-symbols-outlined text-xl">arrow_back_ios_new</span>
                         </button>
                         <button 
                           onClick={handleNext} 
                           aria-label="Next image" 
-                          className={`absolute top-1/2 right-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 ${isHovering ? 'opacity-0' : 'opacity-0 group-hover:opacity-100'}`}
+                          className={`absolute top-1/2 right-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 lg:hidden opacity-100`}
                         >
                             <span className="material-symbols-outlined text-xl">arrow_forward_ios</span>
                         </button>
@@ -366,8 +379,18 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                       {product.description}
                     </p>
                   </div>
-                  <div className="mt-6">
-                    <p className="text-3xl font-bold text-text-light dark:text-text-dark">₹{product.price.toFixed(2)}</p>
+                  <div className="mt-6 flex flex-col gap-1">
+                    <span className="text-sm font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider">
+                      M.R.P.
+                    </span>
+                    <div className="flex items-baseline gap-2">
+                      <p className="text-4xl lg:text-5xl font-bold text-text-light dark:text-text-dark font-display tracking-tight">
+                        ₹{product.price.toFixed(2)}
+                      </p>
+                      <span className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
+                        (Incl. of all taxes)
+                      </span>
+                    </div>
                   </div>
                   <div className="mt-8 border-t border-border-light dark:border-border-dark pt-8">
                     <div className="flex items-center gap-6">
