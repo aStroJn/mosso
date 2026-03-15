@@ -36,13 +36,10 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigateTo, to
     onClose();
   };
 
-  const collectionsByStyle = PRODUCT_STYLES.reduce((acc, style) => {
-    const cols = COLLECTIONS.filter(c => c.style === style);
-    if (cols.length > 0) {
-      acc[style] = cols;
-    }
-    return acc;
-  }, {} as Record<string, Collection[]>);
+  const collectionsByStyle = PRODUCT_STYLES.map(style => ({
+    style,
+    collections: COLLECTIONS.filter(c => c.style === style)
+  })).filter(group => group.collections.length > 0);
 
   const isProductPage = currentPage === 'product-overview' || currentPage === 'collection-detail';
 
@@ -92,28 +89,30 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, navigateTo, to
                   <span>Products</span>
                   <span className={`material-symbols-outlined transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}>expand_more</span>
                 </button>
-                {isProductsOpen && (
-                  <ul className="pl-4 mt-2 space-y-4 border-l border-border-light dark:border-border-dark">
-                    {Object.entries(collectionsByStyle).map(([style, collections]) => (
-                      <li key={style}>
-                        <h4 className="px-2 text-sm font-semibold tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h4>
-                        <ul className="mt-2 space-y-1">
-                          {collections.map(collection => (
-                            <li key={collection.id}>
-                              <a
-                                href="#"
-                                onClick={(e) => { e.preventDefault(); handleNavigate('collection-detail', { collectionId: collection.id }); }}
-                                className="block text-base font-normal text-text-secondary-light dark:text-text-secondary-dark p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-text-light dark:hover:text-text-dark transition-colors cursor-pointer"
-                              >
-                                {collection.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </li>
-                    ))}
-                  </ul>
-                )}
+                 {isProductsOpen && (
+                   <ul className="pl-4 mt-2 space-y-8 border-l border-border-light dark:border-border-dark">
+                     {collectionsByStyle.map(({ style, collections }) => (
+                       <li key={style}>
+                        <div className="px-3 py-1 bg-black/5 dark:bg-white/5 rounded-md mb-3 inline-block">
+                           <h4 className="text-xs font-bold tracking-widest uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h4>
+                        </div>
+                         <ul className="space-y-1">
+                           {collections.map(collection => (
+                             <li key={collection.id}>
+                               <a
+                                 href="#"
+                                 onClick={(e) => { e.preventDefault(); handleNavigate('collection-detail', { collectionId: collection.id }); }}
+                                 className="block text-base font-medium text-text-light dark:text-text-dark py-2.5 px-3 rounded-md hover:bg-black/5 dark:hover:bg-white/5 transition-colors cursor-pointer"
+                               >
+                                 {collection.name}
+                               </a>
+                             </li>
+                           ))}
+                         </ul>
+                       </li>
+                     ))}
+                   </ul>
+                 )}
               </div>
             </li>
           </ul>

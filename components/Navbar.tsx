@@ -32,13 +32,16 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const iconColorClass = isHomePage ? 'text-white' : 'text-text-light dark:text-text-dark';
   const buttonHoverBgClass = isHomePage ? 'hover:bg-white/10' : 'hover:bg-black/10 dark:hover:bg-white/10';
 
-  const collectionsByStyle = PRODUCT_STYLES.reduce((acc, style) => {
-    const cols = COLLECTIONS.filter(c => c.style === style);
-    if (cols.length > 0) {
-      acc[style] = cols;
-    }
-    return acc;
-  }, {} as Record<string, Collection[]>);
+  const collectionsByStyle = PRODUCT_STYLES.map(style => ({
+    style,
+    collections: COLLECTIONS.filter(c => c.style === style)
+  })).filter(group => group.collections.length > 0);
+
+  // Split into two columns: first 3 styles in col 1, remaining in col 2
+  // This helps place Natural (3rd) on the left and balances content
+  const midPoint = 3;
+  const leftColumnStyles = collectionsByStyle.slice(0, midPoint);
+  const rightColumnStyles = collectionsByStyle.slice(midPoint);
 
   const featuredCollections = useMemo(() => COLLECTIONS.filter(c => [1, 2, 7, 8].includes(c.id)), []);
   const [featuredIndex, setFeaturedIndex] = useState(0);
@@ -73,25 +76,47 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
             <div className="absolute top-[80%] right-0 w-[calc(100vw-2rem)] md:w-[46rem] lg:w-[60rem] xl:w-[64rem] max-w-full z-30 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 text-left">
               <div className="bg-secondary-background-light dark:bg-secondary-background-dark shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10 whitespace-normal">
                 <div className="grid grid-cols-3">
-                  <div className="col-span-2 grid grid-cols-2 gap-x-8 gap-y-6 p-8">
-                    {Object.entries(collectionsByStyle).map(([style, collections]) => (
-                      <div key={style}>
-                        <h3 className="text-sm font-semibold tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h3>
-                        <ul className="mt-4 space-y-2">
-                          {collections.map(collection => (
-                            <li key={collection.id}>
-                              <a
-                                href="#"
-                                onClick={(e) => { e.preventDefault(); navigateTo('collection-detail', { collectionId: collection.id }); }}
-                                className="text-sm text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light transition-colors"
-                              >
-                                {collection.name}
-                              </a>
-                            </li>
-                          ))}
-                        </ul>
-                      </div>
-                    ))}
+                  <div className="col-span-2 flex gap-12 p-8">
+                    <div className="flex-1 flex flex-col gap-10">
+                      {leftColumnStyles.map(({ style, collections }) => (
+                        <div key={style}>
+                          <h3 className="text-sm font-semibold tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h3>
+                          <ul className="mt-4 space-y-2">
+                            {collections.map(collection => (
+                              <li key={collection.id}>
+                                <a
+                                  href="#"
+                                  onClick={(e) => { e.preventDefault(); navigateTo('collection-detail', { collectionId: collection.id }); }}
+                                  className="text-sm text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light transition-colors"
+                                >
+                                  {collection.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
+                    <div className="flex-1 flex flex-col gap-10">
+                      {rightColumnStyles.map(({ style, collections }) => (
+                        <div key={style}>
+                          <h3 className="text-sm font-semibold tracking-wider uppercase text-text-secondary-light dark:text-text-secondary-dark">{style}</h3>
+                          <ul className="mt-4 space-y-4">
+                            {collections.map(collection => (
+                              <li key={collection.id}>
+                                <a
+                                  href="#"
+                                  onClick={(e) => { e.preventDefault(); navigateTo('collection-detail', { collectionId: collection.id }); }}
+                                  className="text-sm text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light transition-colors"
+                                >
+                                  {collection.name}
+                                </a>
+                              </li>
+                            ))}
+                          </ul>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                   <div className="col-span-1 bg-background-light dark:bg-background-dark p-4">
                     {featuredCollection && (
