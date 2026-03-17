@@ -10,14 +10,14 @@ export const COLLECTIONS: Collection[] = [
     name: "Arya Series",
     description: "Where fluidity meets form. The Arya Series embodies the philosophy of water as an art form, with designs that flow seamlessly from aesthetic beauty to functional precision.",
     tagline: "Where fluidity meets form.",
-    heroImageUrl: "products/arya/arya-piller-cock-three.webp",
+    heroImageUrl: "products/arya/pillercock/arya-pillercock-one.webp",
     style: "Minimalist",
     products: [
       {
         id: 101,
         name: "Arya Bib Cock",
         description: "A durable and functional bib cock for utility areas, featuring a smooth quarter-turn operation and the signature Arya chrome finish.",
-        imageUrl: "https://picsum.photos/seed/arya101/800/1000",
+        imageUrl: "products/arya/bibcock/arya-bibcock-one.webp",
         altText: "Arya Bib Cock - polished chrome utility faucet",
         style: "Minimalist",
         price: 75.00,
@@ -28,15 +28,16 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Wall-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya101g1/800/1000",
-          "https://picsum.photos/seed/arya101g2/800/1000"
+          "products/arya/bibcock/arya-bibcock-two.webp",
+          "products/arya/bibcock/arya-bibcock-three.webp",
+          "products/arya/bibcock/arya-bibcock-four.webp"
         ]
       },
       {
         id: 102,
         name: "Arya Longbody",
         description: "An extended body bib cock designed for installations where additional reach is required, maintaining a clean and functional design.",
-        imageUrl: "https://picsum.photos/seed/arya102/800/1000",
+        imageUrl: "products/arya/longbody/arya-longbody-one.webp",
         altText: "Arya Longbody Bib Cock - chrome faucet with extended body",
         style: "Minimalist",
         price: 95.00,
@@ -47,8 +48,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Wall-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya102g1/800/1000",
-          "https://picsum.photos/seed/arya102g2/800/1000"
+          "products/arya/longbody/arya-longbody-two.webp",
+          "products/arya/longbody/arya-longbody-three.webp",
+          "products/arya/longbody/arya-longbody-four.webp"
         ]
       },
       {
@@ -74,7 +76,7 @@ export const COLLECTIONS: Collection[] = [
         id: 104,
         name: "Arya Piller Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
-        imageUrl: "products/arya/arya-piller-cock-four.webp",
+        imageUrl: "products/arya/pillercock/arya-pillercock-four.webp",
         altText: "Arya Pillar Cock - standard chrome basin faucet",
         style: "Minimalist",
         price: 115.00,
@@ -85,9 +87,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Deck-mounted, two-hole" }
         ],
         galleryImages: [
-          "products/arya/arya-piller-cock-three.webp",
-          "products/arya/arya-piller-cock-two.webp",
-          "products/arya/arya-piller-cock-one.webp"
+          "products/arya/pillercock/arya-pillercock-three.webp",
+          "products/arya/pillercock/arya-pillercock-two.webp",
+          "products/arya/pillercock/arya-pillercock-one.webp"
         ]
       },
       {
@@ -189,7 +191,7 @@ export const COLLECTIONS: Collection[] = [
         id: 110,
         name: "Arya Sink Cock",
         description: "A functional and sturdy sink cock for kitchen areas, featuring a high-arc design to accommodate large pots and pans.",
-        imageUrl: "https://picsum.photos/seed/arya110/800/1000",
+        imageUrl: "products/arya/sinkcock/arya-sinkcock-one.webp",
         altText: "Arya Sink Cock - high-arc chrome kitchen faucet",
         style: "Minimalist",
         price: 150.00,
@@ -200,9 +202,13 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Deck-mounted, single-hole" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya110g1/800/1000",
-          "https://picsum.photos/seed/arya110g2/800/1000"
-        ]
+          "products/arya/sinkcock/arya-sinkcock-two.webp",
+          "products/arya/sinkcock/arya-sinkcock-three.webp",
+          "products/arya/sinkcock/arya-sinkcock-four.webp"
+        ],
+        imagePositions: {
+          3: 'center 5%' // Shifted down
+        }
       },
       {
         id: 111,
@@ -265,7 +271,7 @@ export const COLLECTIONS: Collection[] = [
         id: 114,
         name: "Arya Centre Hole",
         description: "A single-hole basin mixer that brings clean lines and minimalist beauty to your bathroom countertop.",
-        imageUrl: "https://picsum.photos/seed/arya114/800/1000",
+        imageUrl: "products/arya/centerhole/arya-centerhole-one.webp",
         altText: "Arya Centre Hole - single-hole polished chrome basin mixer",
         style: "Minimalist",
         price: 185.00,
@@ -276,16 +282,16 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Single-hole" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya114g1/800/1000",
-          "https://picsum.photos/seed/arya114g2/800/1000",
-          "https://picsum.photos/seed/arya114g3/800/1000"
+          "products/arya/centerhole/arya-centerhole-two.webp",
+          "products/arya/centerhole/arya-centerhole-three.webp",
+          "products/arya/centerhole/arya-centerhole-four.webp"
         ]
       },
       {
         id: 115,
         name: "Arya Sink Mixer",
         description: "A versatile single-lever sink mixer with a swivel spout, designed for Minimalist kitchens to handle multiple tasks with ease.",
-        imageUrl: "https://picsum.photos/seed/arya115/800/1000",
+        imageUrl: "products/arya/sinkmixer/arya-sinkmixer-one.webp",
         altText: "Arya Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Minimalist",
         price: 225.00,
@@ -296,8 +302,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Single-hole or deck-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya115g1/800/1000",
-          "https://picsum.photos/seed/arya115g2/800/1000"
+          "products/arya/sinkmixer/arya-sinkmixer-two.webp",
+          "products/arya/sinkmixer/arya-sinkmixer-three.webp",
+          "products/arya/sinkmixer/arya-sinkmixer-four.webp"
         ]
       },
       {

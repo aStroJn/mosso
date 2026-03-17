@@ -12,6 +12,7 @@ export interface Product {
   price: number;
   specifications: { label: string; value: string; }[];
   galleryImages: string[]; // Added for multiple product images
+  imagePositions?: Record<number, string>; // Maps index (0 for imageUrl, 1+ for galleryImages) to object-position or background-position
 }
 
 export interface Collection {

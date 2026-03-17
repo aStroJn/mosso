@@ -298,7 +298,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                                         style={{
                                             backgroundImage: `url("${displayUrl}")`,
                                             backgroundSize: isCurrent && isHovering && isLargeScreen ? `${zoomLevel * 100}%` : 'cover',
-                                            backgroundPosition: isCurrent && isHovering && isLargeScreen ? `${mousePosition.x}% ${mousePosition.y}%` : 'center center',
+                                            backgroundPosition: isCurrent && isHovering && isLargeScreen ? `${mousePosition.x}% ${mousePosition.y}%` : (product.imagePositions?.[index] || 'center center'),
                                             // Disable parallax and scale transition when hovering to give user control
                                             transform: `scale(1.2) translateY(${isCurrent && isHovering && isLargeScreen ? 0 : parallaxOffset}px)`,
                                             transition: isCurrent && isHovering && isLargeScreen
@@ -346,7 +346,10 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                                 ref={el => { thumbnailRefs.current[index] = el; }}
                                 key={index}
                                 className={`bg-cover bg-center rounded-lg aspect-square cursor-pointer shrink-0 w-[23%] ${currentIndex === index ? 'border-2 border-primary' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
-                                style={{ backgroundImage: `url("${img}")` }}
+                                style={{ 
+                                    backgroundImage: `url("${img}")`,
+                                    backgroundPosition: product.imagePositions?.[index] || 'center center'
+                                }}
                                 onClick={() => setCurrentIndex(index)}
                                 aria-label={`${product.name} thumbnail ${index + 1}`}
                             ></div>
