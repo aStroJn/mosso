@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Page, Product } from '../types';
-import { PRODUCTS } from '../constants';
+import { resolveProduct } from '../constants';
 import Navbar from '../components/Navbar';
 import MobileMenu from '../components/MobileMenu';
 import Footer from '../components/Footer';
@@ -34,9 +34,9 @@ const CartPage: React.FC<CartPageProps> = ({ navigateTo, toggleTheme }) => {
 
   const cartItems: CartProduct[] = useMemo(() => {
     return Array.from(cart.entries()).map(([productId, quantity]) => {
-      const product = PRODUCTS.find(p => p.id === productId);
-      return { ...product!, quantity };
-    }).filter(item => item.id); // Filter out any potential mismatches
+      const product = resolveProduct(productId);
+      return product ? { ...product, quantity } : null;
+    }).filter((item): item is CartProduct => item !== null);
   }, [cart]);
 
   const subtotal = useMemo(() => {

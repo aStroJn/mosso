@@ -2,6 +2,16 @@ export type Page = 'home' | 'collections' | 'collection-detail' | 'error404' | '
 
 export type ProductStyle = 'Modern' | 'Classic' | 'Minimalist' | 'Avant-Garde' | 'Industrial' | 'Natural';
 
+export interface ProductVariant {
+  id: number;
+  label: string;
+  price: number;
+  imageUrl: string;
+  altText: string;
+  galleryImages: string[];
+  specifications: { label: string; value: string; }[];
+}
+
 export interface Product {
   id: number;
   name: string;
@@ -12,7 +22,7 @@ export interface Product {
   price: number;
   specifications: { label: string; value: string; }[];
   galleryImages: string[]; // Added for multiple product images
-  imagePositions?: Record<number, string>; // Maps index (0 for imageUrl, 1+ for galleryImages) to object-position or background-position
+  variants?: ProductVariant[]; // Optional array of product variants
 }
 
 export interface Collection {

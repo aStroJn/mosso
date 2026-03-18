@@ -10,7 +10,7 @@ export const COLLECTIONS: Collection[] = [
     name: "Arya Series",
     description: "Where fluidity meets form. The Arya Series embodies the philosophy of water as an art form, with designs that flow seamlessly from aesthetic beauty to functional precision.",
     tagline: "Where fluidity meets form.",
-    heroImageUrl: "products/arya/pillercock/arya-pillercock-one.webp",
+    heroImageUrl: "products/arya/pillarcock/arya-pillarcock-one.webp",
     style: "Minimalist",
     products: [
       {
@@ -20,11 +20,11 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "products/arya/bibcock/arya-bibcock-one.webp",
         altText: "Arya Bib Cock - polished chrome utility faucet",
         style: "Minimalist",
-        price: 75.00,
+        price: 960.00,
         specifications: [
-          { label: "Material", value: "Polished Chrome" },
+          { label: "Material", value: "Brass" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
-          { label: "Flow Rate", value: "1.5 GPM" },
+          { label: "Polishing Finish", value: "Chrome" },
           { label: "Installation", value: "Wall-mounted" }
         ],
         galleryImages: [
@@ -40,7 +40,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "products/arya/longbody/arya-longbody-one.webp",
         altText: "Arya Longbody Bib Cock - chrome faucet with extended body",
         style: "Minimalist",
-        price: 95.00,
+        price: 1080.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -60,7 +60,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/arya103/800/1000",
         altText: "Arya Angle Cock - polished chrome angle valve",
         style: "Minimalist",
-        price: 60.00,
+        price: 750.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -74,127 +74,89 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 104,
-        name: "Arya Piller Cock",
+        name: "Arya Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
-        imageUrl: "products/arya/pillercock/arya-pillercock-four.webp",
+        imageUrl: "products/arya/pillarcock/arya-pillarcock-four.webp",
         altText: "Arya Pillar Cock - standard chrome basin faucet",
         style: "Minimalist",
-        price: 115.00,
+        price: 1130.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
           { label: "Flow Rate", value: "1.2 GPM" },
-          { label: "Installation", value: "Deck-mounted, two-hole" }
+          { label: "Installation", value: "Basin-mounted" }
         ],
         galleryImages: [
-          "products/arya/pillercock/arya-pillercock-three.webp",
-          "products/arya/pillercock/arya-pillercock-two.webp",
-          "products/arya/pillercock/arya-pillercock-one.webp"
+          "products/arya/pillarcock/arya-pillarcock-three.webp",
+          "products/arya/pillarcock/arya-pillarcock-two.webp",
+          "products/arya/pillarcock/arya-pillarcock-one.webp"
         ]
       },
-      {
-        id: 105,
-        name: "Arya Washing Cock",
-        description: "A practical washing machine cock with a snap-on connector, designed for easy installation and reliable water shut-off.",
-        imageUrl: "https://picsum.photos/seed/arya105/800/1000",
-        altText: "Arya Washing Cock - chrome washing machine valve with connector",
-        style: "Minimalist",
-        price: 70.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "4\" H x 3\" W" },
-          { label: "Flow Rate", value: "1.5 GPM" },
-          { label: "Installation", value: "Wall-mounted" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya105g1/800/1000",
-          "https://picsum.photos/seed/arya105g2/800/1000"
-        ]
-      },
-      {
-        id: 106,
-        name: "Arya Nozzle Cock",
-        description: "A versatile nozzle cock with a swivel spout, ideal for kitchen or utility sinks where directed flow is needed.",
-        imageUrl: "https://picsum.photos/seed/arya106/800/1000",
-        altText: "Arya Nozzle Cock - swivel spout chrome faucet",
-        style: "Minimalist",
-        price: 130.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 4\" W" },
-          { label: "Flow Rate", value: "1.5 GPM" },
-          { label: "Installation", value: "Deck-mounted" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya106g1/800/1000",
-          "https://picsum.photos/seed/arya106g2/800/1000"
-        ]
-      },
-      {
-        id: 107,
-        name: "Arya Piller Cock HO NICK",
-        description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
-        imageUrl: "https://picsum.photos/seed/arya107/800/1000",
-        altText: "Arya Pillar Cock - chrome faucet without nickel base",
-        style: "Minimalist",
-        price: 120.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome (No Nickel)" },
-          { label: "Dimensions", value: "5\" H x 2\" W" },
-          { label: "Flow Rate", value: "1.2 GPM" },
-          { label: "Installation", value: "Deck-mounted, two-hole" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya107g1/800/1000",
-          "https://picsum.photos/seed/arya107g2/800/1000"
-        ]
-      },
+      // {
+      //   id: 105,
+      //   name: "Arya Pillar Cock (High Neck)",
+      //   description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
+      //   imageUrl: "https://picsum.photos/seed/arya107/800/1000",
+      //   altText: "Arya Pillar Cock - chrome faucet without nickel base",
+      //   style: "Minimalist",
+      //   price: 1045.00,
+      //   specifications: [
+      //     { label: "Material", value: "Polished Chrome (No Nickel)" },
+      //     { label: "Dimensions", value: "5\" H x 2\" W" },
+      //     { label: "Flow Rate", value: "1.2 GPM" },
+      //     { label: "Installation", value: "Deck-mounted, two-hole" }
+      //   ],
+      //   galleryImages: [
+      //     "https://picsum.photos/seed/arya107g1/800/1000",
+      //     "https://picsum.photos/seed/arya107g2/800/1000"
+      //   ]
+      // },
+      // {
+      //   id: 106,
+      //   name: "Arya Concealed 1/2",
+      //   description: "A 1/2-inch concealed body stop cock for under-sink installation, providing reliable water control while remaining hidden from view.",
+      //   imageUrl: "https://picsum.photos/seed/arya108/800/1000",
+      //   altText: "Arya Concealed 1/2 inch stop cock for plumbing",
+      //   style: "Minimalist",
+      //   price: 1350.00,
+      //   specifications: [
+      //     { label: "Material", value: "Polished Chrome" },
+      //     { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
+      //     { label: "Connection Size", value: "1/2 inch" },
+      //     { label: "Installation", value: "In-line, Concealed" }
+      //   ],
+      //   galleryImages: [
+      //     "https://picsum.photos/seed/arya108g1/800/1000",
+      //     "https://picsum.photos/seed/arya108g2/800/1000"
+      //   ]
+      // },
+      // {
+      //   id: 107,
+      //   name: "Arya Concealed 3/4",
+      //   description: "A heavy-duty 3/4-inch concealed stop cock designed for higher flow applications, ensuring durable and hidden water line control.",
+      //   imageUrl: "https://picsum.photos/seed/arya109/800/1000",
+      //   altText: "Arya Concealed 3/4 inch stop cock for main water lines",
+      //   style: "Minimalist",
+      //   price: 1350.00,
+      //   specifications: [
+      //     { label: "Material", value: "Polished Chrome" },
+      //     { label: "Dimensions", value: "3\" H x 3\" W" },
+      //     { label: "Connection Size", value: "3/4 inch" },
+      //     { label: "Installation", value: "In-line, Concealed" }
+      //   ],
+      //   galleryImages: [
+      //     "https://picsum.photos/seed/arya109g1/800/1000",
+      //     "https://picsum.photos/seed/arya109g2/800/1000"
+      //   ]
+      // },
       {
         id: 108,
-        name: "Arya Concealed 1/2",
-        description: "A 1/2-inch concealed body stop cock for under-sink installation, providing reliable water control while remaining hidden from view.",
-        imageUrl: "https://picsum.photos/seed/arya108/800/1000",
-        altText: "Arya Concealed 1/2 inch stop cock for plumbing",
-        style: "Minimalist",
-        price: 50.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
-          { label: "Connection Size", value: "1/2 inch" },
-          { label: "Installation", value: "In-line, Concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya108g1/800/1000",
-          "https://picsum.photos/seed/arya108g2/800/1000"
-        ]
-      },
-      {
-        id: 109,
-        name: "Arya Concealed 3/4",
-        description: "A heavy-duty 3/4-inch concealed stop cock designed for higher flow applications, ensuring durable and hidden water line control.",
-        imageUrl: "https://picsum.photos/seed/arya109/800/1000",
-        altText: "Arya Concealed 3/4 inch stop cock for main water lines",
-        style: "Minimalist",
-        price: 70.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "3\" H x 3\" W" },
-          { label: "Connection Size", value: "3/4 inch" },
-          { label: "Installation", value: "In-line, Concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya109g1/800/1000",
-          "https://picsum.photos/seed/arya109g2/800/1000"
-        ]
-      },
-      {
-        id: 110,
         name: "Arya Sink Cock",
         description: "A functional and sturdy sink cock for kitchen areas, featuring a high-arc design to accommodate large pots and pans.",
         imageUrl: "products/arya/sinkcock/arya-sinkcock-one.webp",
         altText: "Arya Sink Cock - high-arc chrome kitchen faucet",
         style: "Minimalist",
-        price: 150.00,
+        price: 1300.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -205,38 +167,36 @@ export const COLLECTIONS: Collection[] = [
           "products/arya/sinkcock/arya-sinkcock-two.webp",
           "products/arya/sinkcock/arya-sinkcock-three.webp",
           "products/arya/sinkcock/arya-sinkcock-four.webp"
-        ],
-        imagePositions: {
-          3: 'center 5%' // Shifted down
-        }
+        ]
       },
       {
-        id: 111,
+        id: 109,
         name: "Arya Swan Neck",
         description: "An elegant swan neck faucet that adds a touch of sophistication to any bathroom. Its graceful curve and polished finish make it a timeless choice.",
-        imageUrl: "https://picsum.photos/seed/arya111/800/1000",
+        imageUrl: "products/arya/swanneck/arya-swanneck-one.webp",
         altText: "Arya Swan Neck - elegant high-arc chrome basin faucet",
         style: "Minimalist",
-        price: 210.00,
+        price: 1400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
           { label: "Flow Rate", value: "1.2 GPM" },
-          { label: "Installation", value: "Deck-mounted, single-hole" }
+          { label: "Installation", value: "Basin-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya111g1/800/1000",
-          "https://picsum.photos/seed/arya111g2/800/1000"
+          "products/arya/swanneck/arya-swanneck-two.webp",
+          "products/arya/swanneck/arya-swanneck-three.webp",
+          "products/arya/swanneck/arya-swanneck-four.webp"
         ]
       },
       {
-        id: 112,
+        id: 110,
         name: "Arya 2IN1 BIB COCK",
         description: "An innovative bib cock with an integrated outlet for a washing machine or hose, combining two functions in one sleek unit.",
         imageUrl: "https://picsum.photos/seed/arya112/800/1000",
         altText: "Arya 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Minimalist",
-        price: 110.00,
+        price: 1610.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -249,13 +209,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 113,
+        id: 111,
         name: "Arya 2IN1 ANGLE COCK",
         description: "A space-saving angle cock with a secondary outlet, perfect for connecting a washing machine or dishwasher directly.",
         imageUrl: "https://picsum.photos/seed/arya113/800/1000",
         altText: "Arya 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Minimalist",
-        price: 90.00,
+        price: 1510.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -268,18 +228,18 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 114,
+        id: 112,
         name: "Arya Centre Hole",
         description: "A single-hole basin mixer that brings clean lines and minimalist beauty to your bathroom countertop.",
         imageUrl: "products/arya/centerhole/arya-centerhole-one.webp",
         altText: "Arya Centre Hole - single-hole polished chrome basin mixer",
         style: "Minimalist",
-        price: 185.00,
+        price: 2425.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
           { label: "Flow Rate", value: "1.2 GPM" },
-          { label: "Installation", value: "Single-hole" }
+          { label: "Installation", value: "Basin-mounted" }
         ],
         galleryImages: [
           "products/arya/centerhole/arya-centerhole-two.webp",
@@ -288,13 +248,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 115,
+        id: 113,
         name: "Arya Sink Mixer",
         description: "A versatile single-lever sink mixer with a swivel spout, designed for Minimalist kitchens to handle multiple tasks with ease.",
         imageUrl: "products/arya/sinkmixer/arya-sinkmixer-one.webp",
         altText: "Arya Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Minimalist",
-        price: 225.00,
+        price: 2940.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -308,13 +268,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 116,
-        name: "Arya Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        id: 114,
+        name: "Arya Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/arya116/800/1000",
         altText: "Arya Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
-        price: 165.00,
+        price: 4330.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -324,28 +284,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/arya116g1/800/1000",
           "https://picsum.photos/seed/arya116g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 114,
+            label: "W/O Band",
+            price: 4330.00,
+            imageUrl: "https://picsum.photos/seed/arya116/800/1000",
+            altText: "Arya Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/arya116g1/800/1000",
+          "https://picsum.photos/seed/arya116g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 117,
-        name: "Arya Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/arya117/800/1000",
-        altText: "Arya Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Minimalist",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 115,
+            label: "W/ Band",
+            price: 4520.00,
+            imageUrl: "https://picsum.photos/seed/arya117/800/1000",
+            altText: "Arya Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/arya117g1/800/1000",
+          "https://picsum.photos/seed/arya117g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya117g1/800/1000",
-          "https://picsum.photos/seed/arya117g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 2,
@@ -362,7 +339,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/flora201/800/1000",
         altText: "Flora Bib Cock - polished chrome utility faucet",
         style: "Natural",
-        price: 75.00,
+        price: 1560.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -381,7 +358,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/flora202/800/1000",
         altText: "Flora Longbody Bib Cock - chrome faucet with extended body",
         style: "Natural",
-        price: 95.00,
+        price: 1850.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -414,7 +391,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 204,
-        name: "Flora Piller Cock",
+        name: "Flora Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/flora204/800/1000",
         altText: "Flora Pillar Cock - standard chrome basin faucet",
@@ -471,7 +448,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 207,
-        name: "Flora Piller Cock HO NICK",
+        name: "Flora Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/flora207/800/1000",
         altText: "Flora Pillar Cock - chrome faucet without nickel base",
@@ -643,8 +620,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 216,
-        name: "Flora Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Flora Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/flora216/800/1000",
         altText: "Flora Wall Mixer without Band - concealed chrome shower mixer",
         style: "Natural",
@@ -658,28 +635,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/flora216g1/800/1000",
           "https://picsum.photos/seed/flora216g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 216,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/flora216/800/1000",
+            altText: "Flora Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/flora216g1/800/1000",
+          "https://picsum.photos/seed/flora216g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 217,
-        name: "Flora Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/flora217/800/1000",
-        altText: "Flora Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Natural",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 217,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/flora217/800/1000",
+            altText: "Flora Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/flora217g1/800/1000",
+          "https://picsum.photos/seed/flora217g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/flora217g1/800/1000",
-          "https://picsum.photos/seed/flora217g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 3,
@@ -748,7 +742,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 304,
-        name: "Fusion Piller Cock",
+        name: "Fusion Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/fusion304/800/1000",
         altText: "Fusion Pillar Cock - standard chrome basin faucet",
@@ -805,7 +799,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 307,
-        name: "Fusion Piller Cock HO NICK",
+        name: "Fusion Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/fusion307/800/1000",
         altText: "Fusion Pillar Cock - chrome faucet without nickel base",
@@ -977,8 +971,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 316,
-        name: "Fusion Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Fusion Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/fusion316/800/1000",
         altText: "Fusion Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
@@ -992,28 +986,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/fusion316g1/800/1000",
           "https://picsum.photos/seed/fusion316g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 316,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/fusion316/800/1000",
+            altText: "Fusion Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/fusion316g1/800/1000",
+          "https://picsum.photos/seed/fusion316g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 317,
-        name: "Fusion Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/fusion317/800/1000",
-        altText: "Fusion Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Modern",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 317,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/fusion317/800/1000",
+            altText: "Fusion Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/fusion317g1/800/1000",
+          "https://picsum.photos/seed/fusion317g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/fusion317g1/800/1000",
-          "https://picsum.photos/seed/fusion317g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 4,
@@ -1082,7 +1093,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 404,
-        name: "Rozzer Piller Cock",
+        name: "Rozzer Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/rozzer404/800/1000",
         altText: "Rozzer Pillar Cock - standard chrome basin faucet",
@@ -1139,7 +1150,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 407,
-        name: "Rozzer Piller Cock HO NICK",
+        name: "Rozzer Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/rozzer407/800/1000",
         altText: "Rozzer Pillar Cock - chrome faucet without nickel base",
@@ -1311,8 +1322,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 416,
-        name: "Rozzer Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Rozzer Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/rozzer416/800/1000",
         altText: "Rozzer Wall Mixer without Band - concealed chrome shower mixer",
         style: "Industrial",
@@ -1326,28 +1337,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/rozzer416g1/800/1000",
           "https://picsum.photos/seed/rozzer416g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 416,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/rozzer416/800/1000",
+            altText: "Rozzer Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/rozzer416g1/800/1000",
+          "https://picsum.photos/seed/rozzer416g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 417,
-        name: "Rozzer Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/rozzer417/800/1000",
-        altText: "Rozzer Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Industrial",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 417,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/rozzer417/800/1000",
+            altText: "Rozzer Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/rozzer417g1/800/1000",
+          "https://picsum.photos/seed/rozzer417g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/rozzer417g1/800/1000",
-          "https://picsum.photos/seed/rozzer417g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 5,
@@ -1416,7 +1444,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 504,
-        name: "Prime Piller Cock",
+        name: "Prime Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/prime504/800/1000",
         altText: "Prime Pillar Cock - standard chrome basin faucet",
@@ -1473,7 +1501,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 507,
-        name: "Prime Piller Cock HO NICK",
+        name: "Prime Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/prime507/800/1000",
         altText: "Prime Pillar Cock - chrome faucet without nickel base",
@@ -1645,8 +1673,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 516,
-        name: "Prime Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Prime Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/prime516/800/1000",
         altText: "Prime Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
@@ -1660,28 +1688,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/prime516g1/800/1000",
           "https://picsum.photos/seed/prime516g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 516,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/prime516/800/1000",
+            altText: "Prime Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/prime516g1/800/1000",
+          "https://picsum.photos/seed/prime516g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 517,
-        name: "Prime Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/prime517/800/1000",
-        altText: "Prime Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Minimalist",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 517,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/prime517/800/1000",
+            altText: "Prime Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/prime517g1/800/1000",
+          "https://picsum.photos/seed/prime517g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/prime517g1/800/1000",
-          "https://picsum.photos/seed/prime517g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 6,
@@ -1750,7 +1795,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 604,
-        name: "Solo Piller Cock",
+        name: "Solo Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/solo604/800/1000",
         altText: "Solo Pillar Cock - standard chrome basin faucet",
@@ -1807,7 +1852,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 607,
-        name: "Solo Piller Cock HO NICK",
+        name: "Solo Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/solo607/800/1000",
         altText: "Solo Pillar Cock - chrome faucet without nickel base",
@@ -1979,8 +2024,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 616,
-        name: "Solo Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Solo Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/solo616/800/1000",
         altText: "Solo Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
@@ -1994,28 +2039,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/solo616g1/800/1000",
           "https://picsum.photos/seed/solo616g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 616,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/solo616/800/1000",
+            altText: "Solo Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/solo616g1/800/1000",
+          "https://picsum.photos/seed/solo616g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 617,
-        name: "Solo Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/solo617/800/1000",
-        altText: "Solo Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Minimalist",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 617,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/solo617/800/1000",
+            altText: "Solo Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/solo617g1/800/1000",
+          "https://picsum.photos/seed/solo617g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/solo617g1/800/1000",
-          "https://picsum.photos/seed/solo617g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 7,
@@ -2084,7 +2146,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 704,
-        name: "Soft Piller Cock",
+        name: "Soft Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/soft704/800/1000",
         altText: "Soft Pillar Cock - standard chrome basin faucet",
@@ -2141,7 +2203,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 707,
-        name: "Soft Piller Cock HO NICK",
+        name: "Soft Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/soft707/800/1000",
         altText: "Soft Pillar Cock - chrome faucet without nickel base",
@@ -2313,8 +2375,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 716,
-        name: "Soft Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Soft Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/soft716/800/1000",
         altText: "Soft Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
@@ -2328,28 +2390,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/soft716g1/800/1000",
           "https://picsum.photos/seed/soft716g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 716,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/soft716/800/1000",
+            altText: "Soft Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/soft716g1/800/1000",
+          "https://picsum.photos/seed/soft716g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 717,
-        name: "Soft Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/soft717/800/1000",
-        altText: "Soft Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Minimalist",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 717,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/soft717/800/1000",
+            altText: "Soft Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/soft717g1/800/1000",
+          "https://picsum.photos/seed/soft717g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/soft717g1/800/1000",
-          "https://picsum.photos/seed/soft717g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 8,
@@ -2418,7 +2497,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 804,
-        name: "Donald Piller Cock",
+        name: "Donald Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/donald804/800/1000",
         altText: "Donald Pillar Cock - standard chrome basin faucet",
@@ -2475,7 +2554,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 807,
-        name: "Donald Piller Cock HO NICK",
+        name: "Donald Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/donald807/800/1000",
         altText: "Donald Pillar Cock - chrome faucet without nickel base",
@@ -2647,8 +2726,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 816,
-        name: "Donald Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Donald Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/donald816/800/1000",
         altText: "Donald Wall Mixer without Band - concealed chrome shower mixer",
         style: "Industrial",
@@ -2662,28 +2741,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/donald816g1/800/1000",
           "https://picsum.photos/seed/donald816g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 816,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/donald816/800/1000",
+            altText: "Donald Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/donald816g1/800/1000",
+          "https://picsum.photos/seed/donald816g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 817,
-        name: "Donald Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/donald817/800/1000",
-        altText: "Donald Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Industrial",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 817,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/donald817/800/1000",
+            altText: "Donald Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/donald817g1/800/1000",
+          "https://picsum.photos/seed/donald817g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/donald817g1/800/1000",
-          "https://picsum.photos/seed/donald817g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 9,
@@ -2752,7 +2848,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 904,
-        name: "Spark Piller Cock",
+        name: "Spark Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/spark904/800/1000",
         altText: "Spark Pillar Cock - standard chrome basin faucet",
@@ -2809,7 +2905,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 907,
-        name: "Spark Piller Cock HO NICK",
+        name: "Spark Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/spark907/800/1000",
         altText: "Spark Pillar Cock - chrome faucet without nickel base",
@@ -2981,8 +3077,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 916,
-        name: "Spark Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Spark Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/spark916/800/1000",
         altText: "Spark Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
@@ -2996,28 +3092,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/spark916g1/800/1000",
           "https://picsum.photos/seed/spark916g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 916,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/spark916/800/1000",
+            altText: "Spark Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/spark916g1/800/1000",
+          "https://picsum.photos/seed/spark916g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 917,
-        name: "Spark Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/spark917/800/1000",
-        altText: "Spark Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Modern",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 917,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/spark917/800/1000",
+            altText: "Spark Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/spark917g1/800/1000",
+          "https://picsum.photos/seed/spark917g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/spark917g1/800/1000",
-          "https://picsum.photos/seed/spark917g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 10,
@@ -3086,7 +3199,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1004,
-        name: "Euro Piller Cock",
+        name: "Euro Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/euro1004/800/1000",
         altText: "Euro Pillar Cock - standard chrome basin faucet",
@@ -3143,7 +3256,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1007,
-        name: "Euro Piller Cock HO NICK",
+        name: "Euro Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/euro1007/800/1000",
         altText: "Euro Pillar Cock - chrome faucet without nickel base",
@@ -3315,8 +3428,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1016,
-        name: "Euro Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Euro Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/euro1016/800/1000",
         altText: "Euro Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
@@ -3330,28 +3443,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/euro1016g1/800/1000",
           "https://picsum.photos/seed/euro1016g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 1016,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/euro1016/800/1000",
+            altText: "Euro Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/euro1016g1/800/1000",
+          "https://picsum.photos/seed/euro1016g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 1017,
-        name: "Euro Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/euro1017/800/1000",
-        altText: "Euro Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Modern",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 1017,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/euro1017/800/1000",
+            altText: "Euro Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/euro1017g1/800/1000",
+          "https://picsum.photos/seed/euro1017g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/euro1017g1/800/1000",
-          "https://picsum.photos/seed/euro1017g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 11,
@@ -3420,7 +3550,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1104,
-        name: "Ornamix Piller Cock",
+        name: "Ornamix Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/ornamix1104/800/1000",
         altText: "Ornamix Pillar Cock - standard chrome basin faucet",
@@ -3477,7 +3607,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1107,
-        name: "Ornamix Piller Cock HO NICK",
+        name: "Ornamix Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/ornamix1107/800/1000",
         altText: "Ornamix Pillar Cock - chrome faucet without nickel base",
@@ -3649,8 +3779,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1116,
-        name: "Ornamix Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Ornamix Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/ornamix1116/800/1000",
         altText: "Ornamix Wall Mixer without Band - concealed chrome shower mixer",
         style: "Classic",
@@ -3664,28 +3794,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/ornamix1116g1/800/1000",
           "https://picsum.photos/seed/ornamix1116g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 1116,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/ornamix1116/800/1000",
+            altText: "Ornamix Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/ornamix1116g1/800/1000",
+          "https://picsum.photos/seed/ornamix1116g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 1117,
-        name: "Ornamix Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/ornamix1117/800/1000",
-        altText: "Ornamix Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Classic",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 1117,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/ornamix1117/800/1000",
+            altText: "Ornamix Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/ornamix1117g1/800/1000",
+          "https://picsum.photos/seed/ornamix1117g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/ornamix1117g1/800/1000",
-          "https://picsum.photos/seed/ornamix1117g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 12,
@@ -3754,7 +3901,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1204,
-        name: "M-Flora Piller Cock",
+        name: "M-Flora Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/mflora1204/800/1000",
         altText: "M-Flora Pillar Cock - standard chrome basin faucet",
@@ -3811,7 +3958,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1207,
-        name: "M-Flora Piller Cock HO NICK",
+        name: "M-Flora Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/mflora1207/800/1000",
         altText: "M-Flora Pillar Cock - chrome faucet without nickel base",
@@ -3983,8 +4130,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1216,
-        name: "M-Flora Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "M-Flora Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/mflora1216/800/1000",
         altText: "M-Flora Wall Mixer without Band - concealed chrome shower mixer",
         style: "Natural",
@@ -3998,28 +4145,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/mflora1216g1/800/1000",
           "https://picsum.photos/seed/mflora1216g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 1216,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/mflora1216/800/1000",
+            altText: "M-Flora Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/mflora1216g1/800/1000",
+          "https://picsum.photos/seed/mflora1216g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 1217,
-        name: "M-Flora Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/mflora1217/800/1000",
-        altText: "M-Flora Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Natural",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 1217,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/mflora1217/800/1000",
+            altText: "M-Flora Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/mflora1217g1/800/1000",
+          "https://picsum.photos/seed/mflora1217g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/mflora1217g1/800/1000",
-          "https://picsum.photos/seed/mflora1217g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 13,
@@ -4088,7 +4252,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1304,
-        name: "Vignette Piller Cock",
+        name: "Vignette Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/vignette1304/800/1000",
         altText: "Vignette Pillar Cock - standard chrome basin faucet",
@@ -4145,7 +4309,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1307,
-        name: "Vignette Piller Cock HO NICK",
+        name: "Vignette Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/vignette1307/800/1000",
         altText: "Vignette Pillar Cock - chrome faucet without nickel base",
@@ -4317,8 +4481,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1316,
-        name: "Vignette Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Vignette Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/vignette1316/800/1000",
         altText: "Vignette Wall Mixer without Band - concealed chrome shower mixer",
         style: "Classic",
@@ -4332,28 +4496,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/vignette1316g1/800/1000",
           "https://picsum.photos/seed/vignette1316g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 1316,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/vignette1316/800/1000",
+            altText: "Vignette Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/vignette1316g1/800/1000",
+          "https://picsum.photos/seed/vignette1316g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 1317,
-        name: "Vignette Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/vignette1317/800/1000",
-        altText: "Vignette Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Classic",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 1317,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/vignette1317/800/1000",
+            altText: "Vignette Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/vignette1317g1/800/1000",
+          "https://picsum.photos/seed/vignette1317g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/vignette1317g1/800/1000",
-          "https://picsum.photos/seed/vignette1317g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 14,
@@ -4422,7 +4603,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1404,
-        name: "Opel Piller Cock",
+        name: "Opel Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/opel1404/800/1000",
         altText: "Opel Pillar Cock - standard chrome basin faucet",
@@ -4479,7 +4660,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1407,
-        name: "Opel Piller Cock HO NICK",
+        name: "Opel Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/opel1407/800/1000",
         altText: "Opel Pillar Cock - chrome faucet without nickel base",
@@ -4651,8 +4832,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1416,
-        name: "Opel Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Opel Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/opel1416/800/1000",
         altText: "Opel Wall Mixer without Band - concealed chrome shower mixer",
         style: "Avant-Garde",
@@ -4666,28 +4847,45 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/opel1416g1/800/1000",
           "https://picsum.photos/seed/opel1416g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 1416,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/opel1416/800/1000",
+            altText: "Opel Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/opel1416g1/800/1000",
+          "https://picsum.photos/seed/opel1416g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 1417,
-        name: "Opel Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/opel1417/800/1000",
-        altText: "Opel Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Avant-Garde",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 1417,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/opel1417/800/1000",
+            altText: "Opel Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/opel1417g1/800/1000",
+          "https://picsum.photos/seed/opel1417g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/opel1417g1/800/1000",
-          "https://picsum.photos/seed/opel1417g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
   {
     id: 15,
@@ -4756,7 +4954,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1504,
-        name: "Croma Piller Cock",
+        name: "Croma Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
         imageUrl: "https://picsum.photos/seed/croma1504/800/1000",
         altText: "Croma Pillar Cock - standard chrome basin faucet",
@@ -4813,7 +5011,7 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1507,
-        name: "Croma Piller Cock HO NICK",
+        name: "Croma Pillar Cock HO NICK",
         description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
         imageUrl: "https://picsum.photos/seed/croma1507/800/1000",
         altText: "Croma Pillar Cock - chrome faucet without nickel base",
@@ -4985,8 +5183,8 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 1516,
-        name: "Croma Wall Mixer W/O BAND",
-        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, featuring a handle without a band.",
+        name: "Croma Wall Mixer",
+        description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/croma1516/800/1000",
         altText: "Croma Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
@@ -5000,30 +5198,66 @@ export const COLLECTIONS: Collection[] = [
         galleryImages: [
           "https://picsum.photos/seed/croma1516g1/800/1000",
           "https://picsum.photos/seed/croma1516g2/800/1000"
+        ],
+        variants: [
+          {
+            id: 1516,
+            label: "W/O Band",
+            price: 165.00,
+            imageUrl: "https://picsum.photos/seed/croma1516/800/1000",
+            altText: "Croma Wall Mixer without Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/croma1516g1/800/1000",
+          "https://picsum.photos/seed/croma1516g2/800/1000"
+        ],
+            specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "6\" H x 6\" W" },
+          { label: "Flow Rate", value: "2.0 GPM" },
+          { label: "Installation", value: "Wall-mounted, concealed" }
         ]
-      },
-      {
-        id: 1517,
-        name: "Croma Wall Mixer W/ BAND",
-        description: "A concealed wall mixer with a decorative band, offering the same minimalist functionality with an added design detail.",
-        imageUrl: "https://picsum.photos/seed/croma1517/800/1000",
-        altText: "Croma Wall Mixer with Band - concealed chrome shower mixer",
-        style: "Modern",
-        price: 175.00,
-        specifications: [
+          },
+          {
+            id: 1517,
+            label: "W/ Band",
+            price: 175.00,
+            imageUrl: "https://picsum.photos/seed/croma1517/800/1000",
+            altText: "Croma Wall Mixer with Band - concealed chrome shower mixer",
+            galleryImages: [
+          "https://picsum.photos/seed/croma1517g1/800/1000",
+          "https://picsum.photos/seed/croma1517g2/800/1000"
+        ],
+            specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6.5\" W" },
           { label: "Flow Rate", value: "2.0 GPM" },
           { label: "Installation", value: "Wall-mounted, concealed" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/croma1517g1/800/1000",
-          "https://picsum.photos/seed/croma1517g2/800/1000"
         ]
-      }
-    ]
+          }
+        ]
+      },
+      ]
   },
 ];
 
 // Flat list of all products across all collections (for backward compatibility and search)
 export const PRODUCTS: Product[] = COLLECTIONS.flatMap(c => c.products);
+
+// Helper function to resolve a product by its ID, taking variants into account
+export const resolveProduct = (productId: number): Product | undefined => {
+  const baseProduct = PRODUCTS.find(p => p.id === productId);
+  if (baseProduct) return baseProduct;
+
+  for (const p of PRODUCTS) {
+    const variant = p.variants?.find(v => v.id === productId);
+    if (variant) {
+      return {
+        ...p,
+        ...variant,
+        name: `${p.name} - ${variant.label}`,
+        id: variant.id
+      };
+    }
+  }
+  return undefined;
+};

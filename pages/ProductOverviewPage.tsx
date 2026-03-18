@@ -1,6 +1,6 @@
 
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
-import { Page, Product } from '../types';
+import { Page, Product, ProductVariant } from '../types';
 import { PRODUCTS, COLLECTIONS } from '../constants';
 import Navbar from '../components/Navbar';
 import MobileMenu from '../components/MobileMenu';
@@ -28,12 +28,17 @@ const getHighResUrl = (url: string) => {
 const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, toggleTheme, productId }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [quantity, setQuantity] = useState(1);
-  const product: Product | undefined = PRODUCTS.find(p => p.id === productId);
+  const product: Product | undefined = useMemo(() => {
+    return PRODUCTS.find(p => p.id === productId || p.variants?.some(v => v.id === productId));
+  }, [productId]);
+
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(null);
 
   const allProductImages = useMemo(() => {
     if (!product) return [];
-    return [product.imageUrl, ...product.galleryImages];
-  }, [product]);
+    const source = selectedVariant || product;
+    return [source.imageUrl, ...source.galleryImages];
+  }, [product, selectedVariant]);
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovering, setIsHovering] = useState(false);
@@ -55,10 +60,17 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
       setCurrentIndex(0);
       setQuantity(1);
       isInitialMount.current = true;
+      if (product.variants && product.variants.length > 0) {
+        // Auto-select variant matching the URL productId, or fallback to first
+        const variantMatch = product.variants.find(v => v.id === productId) || product.variants[0];
+        setSelectedVariant(variantMatch);
+      } else {
+        setSelectedVariant(null);
+      }
     } else {
       navigateTo('error404');
     }
-  }, [product, navigateTo]);
+  }, [product, productId, navigateTo]);
 
   useEffect(() => {
     thumbnailRefs.current = thumbnailRefs.current.slice(0, allProductImages.length);
@@ -68,10 +80,10 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     const handleResize = () => {
       setIsLargeScreen(window.innerWidth >= 1024); // lg breakpoint in Tailwind
     };
-    
+
     // Initial check
     handleResize();
-    
+
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -79,18 +91,18 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   useEffect(() => {
     // Reset zoom level when image changes
     setZoomLevel(2.0);
-    
+
     if (isInitialMount.current) {
       isInitialMount.current = false;
       return;
     }
 
     if (thumbnailRefs.current[currentIndex]) {
-        thumbnailRefs.current[currentIndex]?.scrollIntoView({
-            behavior: 'smooth',
-            block: 'nearest',
-            inline: 'center',
-        });
+      thumbnailRefs.current[currentIndex]?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'nearest',
+        inline: 'center',
+      });
     }
   }, [currentIndex]);
 
@@ -102,7 +114,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     const img = new Image();
     img.src = highResUrl;
   }, [currentIndex, product, allProductImages]);
-  
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.style.overflow = 'hidden';
@@ -116,25 +128,25 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
 
   useEffect(() => {
     const handleScroll = () => {
-        if (imageContainerRef.current) {
-            const rect = imageContainerRef.current.getBoundingClientRect();
-            const speed = 0.1; // Keep it subtle
+      if (imageContainerRef.current) {
+        const rect = imageContainerRef.current.getBoundingClientRect();
+        const speed = 0.1; // Keep it subtle
 
-            // Only calculate when in viewport
-            if (rect.top < window.innerHeight && rect.bottom > 0) {
-                const elementCenter = rect.top + rect.height / 2;
-                const viewportCenter = window.innerHeight / 2;
-                const offset = (elementCenter - viewportCenter) * speed;
-                setParallaxOffset(offset);
-            }
+        // Only calculate when in viewport
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          const elementCenter = rect.top + rect.height / 2;
+          const viewportCenter = window.innerHeight / 2;
+          const offset = (elementCenter - viewportCenter) * speed;
+          setParallaxOffset(offset);
         }
+      }
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
     handleScroll(); // Set initial position
 
     return () => {
-        window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -144,35 +156,36 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     if (!container) return;
 
     const onWheel = (e: WheelEvent) => {
-        if (isHovering && isLargeScreen) {
-            e.preventDefault();
-            e.stopPropagation();
-            // Adjust zoom sensitivity
-            const ZOOM_SPEED = 0.2;
-            const delta = e.deltaY > 0 ? -ZOOM_SPEED : ZOOM_SPEED;
-            setZoomLevel(prev => Math.min(Math.max(1.5, prev + delta), 5));
-        }
+      if (isHovering && isLargeScreen) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Adjust zoom sensitivity
+        const ZOOM_SPEED = 0.2;
+        const delta = e.deltaY > 0 ? -ZOOM_SPEED : ZOOM_SPEED;
+        setZoomLevel(prev => Math.min(Math.max(1.5, prev + delta), 5));
+      }
     };
-    
+
     // Use { passive: false } to allow preventDefault to block scrolling
     container.addEventListener('wheel', onWheel, { passive: false });
     return () => container.removeEventListener('wheel', onWheel);
   }, [isHovering, isLargeScreen]);
-  
+
 
   if (!product) {
     return null;
   }
-  
-  const isProductWishlisted = isWishlisted(product.id);
+
+  const currentProductId = selectedVariant ? selectedVariant.id : product.id;
+  const isProductWishlisted = isWishlisted(currentProductId);
 
   const handleQuantityChange = (delta: number) => {
     setQuantity(prevQuantity => Math.max(1, prevQuantity + delta));
   };
 
   const handleAddToCart = () => {
-    if(product) {
-      addToCart(product.id, quantity);
+    if (product) {
+      addToCart(currentProductId, quantity);
     }
   };
 
@@ -191,21 +204,21 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
 
   const scrollImageGallery = (direction: 'left' | 'right') => {
     if (imageGalleryRef.current) {
-        const scrollAmount = imageGalleryRef.current.clientWidth * 0.75;
-        imageGalleryRef.current.scrollBy({
-            left: direction === 'left' ? -scrollAmount : scrollAmount,
-            behavior: 'smooth',
-        });
+      const scrollAmount = imageGalleryRef.current.clientWidth * 0.75;
+      imageGalleryRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
     }
   };
 
   const scrollCarousel = (direction: 'left' | 'right') => {
     if (relatedProductsRef.current) {
-        const scrollAmount = relatedProductsRef.current.clientWidth * 0.75; // Scroll by 75% of the visible width
-        relatedProductsRef.current.scrollBy({
-            left: direction === 'left' ? -scrollAmount : scrollAmount,
-            behavior: 'smooth',
-        });
+      const scrollAmount = relatedProductsRef.current.clientWidth * 0.75; // Scroll by 75% of the visible width
+      relatedProductsRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth',
+      });
     }
   };
 
@@ -244,7 +257,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
       // Clamp values between 0 and 100
       const clampedX = Math.max(0, Math.min(100, x));
       const clampedY = Math.max(0, Math.min(100, y));
-      
+
       setMousePosition({ x: clampedX, y: clampedY });
       setIsHovering(true);
     }
@@ -279,99 +292,96 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
             <AnimatedSection>
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-24">
                 <div className="flex flex-col gap-4">
-                  <div 
-                    ref={imageContainerRef} 
+                  <div
+                    ref={imageContainerRef}
                     className="relative group overflow-hidden bg-background-light dark:bg-background-dark/50 rounded-xl aspect-[4/5] w-full cursor-crosshair"
                     onMouseMove={handleMouseMove}
                     onMouseLeave={handleMouseLeave}
                   >
                     <div className="flex h-full transition-transform duration-500 ease-in-out" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
-                        {allProductImages.map((img, index) => {
-                            const isCurrent = index === currentIndex;
-                            // Only load high-res URL if current and hovering to save bandwidth/memory
-                            const displayUrl = isCurrent && isHovering && isLargeScreen ? getHighResUrl(img) : img;
-                            
-                            return (
-                                <div key={index} className="w-full h-full flex-shrink-0 overflow-hidden">
-                                    <div
-                                        className="w-full h-full bg-cover bg-center"
-                                        style={{
-                                            backgroundImage: `url("${displayUrl}")`,
-                                            backgroundSize: isCurrent && isHovering && isLargeScreen ? `${zoomLevel * 100}%` : 'cover',
-                                            backgroundPosition: isCurrent && isHovering && isLargeScreen ? `${mousePosition.x}% ${mousePosition.y}%` : (product.imagePositions?.[index] || 'center center'),
-                                            // Disable parallax and scale transition when hovering to give user control
-                                            transform: `scale(1.2) translateY(${isCurrent && isHovering && isLargeScreen ? 0 : parallaxOffset}px)`,
-                                            transition: isCurrent && isHovering && isLargeScreen
-                                              ? 'background-size 0.2s ease, background-position 0.1s ease' // Faster transition for zoom
-                                              : 'background-size 0.3s ease, background-position 0.3s ease, transform 0.5s ease-out',
-                                            willChange: 'transform, background-position, background-size',
-                                        }}
-                                        aria-label={`${product.altText} - image ${index + 1}`}
-                                    />
-                                </div>
-                            );
-                        })}
+                      {allProductImages.map((img, index) => {
+                        const isCurrent = index === currentIndex;
+                        // Only load high-res URL if current and hovering to save bandwidth/memory
+                        const displayUrl = isCurrent && isHovering && isLargeScreen ? getHighResUrl(img) : img;
+
+                        return (
+                          <div key={index} className="w-full h-full flex-shrink-0 overflow-hidden">
+                            <div
+                              className="w-full h-full bg-cover bg-center"
+                              style={{
+                                backgroundImage: `url("${displayUrl}")`,
+                                backgroundSize: isCurrent && isHovering && isLargeScreen ? `${zoomLevel * 100}%` : 'cover',
+                                backgroundPosition: isCurrent && isHovering && isLargeScreen ? `${mousePosition.x}% ${mousePosition.y}%` : 'center center',
+                                // Disable parallax and scale transition when hovering to give user control
+                                transform: `scale(1.2) translateY(${isCurrent && isHovering && isLargeScreen ? 0 : parallaxOffset}px)`,
+                                transition: isCurrent && isHovering && isLargeScreen
+                                  ? 'background-size 0.2s ease, background-position 0.1s ease' // Faster transition for zoom
+                                  : 'background-size 0.3s ease, background-position 0.3s ease, transform 0.5s ease-out',
+                                willChange: 'transform, background-position, background-size',
+                              }}
+                              aria-label={`${product.altText} - image ${index + 1}`}
+                            />
+                          </div>
+                        );
+                      })}
                     </div>
-                    
+
                     {/* Zoom Hint - Only on Large Screens */}
                     <div className={`absolute bottom-6 left-0 right-0 lg:flex justify-center pointer-events-none transition-opacity duration-300 hidden ${isHovering ? 'opacity-100' : 'opacity-0'}`}>
-                        <div className="bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
-                           Scroll to zoom • {Math.round(zoomLevel * 100)}%
-                        </div>
+                      <div className="bg-black/60 backdrop-blur-sm text-white text-xs font-medium px-3 py-1.5 rounded-full shadow-lg">
+                        Scroll to zoom • {Math.round(zoomLevel * 100)}%
+                      </div>
                     </div>
 
                     {allProductImages.length > 1 && (
                       <>
-                        <button 
-                          onClick={handlePrev} 
-                          aria-label="Previous image" 
+                        <button
+                          onClick={handlePrev}
+                          aria-label="Previous image"
                           className={`absolute top-1/2 left-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 lg:hidden opacity-100`}
                         >
-                            <span className="material-symbols-outlined text-xl">arrow_back_ios_new</span>
+                          <span className="material-symbols-outlined text-xl">arrow_back_ios_new</span>
                         </button>
-                        <button 
-                          onClick={handleNext} 
-                          aria-label="Next image" 
+                        <button
+                          onClick={handleNext}
+                          aria-label="Next image"
                           className={`absolute top-1/2 right-4 -translate-y-1/2 z-10 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md transition-all hover:scale-110 lg:hidden opacity-100`}
                         >
-                            <span className="material-symbols-outlined text-xl">arrow_forward_ios</span>
+                          <span className="material-symbols-outlined text-xl">arrow_forward_ios</span>
                         </button>
                       </>
                     )}
                   </div>
                   <div className="relative group">
                     <div ref={imageGalleryRef} className="flex items-center gap-4 overflow-x-auto scroll-smooth scrollbar-hide py-1">
-                        {allProductImages.map((img, index) => (
-                            <div
-                                ref={el => { thumbnailRefs.current[index] = el; }}
-                                key={index}
-                                className={`bg-cover bg-center rounded-lg aspect-square cursor-pointer shrink-0 w-[23%] ${currentIndex === index ? 'border-2 border-primary' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
-                                style={{ 
-                                    backgroundImage: `url("${img}")`,
-                                    backgroundPosition: product.imagePositions?.[index] || 'center center'
-                                }}
-                                onClick={() => setCurrentIndex(index)}
-                                aria-label={`${product.name} thumbnail ${index + 1}`}
-                            ></div>
-                        ))}
+                      {allProductImages.map((img, index) => (
+                        <div
+                          ref={el => { thumbnailRefs.current[index] = el; }}
+                          key={index}
+                          className={`bg-cover bg-center rounded-lg aspect-square cursor-pointer shrink-0 w-[23%] ${currentIndex === index ? 'border-2 border-primary' : 'opacity-70 hover:opacity-100 transition-opacity'}`}
+                          style={{ backgroundImage: `url("${img}")` }}
+                          onClick={() => setCurrentIndex(index)}
+                          aria-label={`${product.name} thumbnail ${index + 1}`}
+                        ></div>
+                      ))}
                     </div>
                     {allProductImages.length > 4 && (
-                        <>
-                            <button 
-                                onClick={() => scrollImageGallery('left')} 
-                                aria-label="Previous image" 
-                                className="absolute top-1/2 left-0 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-110 -translate-x-1/2"
-                            >
-                                <span className="material-symbols-outlined text-lg">arrow_back_ios_new</span>
-                            </button>
-                            <button 
-                                onClick={() => scrollImageGallery('right')} 
-                                aria-label="Next image" 
-                                className="absolute top-1/2 right-0 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-110 translate-x-1/2"
-                            >
-                                <span className="material-symbols-outlined text-lg">arrow_forward_ios</span>
-                            </button>
-                        </>
+                      <>
+                        <button
+                          onClick={() => scrollImageGallery('left')}
+                          aria-label="Previous image"
+                          className="absolute top-1/2 left-0 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-110 -translate-x-1/2"
+                        >
+                          <span className="material-symbols-outlined text-lg">arrow_back_ios_new</span>
+                        </button>
+                        <button
+                          onClick={() => scrollImageGallery('right')}
+                          aria-label="Next image"
+                          className="absolute top-1/2 right-0 -translate-y-1/2 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-white/80 dark:bg-black/80 shadow-md opacity-0 group-hover:opacity-100 transition-all hover:scale-110 translate-x-1/2"
+                        >
+                          <span className="material-symbols-outlined text-lg">arrow_forward_ios</span>
+                        </button>
+                      </>
                     )}
                   </div>
                 </div>
@@ -388,13 +398,38 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                     </span>
                     <div className="flex items-baseline gap-2">
                       <p className="text-4xl lg:text-5xl font-bold text-text-light dark:text-text-dark font-display tracking-tight">
-                        ₹{product.price.toFixed(2)}
+                        ₹{(selectedVariant ? selectedVariant.price : product.price).toFixed(2)}
                       </p>
                       <span className="text-sm text-text-secondary-light dark:text-text-secondary-dark">
                         (Incl. of all taxes)
                       </span>
                     </div>
                   </div>
+                  
+                  {product.variants && product.variants.length > 0 && (
+                    <div className="mt-8">
+                      <h3 className="text-sm font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-3">Model / Variant</h3>
+                      <div className="flex flex-wrap gap-3">
+                        {product.variants.map((variant) => (
+                          <button
+                            key={variant.id}
+                            onClick={() => {
+                              setSelectedVariant(variant);
+                              setCurrentIndex(0); // Reset image gallery to first image of new variant
+                            }}
+                            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 border ${
+                              selectedVariant?.id === variant.id
+                                ? 'border-primary bg-primary text-white shadow-md'
+                                : 'border-border-light dark:border-border-dark text-text-light dark:text-text-dark hover:border-primary/50 hover:bg-black/5 dark:hover:bg-white/5'
+                            }`}
+                          >
+                            {variant.label}
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
                   <div className="mt-8 border-t border-border-light dark:border-border-dark pt-8">
                     <div className="flex items-center gap-6">
                       <label className="text-sm font-medium text-text-light dark:text-text-dark" htmlFor="quantity">Quantity</label>
@@ -429,12 +464,12 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                       <span className="material-symbols-outlined">shopping_cart</span>
                       Add to Cart
                     </button>
-                    <button 
-                      onClick={() => toggleWishlist(product.id)}
+                    <button
+                      onClick={() => toggleWishlist(currentProductId)}
                       aria-label={isProductWishlisted ? 'Remove from wishlist' : 'Add to wishlist'}
                       className="flex items-center justify-center h-12 w-12 rounded-lg border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors"
                     >
-                      <span 
+                      <span
                         className={`material-symbols-outlined ${isProductWishlisted ? 'text-red-500' : ''}`}
                         style={{ fontVariationSettings: `'FILL' ${isProductWishlisted ? 1 : 0}` }}
                       >
@@ -445,7 +480,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                   <div className="mt-12 border-t border-border-light dark:border-border-dark pt-8">
                     <h3 className="text-xl font-bold mb-6 text-text-light dark:text-text-dark uppercase tracking-wider">Specifications</h3>
                     <ul className="grid grid-cols-2 gap-x-8 gap-y-6">
-                      {product.specifications.map((spec, index) => (
+                      {(selectedVariant ? selectedVariant.specifications : product.specifications).map((spec, index) => (
                         <li key={index}>
                           <span className="block text-sm font-medium text-text-secondary-light dark:text-text-secondary-dark uppercase">{spec.label}</span>
                           <span className="block text-base font-semibold text-text-light dark:text-text-dark uppercase mt-1">{spec.value}</span>
@@ -462,12 +497,12 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                   <div className="flex justify-between items-center mb-8">
                     <h2 className="text-2xl font-bold text-text-light dark:text-text-dark font-display">You Might Also Like</h2>
                     <div className="flex gap-2">
-                        <button onClick={() => scrollCarousel('left')} aria-label="Scroll left" className="flex items-center justify-center h-10 w-10 rounded-full border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                            <span className="material-symbols-outlined">arrow_back</span>
-                        </button>
-                        <button onClick={() => scrollCarousel('right')} aria-label="Scroll right" className="flex items-center justify-center h-10 w-10 rounded-full border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
-                            <span className="material-symbols-outlined">arrow_forward</span>
-                        </button>
+                      <button onClick={() => scrollCarousel('left')} aria-label="Scroll left" className="flex items-center justify-center h-10 w-10 rounded-full border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                        <span className="material-symbols-outlined">arrow_back</span>
+                      </button>
+                      <button onClick={() => scrollCarousel('right')} aria-label="Scroll right" className="flex items-center justify-center h-10 w-10 rounded-full border border-border-light dark:border-border-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-black/5 dark:hover:bg-white/5 transition-colors">
+                        <span className="material-symbols-outlined">arrow_forward</span>
+                      </button>
                     </div>
                   </div>
                   <div ref={relatedProductsRef} className="flex overflow-x-auto gap-6 scrollbar-hide scroll-smooth">

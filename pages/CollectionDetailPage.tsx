@@ -36,6 +36,14 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, navigateTo, onQuickV
     onQuickView(product);
   };
 
+  const hasVariants = product.variants && product.variants.length > 0;
+  const minPrice = hasVariants ? Math.min(...product.variants!.map(v => v.price)) : product.price;
+  const maxPrice = hasVariants ? Math.max(...product.variants!.map(v => v.price)) : product.price;
+
+  const priceDisplay = hasVariants && minPrice !== maxPrice
+    ? `₹${minPrice.toFixed(0)} - ₹${maxPrice.toFixed(0)}`
+    : `₹${minPrice.toFixed(2)}`;
+
   return (
     <div
       onClick={() => navigateTo('product-overview', { productId: product.id })}
@@ -68,7 +76,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product, navigateTo, onQuickV
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="font-display text-2xl font-semibold mb-2 text-text-light dark:text-text-dark">{product.name}</h3>
         <p className="mb-2 text-text-secondary-light dark:text-text-secondary-dark flex-grow">{product.description}</p>
-        <p className="text-lg font-bold text-text-light dark:text-text-dark mb-4">₹{product.price.toFixed(2)}</p>
+        <p className="text-lg font-bold text-text-light dark:text-text-dark mb-4">{priceDisplay}</p>
         <div className="font-medium text-primary inline-flex items-center gap-2 mt-auto">
           View Product
           <span className="material-symbols-outlined transition-transform duration-300 group-hover:translate-x-1">arrow_forward</span>
@@ -140,7 +148,9 @@ const CollectionDetailPage: React.FC<CollectionDetailPageProps> = ({ navigateTo,
   ];
 
   // Get price range for the collection
-  const prices = products.map(p => p.price);
+  const prices = products.flatMap(p => 
+    p.variants && p.variants.length > 0 ? p.variants.map(v => v.price) : [p.price]
+  );
   const minPrice = Math.min(...prices);
   const maxPrice = Math.max(...prices);
 

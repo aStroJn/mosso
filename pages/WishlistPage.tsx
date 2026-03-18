@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { Page, Product } from '../types';
-import { PRODUCTS } from '../constants';
+import { resolveProduct } from '../constants';
 import Navbar from '../components/Navbar';
 import MobileMenu from '../components/MobileMenu';
 import Footer from '../components/Footer';
@@ -87,7 +87,7 @@ const WishlistPage: React.FC<WishlistPageProps> = ({ navigateTo, toggleTheme }) 
     };
   }, [isMobileMenuOpen]);
 
-  const wishlistedProducts = PRODUCTS.filter(product => wishlist.has(product.id));
+  const wishlistedProducts = Array.from(wishlist).map((id: number) => resolveProduct(id)).filter((p): p is Product => p !== undefined);
 
   const breadcrumbItems = [
     { label: 'Home', page: 'home' as Page },
