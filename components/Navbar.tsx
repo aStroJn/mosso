@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 import { Page, Collection } from '../types';
 import { COLLECTIONS, PRODUCT_STYLES } from '../constants';
 import ThemeToggle from './ThemeToggle';
@@ -45,6 +45,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
 
   const featuredCollections = useMemo(() => COLLECTIONS.filter(c => [1, 2, 7, 8].includes(c.id)), []);
   const [featuredIndex, setFeaturedIndex] = useState(0);
+  const [hoveredCollection, setHoveredCollection] = useState<Collection | null>(null);
 
   useEffect(() => {
     if (featuredCollections.length < 2) return;
@@ -56,7 +57,16 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
     return () => clearInterval(intervalId);
   }, [featuredCollections.length]);
 
-  const featuredCollection = featuredCollections[featuredIndex];
+  // Show hovered collection if available, otherwise fall back to auto-rotating featured
+  const previewCollection = hoveredCollection ?? featuredCollections[featuredIndex];
+
+  const handleCollectionHover = useCallback((collection: Collection) => {
+    setHoveredCollection(collection);
+  }, []);
+
+  const handleCollectionLeave = useCallback(() => {
+    setHoveredCollection(null);
+  }, []);
 
   return (
     <header className={`flex items-center justify-between whitespace-nowrap border-b border-solid ${borderColorClass} py-4 relative`}>
@@ -87,6 +97,8 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
                                 <a
                                   href="#"
                                   onClick={(e) => { e.preventDefault(); navigateTo('collection-detail', { collectionId: collection.id }); }}
+                                  onMouseEnter={() => handleCollectionHover(collection)}
+                                  onMouseLeave={handleCollectionLeave}
                                   className="text-sm text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light transition-colors"
                                 >
                                   {collection.name}
@@ -107,6 +119,8 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
                                 <a
                                   href="#"
                                   onClick={(e) => { e.preventDefault(); navigateTo('collection-detail', { collectionId: collection.id }); }}
+                                  onMouseEnter={() => handleCollectionHover(collection)}
+                                  onMouseLeave={handleCollectionLeave}
                                   className="text-sm text-text-light dark:text-text-dark hover:text-primary dark:hover:text-primary-light transition-colors"
                                 >
                                   {collection.name}
@@ -119,16 +133,16 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
                     </div>
                   </div>
                   <div className="col-span-1 bg-background-light dark:bg-background-dark p-4">
-                    {featuredCollection && (
+                    {previewCollection && (
                       <div
-                        key={featuredCollection.id}
+                        key={previewCollection.id}
                         className="bg-cover bg-center rounded-lg aspect-[4/5] w-full flex flex-col justify-end p-6 text-white h-full animate-fade-in"
-                        style={{ backgroundImage: `url('${featuredCollection.heroImageUrl}')` }}
+                        style={{ backgroundImage: `url('${previewCollection.heroImageUrl}')` }}
                       >
                         <div className="bg-black/50 p-4 rounded-md backdrop-blur-sm overflow-hidden">
-                          <h4 className="font-bold text-lg truncate">{featuredCollection.name}</h4>
-                          <p className="text-sm mt-1 mb-3 break-words min-h-[40px] whitespace-normal">{featuredCollection.tagline}</p>
-                          <button onClick={() => navigateTo('collection-detail', { collectionId: featuredCollection.id })} className="text-sm font-bold bg-white text-black px-4 py-2 rounded hover:bg-opacity-90 transition-colors">
+                          <h4 className="font-bold text-lg truncate">{previewCollection.name}</h4>
+                          <p className="text-sm mt-1 mb-3 break-words min-h-[40px] whitespace-normal">{previewCollection.tagline}</p>
+                          <button onClick={() => navigateTo('collection-detail', { collectionId: previewCollection.id })} className="text-sm font-bold bg-white text-black px-4 py-2 rounded hover:bg-opacity-90 transition-colors">
                             Explore Now
                           </button>
                         </div>

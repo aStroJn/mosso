@@ -271,7 +271,7 @@ export const COLLECTIONS: Collection[] = [
         id: 114,
         name: "Arya Wall Mixer",
         description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
-        imageUrl: "https://picsum.photos/seed/arya116/800/1000",
+        imageUrl: "products/arya/wallmixer/arya-wallmixer-one.webp",
         altText: "Arya Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
         price: 4330.00,
@@ -282,47 +282,50 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Wall-mounted, concealed" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya116g1/800/1000",
-          "https://picsum.photos/seed/arya116g2/800/1000"
+          "products/arya/wallmixer/arya-wallmixer-two.webp",
+          "products/arya/wallmixer/arya-wallmixer-three.webp",
+          "products/arya/wallmixer/arya-wallmixer-four.webp"
         ],
         variants: [
           {
             id: 114,
             label: "W/O Band",
             price: 4330.00,
-            imageUrl: "https://picsum.photos/seed/arya116/800/1000",
+            imageUrl: "products/arya/wallmixer/arya-wallmixer-one.webp",
             altText: "Arya Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/arya116g1/800/1000",
-          "https://picsum.photos/seed/arya116g2/800/1000"
-        ],
+              "products/arya/wallmixer/arya-wallmixer-two.webp",
+              "products/arya/wallmixer/arya-wallmixer-three.webp",
+              "products/arya/wallmixer/arya-wallmixer-four.webp"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 115,
             label: "W/ Band",
             price: 4520.00,
-            imageUrl: "https://picsum.photos/seed/arya117/800/1000",
+            imageUrl: "products/arya/wallmixer/arya-wallmixer-one.webp",
             altText: "Arya Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/arya117g1/800/1000",
-          "https://picsum.photos/seed/arya117g2/800/1000"
-        ],
+              "products/arya/wallmixer/arya-wallmixer-two.webp",
+              "products/arya/wallmixer/arya-wallmixer-three.webp",
+              "products/arya/wallmixer/arya-wallmixer-four.webp"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 2,
@@ -472,7 +475,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/flora208/800/1000",
         altText: "Flora Concealed 1/2 inch stop cock for plumbing",
         style: "Natural",
-        price: 50.00,
+        price: 120.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -644,15 +647,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/flora216/800/1000",
             altText: "Flora Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/flora216g1/800/1000",
-          "https://picsum.photos/seed/flora216g2/800/1000"
-        ],
+              "https://picsum.photos/seed/flora216g1/800/1000",
+              "https://picsum.photos/seed/flora216g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 217,
@@ -661,19 +664,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/flora217/800/1000",
             altText: "Flora Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/flora217g1/800/1000",
-          "https://picsum.photos/seed/flora217g2/800/1000"
-        ],
+              "https://picsum.photos/seed/flora217g1/800/1000",
+              "https://picsum.photos/seed/flora217g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 3,
@@ -995,15 +998,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/fusion316/800/1000",
             altText: "Fusion Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/fusion316g1/800/1000",
-          "https://picsum.photos/seed/fusion316g2/800/1000"
-        ],
+              "https://picsum.photos/seed/fusion316g1/800/1000",
+              "https://picsum.photos/seed/fusion316g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 317,
@@ -1012,19 +1015,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/fusion317/800/1000",
             altText: "Fusion Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/fusion317g1/800/1000",
-          "https://picsum.photos/seed/fusion317g2/800/1000"
-        ],
+              "https://picsum.photos/seed/fusion317g1/800/1000",
+              "https://picsum.photos/seed/fusion317g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 4,
@@ -1346,15 +1349,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/rozzer416/800/1000",
             altText: "Rozzer Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/rozzer416g1/800/1000",
-          "https://picsum.photos/seed/rozzer416g2/800/1000"
-        ],
+              "https://picsum.photos/seed/rozzer416g1/800/1000",
+              "https://picsum.photos/seed/rozzer416g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 417,
@@ -1363,19 +1366,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/rozzer417/800/1000",
             altText: "Rozzer Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/rozzer417g1/800/1000",
-          "https://picsum.photos/seed/rozzer417g2/800/1000"
-        ],
+              "https://picsum.photos/seed/rozzer417g1/800/1000",
+              "https://picsum.photos/seed/rozzer417g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 5,
@@ -1697,15 +1700,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/prime516/800/1000",
             altText: "Prime Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/prime516g1/800/1000",
-          "https://picsum.photos/seed/prime516g2/800/1000"
-        ],
+              "https://picsum.photos/seed/prime516g1/800/1000",
+              "https://picsum.photos/seed/prime516g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 517,
@@ -1714,19 +1717,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/prime517/800/1000",
             altText: "Prime Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/prime517g1/800/1000",
-          "https://picsum.photos/seed/prime517g2/800/1000"
-        ],
+              "https://picsum.photos/seed/prime517g1/800/1000",
+              "https://picsum.photos/seed/prime517g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 6,
@@ -2048,15 +2051,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/solo616/800/1000",
             altText: "Solo Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/solo616g1/800/1000",
-          "https://picsum.photos/seed/solo616g2/800/1000"
-        ],
+              "https://picsum.photos/seed/solo616g1/800/1000",
+              "https://picsum.photos/seed/solo616g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 617,
@@ -2065,19 +2068,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/solo617/800/1000",
             altText: "Solo Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/solo617g1/800/1000",
-          "https://picsum.photos/seed/solo617g2/800/1000"
-        ],
+              "https://picsum.photos/seed/solo617g1/800/1000",
+              "https://picsum.photos/seed/solo617g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 7,
@@ -2399,15 +2402,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/soft716/800/1000",
             altText: "Soft Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/soft716g1/800/1000",
-          "https://picsum.photos/seed/soft716g2/800/1000"
-        ],
+              "https://picsum.photos/seed/soft716g1/800/1000",
+              "https://picsum.photos/seed/soft716g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 717,
@@ -2416,19 +2419,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/soft717/800/1000",
             altText: "Soft Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/soft717g1/800/1000",
-          "https://picsum.photos/seed/soft717g2/800/1000"
-        ],
+              "https://picsum.photos/seed/soft717g1/800/1000",
+              "https://picsum.photos/seed/soft717g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 8,
@@ -2750,15 +2753,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/donald816/800/1000",
             altText: "Donald Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/donald816g1/800/1000",
-          "https://picsum.photos/seed/donald816g2/800/1000"
-        ],
+              "https://picsum.photos/seed/donald816g1/800/1000",
+              "https://picsum.photos/seed/donald816g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 817,
@@ -2767,19 +2770,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/donald817/800/1000",
             altText: "Donald Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/donald817g1/800/1000",
-          "https://picsum.photos/seed/donald817g2/800/1000"
-        ],
+              "https://picsum.photos/seed/donald817g1/800/1000",
+              "https://picsum.photos/seed/donald817g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 9,
@@ -3101,15 +3104,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/spark916/800/1000",
             altText: "Spark Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/spark916g1/800/1000",
-          "https://picsum.photos/seed/spark916g2/800/1000"
-        ],
+              "https://picsum.photos/seed/spark916g1/800/1000",
+              "https://picsum.photos/seed/spark916g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 917,
@@ -3118,19 +3121,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/spark917/800/1000",
             altText: "Spark Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/spark917g1/800/1000",
-          "https://picsum.photos/seed/spark917g2/800/1000"
-        ],
+              "https://picsum.photos/seed/spark917g1/800/1000",
+              "https://picsum.photos/seed/spark917g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 10,
@@ -3452,15 +3455,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/euro1016/800/1000",
             altText: "Euro Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/euro1016g1/800/1000",
-          "https://picsum.photos/seed/euro1016g2/800/1000"
-        ],
+              "https://picsum.photos/seed/euro1016g1/800/1000",
+              "https://picsum.photos/seed/euro1016g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 1017,
@@ -3469,19 +3472,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/euro1017/800/1000",
             altText: "Euro Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/euro1017g1/800/1000",
-          "https://picsum.photos/seed/euro1017g2/800/1000"
-        ],
+              "https://picsum.photos/seed/euro1017g1/800/1000",
+              "https://picsum.photos/seed/euro1017g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 11,
@@ -3803,15 +3806,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/ornamix1116/800/1000",
             altText: "Ornamix Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/ornamix1116g1/800/1000",
-          "https://picsum.photos/seed/ornamix1116g2/800/1000"
-        ],
+              "https://picsum.photos/seed/ornamix1116g1/800/1000",
+              "https://picsum.photos/seed/ornamix1116g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 1117,
@@ -3820,19 +3823,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/ornamix1117/800/1000",
             altText: "Ornamix Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/ornamix1117g1/800/1000",
-          "https://picsum.photos/seed/ornamix1117g2/800/1000"
-        ],
+              "https://picsum.photos/seed/ornamix1117g1/800/1000",
+              "https://picsum.photos/seed/ornamix1117g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 12,
@@ -4154,15 +4157,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/mflora1216/800/1000",
             altText: "M-Flora Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/mflora1216g1/800/1000",
-          "https://picsum.photos/seed/mflora1216g2/800/1000"
-        ],
+              "https://picsum.photos/seed/mflora1216g1/800/1000",
+              "https://picsum.photos/seed/mflora1216g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 1217,
@@ -4171,19 +4174,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/mflora1217/800/1000",
             altText: "M-Flora Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/mflora1217g1/800/1000",
-          "https://picsum.photos/seed/mflora1217g2/800/1000"
-        ],
+              "https://picsum.photos/seed/mflora1217g1/800/1000",
+              "https://picsum.photos/seed/mflora1217g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 13,
@@ -4505,15 +4508,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/vignette1316/800/1000",
             altText: "Vignette Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/vignette1316g1/800/1000",
-          "https://picsum.photos/seed/vignette1316g2/800/1000"
-        ],
+              "https://picsum.photos/seed/vignette1316g1/800/1000",
+              "https://picsum.photos/seed/vignette1316g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 1317,
@@ -4522,19 +4525,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/vignette1317/800/1000",
             altText: "Vignette Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/vignette1317g1/800/1000",
-          "https://picsum.photos/seed/vignette1317g2/800/1000"
-        ],
+              "https://picsum.photos/seed/vignette1317g1/800/1000",
+              "https://picsum.photos/seed/vignette1317g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 14,
@@ -4856,15 +4859,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/opel1416/800/1000",
             altText: "Opel Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/opel1416g1/800/1000",
-          "https://picsum.photos/seed/opel1416g2/800/1000"
-        ],
+              "https://picsum.photos/seed/opel1416g1/800/1000",
+              "https://picsum.photos/seed/opel1416g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 1417,
@@ -4873,19 +4876,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/opel1417/800/1000",
             altText: "Opel Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/opel1417g1/800/1000",
-          "https://picsum.photos/seed/opel1417g2/800/1000"
-        ],
+              "https://picsum.photos/seed/opel1417g1/800/1000",
+              "https://picsum.photos/seed/opel1417g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
   {
     id: 15,
@@ -5207,15 +5210,15 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/croma1516/800/1000",
             altText: "Croma Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/croma1516g1/800/1000",
-          "https://picsum.photos/seed/croma1516g2/800/1000"
-        ],
+              "https://picsum.photos/seed/croma1516g1/800/1000",
+              "https://picsum.photos/seed/croma1516g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           },
           {
             id: 1517,
@@ -5224,19 +5227,19 @@ export const COLLECTIONS: Collection[] = [
             imageUrl: "https://picsum.photos/seed/croma1517/800/1000",
             altText: "Croma Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
-          "https://picsum.photos/seed/croma1517g1/800/1000",
-          "https://picsum.photos/seed/croma1517g2/800/1000"
-        ],
+              "https://picsum.photos/seed/croma1517g1/800/1000",
+              "https://picsum.photos/seed/croma1517g2/800/1000"
+            ],
             specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 6.5\" W" },
-          { label: "Flow Rate", value: "2.0 GPM" },
-          { label: "Installation", value: "Wall-mounted, concealed" }
-        ]
+              { label: "Material", value: "Polished Chrome" },
+              { label: "Dimensions", value: "6\" H x 6.5\" W" },
+              { label: "Flow Rate", value: "2.0 GPM" },
+              { label: "Installation", value: "Wall-mounted, concealed" }
+            ]
           }
         ]
       },
-      ]
+    ]
   },
 ];
 
