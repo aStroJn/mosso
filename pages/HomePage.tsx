@@ -157,33 +157,39 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo, toggleTheme }) => {
 
           {/* New Technology Section */}
           <AnimatedSection>
-            <section className="py-20 sm:py-28 bg-secondary-background-light dark:bg-secondary-background-dark">
-              <div className="container mx-auto px-4">
+            <section className="relative py-20 sm:py-28 overflow-hidden">
+              {/* Background Image & Overlay */}
+              <div className="absolute inset-0 z-0">
+                <img src="/home/technology-bg.png" alt="Technology Background" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-black/70 backdrop-blur-[2px]"></div>
+              </div>
+
+              <div className="container mx-auto px-4 relative z-10 text-white">
                 <div className="text-center mb-16 max-w-3xl mx-auto">
-                  <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 text-text-light dark:text-text-dark">The Technology Behind the Style</h2>
-                  <p className="text-lg text-text-secondary-light dark:text-text-secondary-dark">Our commitment to excellence is forged in precision engineering and rigorous quality standards.</p>
+                  <h2 className="font-display text-4xl sm:text-5xl md:text-6xl font-semibold mb-4 text-white">The Technology Behind the Style</h2>
+                  <p className="text-lg text-white/80">Our commitment to excellence is forged in precision engineering and rigorous quality standards.</p>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
                   <div className="flex flex-col items-center group">
-                    <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/10 rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110">
-                      <span className="material-symbols-outlined text-primary text-4xl">precision_manufacturing</span>
+                    <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/20 rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110">
+                      <span className="material-symbols-outlined text-primary-light text-4xl">precision_manufacturing</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-text-light dark:text-text-dark">Advanced Manufacturing</h3>
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark">Utilizing state-of-the-art machinery and techniques to ensure every piece is crafted to perfection with flawless finishes.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">Advanced Manufacturing</h3>
+                    <p className="text-white/70">Utilizing state-of-the-art machinery and techniques to ensure every piece is crafted to perfection with flawless finishes.</p>
                   </div>
                   <div className="flex flex-col items-center group">
-                    <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/10 rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110">
-                      <span className="material-symbols-outlined text-primary text-4xl">task_alt</span>
+                    <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/20 rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110">
+                      <span className="material-symbols-outlined text-primary-light text-4xl">task_alt</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-text-light dark:text-text-dark">Strict Quality Checks</h3>
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark">Each product undergoes a multi-point inspection process, from material sourcing to final assembly, guaranteeing reliability.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">Strict Quality Checks</h3>
+                    <p className="text-white/70">Each product undergoes a multi-point inspection process, from material sourcing to final assembly, guaranteeing reliability.</p>
                   </div>
                   <div className="flex flex-col items-center group">
-                    <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/10 rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110">
-                      <span className="material-symbols-outlined text-primary text-4xl">workspace_premium</span>
+                    <div className="w-20 h-20 mb-6 flex items-center justify-center bg-primary/20 rounded-full transition-transform duration-300 ease-in-out group-hover:scale-110">
+                      <span className="material-symbols-outlined text-primary-light text-4xl">workspace_premium</span>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2 text-text-light dark:text-text-dark">Unbeatable Value</h3>
-                    <p className="text-text-secondary-light dark:text-text-secondary-dark">By combining superior craftsmanship with efficient processes, we deliver luxury that endures, providing exceptional value.</p>
+                    <h3 className="text-xl font-semibold mb-2 text-white">Unbeatable Value</h3>
+                    <p className="text-white/70">By combining superior craftsmanship with efficient processes, we deliver luxury that endures, providing exceptional value.</p>
                   </div>
                 </div>
               </div>
@@ -207,7 +213,7 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo, toggleTheme }) => {
                     <p className="mb-10 max-w-2xl mx-auto text-white/80 text-lg">Begin your journey with MOSSO today. Our experts are ready to assist you in creating the bathroom of your dreams.</p>
 
                     <div className="flex flex-col lg:flex-row items-center justify-center gap-4 lg:gap-6 w-full max-w-3xl mx-auto">
-                      <button className="bg-primary text-white px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-primary/30 w-full sm:w-auto shrink-0">
+                      <button onClick={() => window.open('https://wa.me/918076889423?text=Hi%2C%20I%E2%80%99m%20interested%20in%20placing%20an%20orders.', '_blank')} className="bg-primary text-white px-8 py-4 rounded-lg text-base font-medium hover:opacity-90 transition-all shadow-lg hover:shadow-primary/30 w-full sm:w-auto shrink-0">
                         REQUEST A FREE CONSULTATION
                       </button>
 
@@ -217,10 +223,11 @@ const HomePage: React.FC<HomePageProps> = ({ navigateTo, toggleTheme }) => {
                         <div className="h-px w-16 sm:w-24 lg:w-12 bg-white/30"></div>
                       </div>
 
-                      <button className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-lg text-base font-medium hover:bg-white/20 transition-all backdrop-blur-md w-full sm:w-auto shrink-0">
+                      <button onClick={() => window.open('https://drive.google.com/file/d/1S52nIXs6gBIQH3G0AElWuRutJzg-UmuZ/view?usp=drivesdk', '_blank')} className="bg-white/10 text-white border border-white/20 px-8 py-4 rounded-lg text-base font-medium hover:bg-white/20 transition-all backdrop-blur-md w-full sm:w-auto shrink-0">
                         DOWNLOAD CATALOGUE
                       </button>
                     </div>
+
                   </div>
                 </div>
               </div>

@@ -51,7 +51,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
   const relatedProductsRef = useRef<HTMLDivElement>(null);
   const imageGalleryRef = useRef<HTMLDivElement>(null);
   const thumbnailRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const [parallaxOffset, setParallaxOffset] = useState(0);
+
   const imageContainerRef = useRef<HTMLDivElement>(null);
   const isInitialMount = useRef(true);
 
@@ -126,29 +126,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
     };
   }, [isMobileMenuOpen]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (imageContainerRef.current) {
-        const rect = imageContainerRef.current.getBoundingClientRect();
-        const speed = 0.1; // Keep it subtle
 
-        // Only calculate when in viewport
-        if (rect.top < window.innerHeight && rect.bottom > 0) {
-          const elementCenter = rect.top + rect.height / 2;
-          const viewportCenter = window.innerHeight / 2;
-          const offset = (elementCenter - viewportCenter) * speed;
-          setParallaxOffset(offset);
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    handleScroll(); // Set initial position
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
 
   // Handle wheel zoom
   useEffect(() => {
@@ -313,7 +291,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                                 backgroundSize: isCurrent && isHovering && isLargeScreen ? `${zoomLevel * 100}%` : 'cover',
                                 backgroundPosition: isCurrent && isHovering && isLargeScreen ? `${mousePosition.x}% ${mousePosition.y}%` : 'center center',
                                 // Disable parallax and scale transition when hovering to give user control
-                                transform: `scale(1.2) translateY(${isCurrent && isHovering && isLargeScreen ? 0 : parallaxOffset}px)`,
+                                transform: isCurrent && isHovering && isLargeScreen ? 'scale(1.0)' : 'scale(1.0)',
                                 transition: isCurrent && isHovering && isLargeScreen
                                   ? 'background-size 0.2s ease, background-position 0.1s ease' // Faster transition for zoom
                                   : 'background-size 0.3s ease, background-position 0.3s ease, transform 0.5s ease-out',

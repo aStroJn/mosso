@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Page, Product } from '../types';
+import { Page, Product, ProductVariant } from '../types';
 import { useWishlist } from '../hooks/useWishlist';
 import { useCart } from '../hooks/useCart';
 
@@ -11,7 +11,12 @@ interface QuickViewModalProps {
 
 const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose, navigateTo }) => {
   const [quantity, setQuantity] = useState(1);
-  const [selectedImage, setSelectedImage] = useState(product.imageUrl);
+  const [selectedVariant, setSelectedVariant] = useState<ProductVariant | null>(
+    product.variants && product.variants.length > 0 ? product.variants[0] : null
+  );
+  const [selectedImage, setSelectedImage] = useState(
+    product.variants && product.variants.length > 0 ? product.variants[0].imageUrl : product.imageUrl
+  );
   const { isWishlisted, toggleWishlist } = useWishlist();
   const { addToCart } = useCart();
   const [isClosing, setIsClosing] = useState(false);
@@ -36,7 +41,7 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose, navig
   };
 
   const handleAddToCart = () => {
-    addToCart(product.id, quantity);
+    addToCart(selectedVariant ? selectedVariant.id : product.id, quantity);
   };
   
   const handleViewFullDetails = () => {
@@ -44,8 +49,9 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose, navig
     handleClose();
   }
 
-  const allProductImages = [product.imageUrl, ...product.galleryImages];
-  const isProductWishlisted = isWishlisted(product.id);
+  const source = selectedVariant || product;
+  const allProductImages = [source.imageUrl, ...source.galleryImages];
+  const isProductWishlisted = isWishlisted(selectedVariant ? selectedVariant.id : product.id);
 
   const animationClass = isClosing ? 'opacity-0' : 'opacity-100';
   const panelAnimationClass = isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100';
@@ -86,8 +92,32 @@ const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose, navig
           {/* Product Details */}
           <div className="flex flex-col">
             <h2 id="quick-view-title" className="text-3xl font-bold text-text-light dark:text-text-dark font-display">{product.name}</h2>
-            <p className="mt-2 text-text-secondary-light dark:text-text-secondary-dark">{product.description}</p>
-            <p className="text-2xl font-bold text-text-light dark:text-text-dark mt-4">₹{product.price.toFixed(2)}</p>
+            <p className="mt-2 text-text-secondary-light dark:text-text-secondary-dark">{selectedVariant ? selectedVariant.altText : product.description}</p>
+            <p className="text-2xl font-bold text-text-light dark:text-text-dark mt-4">₹{(selectedVariant ? selectedVariant.price : product.price).toFixed(2)}</p>
+
+            {product.variants && product.variants.length > 0 && (
+              <div className="mt-6">
+                <h3 className="text-sm font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-3">Model / Variant</h3>
+                <div className="flex flex-wrap gap-2 text-text-light dark:text-text-dark">
+                  {product.variants.map((variant) => (
+                    <button
+                      key={variant.id}
+                      onClick={() => {
+                        setSelectedVariant(variant);
+                        setSelectedImage(variant.imageUrl);
+                      }}
+                      className={`px-4 py-2 rounded-full text-xs font-medium transition-all duration-200 border ${
+                        selectedVariant?.id === variant.id
+                          ? 'border-primary bg-primary text-white shadow-md'
+                          : 'border-border-light dark:border-border-dark hover:border-primary/50 hover:bg-black/5 dark:hover:bg-white/5'
+                      }`}
+                    >
+                      {variant.label}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
             
             <div className="mt-6 border-t border-border-light dark:border-border-dark pt-6">
               <div className="flex items-center gap-4">

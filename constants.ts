@@ -53,25 +53,25 @@ export const COLLECTIONS: Collection[] = [
           "products/arya/longbody/arya-longbody-four.webp"
         ]
       },
-      {
-        id: 103,
-        name: "Arya Angle Cock",
-        description: "A precision-engineered angle cock for controlling water flow to fixtures, featuring a durable ceramic disc for drip-free performance.",
-        imageUrl: "https://picsum.photos/seed/arya103/800/1000",
-        altText: "Arya Angle Cock - polished chrome angle valve",
-        style: "Minimalist",
-        price: 750.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "3\" H x 2.5\" W" },
-          { label: "Flow Rate", value: "1.0 GPM" },
-          { label: "Installation", value: "Wall-mounted" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya103g1/800/1000",
-          "https://picsum.photos/seed/arya103g2/800/1000"
-        ]
-      },
+      // {
+      //   id: 103,
+      //   name: "Arya Angle Cock",
+      //   description: "A precision-engineered angle cock for controlling water flow to fixtures, featuring a durable ceramic disc for drip-free performance.",
+      //   imageUrl: "https://picsum.photos/seed/arya103/800/1000",
+      //   altText: "Arya Angle Cock - polished chrome angle valve",
+      //   style: "Minimalist",
+      //   price: 750.00,
+      //   specifications: [
+      //     { label: "Material", value: "Polished Chrome" },
+      //     { label: "Dimensions", value: "3\" H x 2.5\" W" },
+      //     { label: "Flow Rate", value: "1.0 GPM" },
+      //     { label: "Installation", value: "Wall-mounted" }
+      //   ],
+      //   galleryImages: [
+      //     "https://picsum.photos/seed/arya103g1/800/1000",
+      //     "https://picsum.photos/seed/arya103g2/800/1000"
+      //   ]
+      // },
       {
         id: 104,
         name: "Arya Pillar Cock",
@@ -193,7 +193,7 @@ export const COLLECTIONS: Collection[] = [
         id: 110,
         name: "Arya 2IN1 BIB COCK",
         description: "An innovative bib cock with an integrated outlet for a washing machine or hose, combining two functions in one sleek unit.",
-        imageUrl: "https://picsum.photos/seed/arya112/800/1000",
+        imageUrl: "products/arya/2in1bibcock/arya-2in1bibcock-one.webp",
         altText: "Arya 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Minimalist",
         price: 1610.00,
@@ -204,29 +204,30 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Wall-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/arya112g1/800/1000",
-          "https://picsum.photos/seed/arya112g2/800/1000"
+          "products/arya/2in1bibcock/arya-2in1bibcock-two.webp",
+          "products/arya/2in1bibcock/arya-2in1bibcock-three.webp",
+          "products/arya/2in1bibcock/arya-2in1bibcock-four.webp"
         ]
       },
-      {
-        id: 111,
-        name: "Arya 2IN1 ANGLE COCK",
-        description: "A space-saving angle cock with a secondary outlet, perfect for connecting a washing machine or dishwasher directly.",
-        imageUrl: "https://picsum.photos/seed/arya113/800/1000",
-        altText: "Arya 2in1 Angle Cock - angle valve with washing machine outlet",
-        style: "Minimalist",
-        price: 1510.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "4\" H x 3.5\" W" },
-          { label: "Flow Rate", value: "1.0 GPM" },
-          { label: "Installation", value: "Wall-mounted" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/arya113g1/800/1000",
-          "https://picsum.photos/seed/arya113g2/800/1000"
-        ]
-      },
+      // {
+      //   id: 111,
+      //   name: "Arya 2IN1 ANGLE COCK",
+      //   description: "A space-saving angle cock with a secondary outlet, perfect for connecting a washing machine or dishwasher directly.",
+      //   imageUrl: "https://picsum.photos/seed/arya113/800/1000",
+      //   altText: "Arya 2in1 Angle Cock - angle valve with washing machine outlet",
+      //   style: "Minimalist",
+      //   price: 1510.00,
+      //   specifications: [
+      //     { label: "Material", value: "Polished Chrome" },
+      //     { label: "Dimensions", value: "4\" H x 3.5\" W" },
+      //     { label: "Flow Rate", value: "1.0 GPM" },
+      //     { label: "Installation", value: "Wall-mounted" }
+      //   ],
+      //   galleryImages: [
+      //     "https://picsum.photos/seed/arya113g1/800/1000",
+      //     "https://picsum.photos/seed/arya113g2/800/1000"
+      //   ]
+      // },
       {
         id: 112,
         name: "Arya Centre Hole",
