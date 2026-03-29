@@ -53,14 +53,16 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
     if (hoverTimeout) clearTimeout(hoverTimeout);
     const timeout = setTimeout(() => {
       setIsProductsOpen(true);
-    }, 300);
+    }, 150);
     setHoverTimeout(timeout);
   }, [hoverTimeout]);
 
   const handleProductsLeave = useCallback(() => {
     if (hoverTimeout) clearTimeout(hoverTimeout);
-    setHoverTimeout(null);
-    setIsProductsOpen(false);
+    const timeout = setTimeout(() => {
+      setIsProductsOpen(false);
+    }, 200);
+    setHoverTimeout(timeout);
   }, [hoverTimeout]);
 
   useEffect(() => {
@@ -102,7 +104,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
               Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}>expand_more</span>
             </a>
 
-            <div className={`absolute top-[80%] right-0 w-[calc(100vw-2rem)] md:w-[46rem] lg:w-[60rem] xl:w-[64rem] max-w-full z-30 pt-4 ${isProductsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'} transition-all duration-300 text-left`}>
+            <div className={`absolute top-full right-0 w-[calc(100vw-2rem)] md:w-[46rem] lg:w-[60rem] xl:w-[64rem] max-w-full z-30 pt-4 ${isProductsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'} transition-all duration-300 text-left`}>
               <div className="bg-secondary-background-light dark:bg-secondary-background-dark shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10 whitespace-normal">
                 <div className="grid grid-cols-3">
                   <div className="col-span-2 flex gap-12 p-8">

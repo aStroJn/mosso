@@ -53,25 +53,25 @@ export const COLLECTIONS: Collection[] = [
           "products/arya/longbody/arya-longbody-four.webp"
         ]
       },
-      // {
-      //   id: 103,
-      //   name: "Arya Angle Cock",
-      //   description: "A precision-engineered angle cock for controlling water flow to fixtures, featuring a durable ceramic disc for drip-free performance.",
-      //   imageUrl: "https://picsum.photos/seed/arya103/800/1000",
-      //   altText: "Arya Angle Cock - polished chrome angle valve",
-      //   style: "Minimalist",
-      //   price: 750.00,
-      //   specifications: [
-      //     { label: "Material", value: "Polished Chrome" },
-      //     { label: "Dimensions", value: "3\" H x 2.5\" W" },
-      //     { label: "Flow Rate", value: "1.0 GPM" },
-      //     { label: "Installation", value: "Wall-mounted" }
-      //   ],
-      //   galleryImages: [
-      //     "https://picsum.photos/seed/arya103g1/800/1000",
-      //     "https://picsum.photos/seed/arya103g2/800/1000"
-      //   ]
-      // },
+      {
+        id: 103,
+        name: "Arya Angle Cock",
+        description: "A precision-engineered angle cock for controlling water flow to fixtures, featuring a durable ceramic disc for drip-free performance.",
+        imageUrl: "https://picsum.photos/seed/arya103/800/1000",
+        altText: "Arya Angle Cock - polished chrome angle valve",
+        style: "Minimalist",
+        price: 750.00,
+        specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "3\" H x 2.5\" W" },
+          { label: "Flow Rate", value: "1.0 GPM" },
+          { label: "Installation", value: "Wall-mounted" }
+        ],
+        galleryImages: [
+          "https://picsum.photos/seed/arya103g1/800/1000",
+          "https://picsum.photos/seed/arya103g2/800/1000"
+        ]
+      },
       {
         id: 104,
         name: "Arya Pillar Cock",
@@ -92,63 +92,63 @@ export const COLLECTIONS: Collection[] = [
           "products/arya/pillarcock/arya-pillarcock-one.webp"
         ]
       },
-      // {
-      //   id: 105,
-      //   name: "Arya Pillar Cock (High Neck)",
-      //   description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
-      //   imageUrl: "https://picsum.photos/seed/arya107/800/1000",
-      //   altText: "Arya Pillar Cock - chrome faucet without nickel base",
-      //   style: "Minimalist",
-      //   price: 1045.00,
-      //   specifications: [
-      //     { label: "Material", value: "Polished Chrome (No Nickel)" },
-      //     { label: "Dimensions", value: "5\" H x 2\" W" },
-      //     { label: "Flow Rate", value: "1.2 GPM" },
-      //     { label: "Installation", value: "Deck-mounted, two-hole" }
-      //   ],
-      //   galleryImages: [
-      //     "https://picsum.photos/seed/arya107g1/800/1000",
-      //     "https://picsum.photos/seed/arya107g2/800/1000"
-      //   ]
-      // },
-      // {
-      //   id: 106,
-      //   name: "Arya Concealed 1/2",
-      //   description: "A 1/2-inch concealed body stop cock for under-sink installation, providing reliable water control while remaining hidden from view.",
-      //   imageUrl: "https://picsum.photos/seed/arya108/800/1000",
-      //   altText: "Arya Concealed 1/2 inch stop cock for plumbing",
-      //   style: "Minimalist",
-      //   price: 1350.00,
-      //   specifications: [
-      //     { label: "Material", value: "Polished Chrome" },
-      //     { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
-      //     { label: "Connection Size", value: "1/2 inch" },
-      //     { label: "Installation", value: "In-line, Concealed" }
-      //   ],
-      //   galleryImages: [
-      //     "https://picsum.photos/seed/arya108g1/800/1000",
-      //     "https://picsum.photos/seed/arya108g2/800/1000"
-      //   ]
-      // },
-      // {
-      //   id: 107,
-      //   name: "Arya Concealed 3/4",
-      //   description: "A heavy-duty 3/4-inch concealed stop cock designed for higher flow applications, ensuring durable and hidden water line control.",
-      //   imageUrl: "https://picsum.photos/seed/arya109/800/1000",
-      //   altText: "Arya Concealed 3/4 inch stop cock for main water lines",
-      //   style: "Minimalist",
-      //   price: 1350.00,
-      //   specifications: [
-      //     { label: "Material", value: "Polished Chrome" },
-      //     { label: "Dimensions", value: "3\" H x 3\" W" },
-      //     { label: "Connection Size", value: "3/4 inch" },
-      //     { label: "Installation", value: "In-line, Concealed" }
-      //   ],
-      //   galleryImages: [
-      //     "https://picsum.photos/seed/arya109g1/800/1000",
-      //     "https://picsum.photos/seed/arya109g2/800/1000"
-      //   ]
-      // },
+      {
+        id: 105,
+        name: "Arya Pillar Cock (High Neck)",
+        description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
+        imageUrl: "https://picsum.photos/seed/arya107/800/1000",
+        altText: "Arya Pillar Cock - chrome faucet without nickel base",
+        style: "Minimalist",
+        price: 1045.00,
+        specifications: [
+          { label: "Material", value: "Polished Chrome (No Nickel)" },
+          { label: "Dimensions", value: "5\" H x 2\" W" },
+          { label: "Flow Rate", value: "1.2 GPM" },
+          { label: "Installation", value: "Deck-mounted, two-hole" }
+        ],
+        galleryImages: [
+          "https://picsum.photos/seed/arya107g1/800/1000",
+          "https://picsum.photos/seed/arya107g2/800/1000"
+        ]
+      },
+      {
+        id: 106,
+        name: "Arya Concealed 1/2",
+        description: "A 1/2-inch concealed body stop cock for under-sink installation, providing reliable water control while remaining hidden from view.",
+        imageUrl: "https://picsum.photos/seed/arya108/800/1000",
+        altText: "Arya Concealed 1/2 inch stop cock for plumbing",
+        style: "Minimalist",
+        price: 1350.00,
+        specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
+          { label: "Connection Size", value: "1/2 inch" },
+          { label: "Installation", value: "In-line, Concealed" }
+        ],
+        galleryImages: [
+          "https://picsum.photos/seed/arya108g1/800/1000",
+          "https://picsum.photos/seed/arya108g2/800/1000"
+        ]
+      },
+      {
+        id: 107,
+        name: "Arya Concealed 3/4",
+        description: "A heavy-duty 3/4-inch concealed stop cock designed for higher flow applications, ensuring durable and hidden water line control.",
+        imageUrl: "https://picsum.photos/seed/arya109/800/1000",
+        altText: "Arya Concealed 3/4 inch stop cock for main water lines",
+        style: "Minimalist",
+        price: 1350.00,
+        specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "3\" H x 3\" W" },
+          { label: "Connection Size", value: "3/4 inch" },
+          { label: "Installation", value: "In-line, Concealed" }
+        ],
+        galleryImages: [
+          "https://picsum.photos/seed/arya109g1/800/1000",
+          "https://picsum.photos/seed/arya109g2/800/1000"
+        ]
+      },
       {
         id: 108,
         name: "Arya Sink Cock",
@@ -209,25 +209,25 @@ export const COLLECTIONS: Collection[] = [
           "products/arya/2in1bibcock/arya-2in1bibcock-four.webp"
         ]
       },
-      // {
-      //   id: 111,
-      //   name: "Arya 2IN1 ANGLE COCK",
-      //   description: "A space-saving angle cock with a secondary outlet, perfect for connecting a washing machine or dishwasher directly.",
-      //   imageUrl: "https://picsum.photos/seed/arya113/800/1000",
-      //   altText: "Arya 2in1 Angle Cock - angle valve with washing machine outlet",
-      //   style: "Minimalist",
-      //   price: 1510.00,
-      //   specifications: [
-      //     { label: "Material", value: "Polished Chrome" },
-      //     { label: "Dimensions", value: "4\" H x 3.5\" W" },
-      //     { label: "Flow Rate", value: "1.0 GPM" },
-      //     { label: "Installation", value: "Wall-mounted" }
-      //   ],
-      //   galleryImages: [
-      //     "https://picsum.photos/seed/arya113g1/800/1000",
-      //     "https://picsum.photos/seed/arya113g2/800/1000"
-      //   ]
-      // },
+      {
+        id: 111,
+        name: "Arya 2IN1 ANGLE COCK",
+        description: "A space-saving angle cock with a secondary outlet, perfect for connecting a washing machine or dishwasher directly.",
+        imageUrl: "https://picsum.photos/seed/arya113/800/1000",
+        altText: "Arya 2in1 Angle Cock - angle valve with washing machine outlet",
+        style: "Minimalist",
+        price: 1510.00,
+        specifications: [
+          { label: "Material", value: "Polished Chrome" },
+          { label: "Dimensions", value: "4\" H x 3.5\" W" },
+          { label: "Flow Rate", value: "1.0 GPM" },
+          { label: "Installation", value: "Wall-mounted" }
+        ],
+        galleryImages: [
+          "https://picsum.photos/seed/arya113g1/800/1000",
+          "https://picsum.photos/seed/arya113g2/800/1000"
+        ]
+      },
       {
         id: 112,
         name: "Arya Centre Hole",
@@ -382,7 +382,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/flora203/800/1000",
         altText: "Flora Angle Cock - polished chrome angle valve",
         style: "Natural",
-        price: 60.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -401,7 +401,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "products/flora/pillarcock/flora-pillarcock-one.webp",
         altText: "Flora Pillar Cock - standard chrome basin faucet",
         style: "Natural",
-        price: 115.00,
+        price: 1750.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -416,69 +416,12 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 205,
-        name: "Flora Washing Cock",
-        description: "A practical washing machine cock with a snap-on connector, designed for easy installation and reliable water shut-off.",
-        imageUrl: "https://picsum.photos/seed/flora205/800/1000",
-        altText: "Flora Washing Cock - chrome washing machine valve with connector",
-        style: "Natural",
-        price: 70.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "4\" H x 3\" W" },
-          { label: "Flow Rate", value: "1.5 GPM" },
-          { label: "Installation", value: "Wall-mounted" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/flora205g1/800/1000",
-          "https://picsum.photos/seed/flora205g2/800/1000"
-        ]
-      },
-      {
-        id: 206,
-        name: "Flora Nozzle Cock",
-        description: "A versatile nozzle cock with a swivel spout, ideal for kitchen or utility sinks where directed flow is needed.",
-        imageUrl: "https://picsum.photos/seed/flora206/800/1000",
-        altText: "Flora Nozzle Cock - swivel spout chrome faucet",
-        style: "Natural",
-        price: 130.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome" },
-          { label: "Dimensions", value: "6\" H x 4\" W" },
-          { label: "Flow Rate", value: "1.5 GPM" },
-          { label: "Installation", value: "Deck-mounted" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/flora206g1/800/1000",
-          "https://picsum.photos/seed/flora206g2/800/1000"
-        ]
-      },
-      {
-        id: 207,
-        name: "Flora Pillar Cock HO NICK",
-        description: "An elegant pillar cock featuring a chrome finish without a nickel base, offering a distinct pure-chrome aesthetic for washbasins.",
-        imageUrl: "https://picsum.photos/seed/flora207/800/1000",
-        altText: "Flora Pillar Cock - chrome faucet without nickel base",
-        style: "Natural",
-        price: 120.00,
-        specifications: [
-          { label: "Material", value: "Polished Chrome (No Nickel)" },
-          { label: "Dimensions", value: "5\" H x 2\" W" },
-          { label: "Flow Rate", value: "1.2 GPM" },
-          { label: "Installation", value: "Deck-mounted, two-hole" }
-        ],
-        galleryImages: [
-          "https://picsum.photos/seed/flora207g1/800/1000",
-          "https://picsum.photos/seed/flora207g2/800/1000"
-        ]
-      },
-      {
-        id: 208,
         name: "Flora Concealed 1/2",
         description: "A 1/2-inch concealed body stop cock for under-sink installation, providing reliable water control while remaining hidden from view.",
         imageUrl: "https://picsum.photos/seed/flora208/800/1000",
         altText: "Flora Concealed 1/2 inch stop cock for plumbing",
         style: "Natural",
-        price: 120.00,
+        price: 1740.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -491,13 +434,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 209,
+        id: 206,
         name: "Flora Concealed 3/4",
         description: "A heavy-duty 3/4-inch concealed stop cock designed for higher flow applications, ensuring durable and hidden water line control.",
         imageUrl: "https://picsum.photos/seed/flora209/800/1000",
         altText: "Flora Concealed 3/4 inch stop cock for main water lines",
         style: "Natural",
-        price: 70.00,
+        price: 1740.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -510,13 +453,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 210,
+        id: 207,
         name: "Flora Sink Cock",
         description: "A functional and sturdy sink cock for kitchen areas, featuring a high-arc design to accommodate large pots and pans.",
         imageUrl: "https://picsum.photos/seed/flora210/800/1000",
         altText: "Flora Sink Cock - high-arc chrome kitchen faucet",
         style: "Natural",
-        price: 150.00,
+        price: 2030.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -529,13 +472,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 211,
+        id: 208,
         name: "Flora Swan Neck",
         description: "An elegant swan neck faucet that adds a touch of sophistication to any bathroom. Its graceful curve and polished finish make it a timeless choice.",
         imageUrl: "products/flora/swanneck/flora-swanneck-one.webp",
         altText: "Flora Swan Neck - elegant high-arc chrome basin faucet",
         style: "Natural",
-        price: 210.00,
+        price: 2370.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -549,13 +492,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 212,
+        id: 209,
         name: "Flora 2IN1 BIB COCK",
         description: "An innovative bib cock with an integrated outlet for a washing machine or hose, combining two functions in one sleek unit.",
         imageUrl: "https://picsum.photos/seed/flora212/800/1000",
         altText: "Flora 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Natural",
-        price: 110.00,
+        price: 2480.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -568,13 +511,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 213,
+        id: 210,
         name: "Flora 2IN1 ANGLE COCK",
         description: "A space-saving angle cock with a secondary outlet, perfect for connecting a washing machine or dishwasher directly.",
         imageUrl: "https://picsum.photos/seed/flora213/800/1000",
         altText: "Flora 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Natural",
-        price: 90.00,
+        price: 2480.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -587,13 +530,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 214,
+        id: 211,
         name: "Flora Basin Mixer",
         description: "A single-hole basin mixer that brings clean lines and minimalist beauty to your bathroom countertop.",
         imageUrl: "products/flora/basinmixer/flora-basinmixer-one.webp",
         altText: "Flora Centre Hole - single-hole polished chrome basin mixer",
         style: "Natural",
-        price: 185.00,
+        price: 5060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -607,13 +550,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 215,
+        id: 212,
         name: "Flora Sink Mixer",
         description: "A versatile single-lever sink mixer with a swivel spout, designed for modern kitchens to handle multiple tasks with ease.",
         imageUrl: "https://picsum.photos/seed/flora215/800/1000",
         altText: "Flora Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Natural",
-        price: 225.00,
+        price: 2360.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -626,13 +569,13 @@ export const COLLECTIONS: Collection[] = [
         ]
       },
       {
-        id: 216,
+        id: 213,
         name: "Flora Wall Mixer",
         description: "A concealed wall mixer that brings clean lines and minimalist beauty to your shower space, available with or without a decorative band.",
         imageUrl: "https://picsum.photos/seed/flora216/800/1000",
         altText: "Flora Wall Mixer without Band - concealed chrome shower mixer",
         style: "Natural",
-        price: 165.00,
+        price: 6450.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -645,9 +588,9 @@ export const COLLECTIONS: Collection[] = [
         ],
         variants: [
           {
-            id: 216,
+            id: 2131,
             label: "W/O Band",
-            price: 165.00,
+            price: 6450.00,
             imageUrl: "https://picsum.photos/seed/flora216/800/1000",
             altText: "Flora Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -662,9 +605,9 @@ export const COLLECTIONS: Collection[] = [
             ]
           },
           {
-            id: 217,
+            id: 2132,
             label: "W/ Band",
-            price: 175.00,
+            price: 6950.00,
             imageUrl: "https://picsum.photos/seed/flora217/800/1000",
             altText: "Flora Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -697,7 +640,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion301/800/1000",
         altText: "Fusion Bib Cock - polished chrome utility faucet",
         style: "Modern",
-        price: 75.00,
+        price: 860.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -716,7 +659,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion302/800/1000",
         altText: "Fusion Longbody Bib Cock - chrome faucet with extended body",
         style: "Modern",
-        price: 95.00,
+        price: 1010.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -735,7 +678,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion303/800/1000",
         altText: "Fusion Angle Cock - polished chrome angle valve",
         style: "Modern",
-        price: 60.00,
+        price: 560.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -754,7 +697,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion304/800/1000",
         altText: "Fusion Pillar Cock - standard chrome basin faucet",
         style: "Modern",
-        price: 115.00,
+        price: 1010.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -773,7 +716,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion305/800/1000",
         altText: "Fusion Washing Cock - chrome washing machine valve with connector",
         style: "Modern",
-        price: 70.00,
+        price: 705.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -792,7 +735,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion306/800/1000",
         altText: "Fusion Nozzle Cock - swivel spout chrome faucet",
         style: "Modern",
-        price: 130.00,
+        price: 750.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -811,7 +754,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion307/800/1000",
         altText: "Fusion Pillar Cock - chrome faucet without nickel base",
         style: "Modern",
-        price: 120.00,
+        price: 1045.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -830,7 +773,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion308/800/1000",
         altText: "Fusion Concealed 1/2 inch stop cock for plumbing",
         style: "Modern",
-        price: 50.00,
+        price: 980.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -849,7 +792,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion309/800/1000",
         altText: "Fusion Concealed 3/4 inch stop cock for main water lines",
         style: "Modern",
-        price: 70.00,
+        price: 1080.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -868,7 +811,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion310/800/1000",
         altText: "Fusion Sink Cock - high-arc chrome kitchen faucet",
         style: "Modern",
-        price: 150.00,
+        price: 1035.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -887,7 +830,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion311/800/1000",
         altText: "Fusion Swan Neck - elegant high-arc chrome basin faucet",
         style: "Modern",
-        price: 210.00,
+        price: 1235.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -906,7 +849,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion312/800/1000",
         altText: "Fusion 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Modern",
-        price: 110.00,
+        price: 1430.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -925,7 +868,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion313/800/1000",
         altText: "Fusion 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Modern",
-        price: 90.00,
+        price: 1430.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -944,7 +887,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion314/800/1000",
         altText: "Fusion Centre Hole - single-hole polished chrome basin mixer",
         style: "Modern",
-        price: 185.00,
+        price: 2425.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -964,7 +907,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion315/800/1000",
         altText: "Fusion Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Modern",
-        price: 225.00,
+        price: 2770.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -983,7 +926,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/fusion316/800/1000",
         altText: "Fusion Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
-        price: 165.00,
+        price: 3600.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -998,7 +941,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 316,
             label: "W/O Band",
-            price: 165.00,
+            price: 3600.00,
             imageUrl: "https://picsum.photos/seed/fusion316/800/1000",
             altText: "Fusion Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -1015,7 +958,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 317,
             label: "W/ Band",
-            price: 175.00,
+            price: 3800.00,
             imageUrl: "https://picsum.photos/seed/fusion317/800/1000",
             altText: "Fusion Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -1048,7 +991,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer401/800/1000",
         altText: "Rozzer Bib Cock - polished chrome utility faucet",
         style: "Industrial",
-        price: 75.00,
+        price: 860.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -1067,7 +1010,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer402/800/1000",
         altText: "Rozzer Longbody Bib Cock - chrome faucet with extended body",
         style: "Industrial",
-        price: 95.00,
+        price: 1010.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -1086,7 +1029,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer403/800/1000",
         altText: "Rozzer Angle Cock - polished chrome angle valve",
         style: "Industrial",
-        price: 60.00,
+        price: 560.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -1105,7 +1048,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer404/800/1000",
         altText: "Rozzer Pillar Cock - standard chrome basin faucet",
         style: "Industrial",
-        price: 115.00,
+        price: 0.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -1124,7 +1067,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer405/800/1000",
         altText: "Rozzer Washing Cock - chrome washing machine valve with connector",
         style: "Industrial",
-        price: 70.00,
+        price: 705.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -1143,7 +1086,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer406/800/1000",
         altText: "Rozzer Nozzle Cock - swivel spout chrome faucet",
         style: "Industrial",
-        price: 130.00,
+        price: 750.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -1162,7 +1105,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer407/800/1000",
         altText: "Rozzer Pillar Cock - chrome faucet without nickel base",
         style: "Industrial",
-        price: 120.00,
+        price: 1045.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -1181,7 +1124,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer408/800/1000",
         altText: "Rozzer Concealed 1/2 inch stop cock for plumbing",
         style: "Industrial",
-        price: 50.00,
+        price: 980.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -1200,7 +1143,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer409/800/1000",
         altText: "Rozzer Concealed 3/4 inch stop cock for main water lines",
         style: "Industrial",
-        price: 70.00,
+        price: 1080.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -1219,7 +1162,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer410/800/1000",
         altText: "Rozzer Sink Cock - high-arc chrome kitchen faucet",
         style: "Industrial",
-        price: 150.00,
+        price: 1035.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -1238,7 +1181,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer411/800/1000",
         altText: "Rozzer Swan Neck - elegant high-arc chrome basin faucet",
         style: "Industrial",
-        price: 210.00,
+        price: 1235.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -1257,7 +1200,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer412/800/1000",
         altText: "Rozzer 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Industrial",
-        price: 110.00,
+        price: 1430.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -1276,7 +1219,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer413/800/1000",
         altText: "Rozzer 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Industrial",
-        price: 90.00,
+        price: 1430.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -1295,7 +1238,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer414/800/1000",
         altText: "Rozzer Centre Hole - single-hole polished chrome basin mixer",
         style: "Industrial",
-        price: 185.00,
+        price: 2435.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -1315,7 +1258,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer415/800/1000",
         altText: "Rozzer Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Industrial",
-        price: 225.00,
+        price: 2770.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -1334,7 +1277,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/rozzer416/800/1000",
         altText: "Rozzer Wall Mixer without Band - concealed chrome shower mixer",
         style: "Industrial",
-        price: 165.00,
+        price: 3600.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -1349,7 +1292,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 416,
             label: "W/O Band",
-            price: 165.00,
+            price: 3600.00,
             imageUrl: "https://picsum.photos/seed/rozzer416/800/1000",
             altText: "Rozzer Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -1366,7 +1309,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 417,
             label: "W/ Band",
-            price: 175.00,
+            price: 3800.00,
             imageUrl: "https://picsum.photos/seed/rozzer417/800/1000",
             altText: "Rozzer Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -1399,7 +1342,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime501/800/1000",
         altText: "Prime Bib Cock - polished chrome utility faucet",
         style: "Minimalist",
-        price: 75.00,
+        price: 790.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -1418,7 +1361,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime502/800/1000",
         altText: "Prime Longbody Bib Cock - chrome faucet with extended body",
         style: "Minimalist",
-        price: 95.00,
+        price: 890.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -1437,7 +1380,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime503/800/1000",
         altText: "Prime Angle Cock - polished chrome angle valve",
         style: "Minimalist",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -1456,7 +1399,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime504/800/1000",
         altText: "Prime Pillar Cock - standard chrome basin faucet",
         style: "Minimalist",
-        price: 115.00,
+        price: 910.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -1475,7 +1418,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime505/800/1000",
         altText: "Prime Washing Cock - chrome washing machine valve with connector",
         style: "Minimalist",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -1494,7 +1437,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime506/800/1000",
         altText: "Prime Nozzle Cock - swivel spout chrome faucet",
         style: "Minimalist",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -1513,7 +1456,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime507/800/1000",
         altText: "Prime Pillar Cock - chrome faucet without nickel base",
         style: "Minimalist",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -1532,7 +1475,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime508/800/1000",
         altText: "Prime Concealed 1/2 inch stop cock for plumbing",
         style: "Minimalist",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -1551,7 +1494,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime509/800/1000",
         altText: "Prime Concealed 3/4 inch stop cock for main water lines",
         style: "Minimalist",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -1570,7 +1513,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime510/800/1000",
         altText: "Prime Sink Cock - high-arc chrome kitchen faucet",
         style: "Minimalist",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -1589,7 +1532,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime511/800/1000",
         altText: "Prime Swan Neck - elegant high-arc chrome basin faucet",
         style: "Minimalist",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -1608,7 +1551,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime512/800/1000",
         altText: "Prime 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Minimalist",
-        price: 110.00,
+        price: 1300.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -1627,7 +1570,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime513/800/1000",
         altText: "Prime 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Minimalist",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -1646,7 +1589,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime514/800/1000",
         altText: "Prime Centre Hole - single-hole polished chrome basin mixer",
         style: "Minimalist",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -1666,7 +1609,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime515/800/1000",
         altText: "Prime Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Minimalist",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -1685,7 +1628,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/prime516/800/1000",
         altText: "Prime Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -1700,7 +1643,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 516,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/prime516/800/1000",
             altText: "Prime Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -1717,7 +1660,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 517,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/prime517/800/1000",
             altText: "Prime Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -1750,7 +1693,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo601/800/1000",
         altText: "Solo Bib Cock - polished chrome utility faucet",
         style: "Minimalist",
-        price: 75.00,
+        price: 815.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -1769,7 +1712,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo602/800/1000",
         altText: "Solo Longbody Bib Cock - chrome faucet with extended body",
         style: "Minimalist",
-        price: 95.00,
+        price: 895.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -1788,7 +1731,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo603/800/1000",
         altText: "Solo Angle Cock - polished chrome angle valve",
         style: "Minimalist",
-        price: 60.00,
+        price: 590.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -1807,7 +1750,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo604/800/1000",
         altText: "Solo Pillar Cock - standard chrome basin faucet",
         style: "Minimalist",
-        price: 115.00,
+        price: 895.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -1826,7 +1769,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo605/800/1000",
         altText: "Solo Washing Cock - chrome washing machine valve with connector",
         style: "Minimalist",
-        price: 70.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -1845,7 +1788,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo606/800/1000",
         altText: "Solo Nozzle Cock - swivel spout chrome faucet",
         style: "Minimalist",
-        price: 130.00,
+        price: 775.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -1864,7 +1807,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo607/800/1000",
         altText: "Solo Pillar Cock - chrome faucet without nickel base",
         style: "Minimalist",
-        price: 120.00,
+        price: 1070.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -1883,7 +1826,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo608/800/1000",
         altText: "Solo Concealed 1/2 inch stop cock for plumbing",
         style: "Minimalist",
-        price: 50.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -1902,7 +1845,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo609/800/1000",
         altText: "Solo Concealed 3/4 inch stop cock for main water lines",
         style: "Minimalist",
-        price: 70.00,
+        price: 1100.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -1921,7 +1864,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo610/800/1000",
         altText: "Solo Sink Cock - high-arc chrome kitchen faucet",
         style: "Minimalist",
-        price: 150.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -1940,7 +1883,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo611/800/1000",
         altText: "Solo Swan Neck - elegant high-arc chrome basin faucet",
         style: "Minimalist",
-        price: 210.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -1959,7 +1902,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo612/800/1000",
         altText: "Solo 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Minimalist",
-        price: 110.00,
+        price: 1380.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -1978,7 +1921,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo613/800/1000",
         altText: "Solo 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Minimalist",
-        price: 90.00,
+        price: 1380.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -1997,7 +1940,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo614/800/1000",
         altText: "Solo Centre Hole - single-hole polished chrome basin mixer",
         style: "Minimalist",
-        price: 185.00,
+        price: 2510.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -2017,7 +1960,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo615/800/1000",
         altText: "Solo Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Minimalist",
-        price: 225.00,
+        price: 2850.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -2036,7 +1979,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/solo616/800/1000",
         altText: "Solo Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
-        price: 165.00,
+        price: 3680.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -2051,7 +1994,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 616,
             label: "W/O Band",
-            price: 165.00,
+            price: 3680.00,
             imageUrl: "https://picsum.photos/seed/solo616/800/1000",
             altText: "Solo Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -2068,7 +2011,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 617,
             label: "W/ Band",
-            price: 175.00,
+            price: 3870.00,
             imageUrl: "https://picsum.photos/seed/solo617/800/1000",
             altText: "Solo Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -2101,7 +2044,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft701/800/1000",
         altText: "Soft Bib Cock - polished chrome utility faucet",
         style: "Minimalist",
-        price: 75.00,
+        price: 740.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -2120,7 +2063,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft702/800/1000",
         altText: "Soft Longbody Bib Cock - chrome faucet with extended body",
         style: "Minimalist",
-        price: 95.00,
+        price: 840.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -2139,7 +2082,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft703/800/1000",
         altText: "Soft Angle Cock - polished chrome angle valve",
         style: "Minimalist",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -2158,7 +2101,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft704/800/1000",
         altText: "Soft Pillar Cock - standard chrome basin faucet",
         style: "Minimalist",
-        price: 115.00,
+        price: 850.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -2177,7 +2120,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft705/800/1000",
         altText: "Soft Washing Cock - chrome washing machine valve with connector",
         style: "Minimalist",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -2196,7 +2139,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft706/800/1000",
         altText: "Soft Nozzle Cock - swivel spout chrome faucet",
         style: "Minimalist",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -2215,7 +2158,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft707/800/1000",
         altText: "Soft Pillar Cock - chrome faucet without nickel base",
         style: "Minimalist",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -2234,7 +2177,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft708/800/1000",
         altText: "Soft Concealed 1/2 inch stop cock for plumbing",
         style: "Minimalist",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -2253,7 +2196,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft709/800/1000",
         altText: "Soft Concealed 3/4 inch stop cock for main water lines",
         style: "Minimalist",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -2272,7 +2215,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft710/800/1000",
         altText: "Soft Sink Cock - high-arc chrome kitchen faucet",
         style: "Minimalist",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -2291,7 +2234,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft711/800/1000",
         altText: "Soft Swan Neck - elegant high-arc chrome basin faucet",
         style: "Minimalist",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -2310,7 +2253,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft712/800/1000",
         altText: "Soft 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Minimalist",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -2329,7 +2272,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft713/800/1000",
         altText: "Soft 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Minimalist",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -2348,7 +2291,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft714/800/1000",
         altText: "Soft Centre Hole - single-hole polished chrome basin mixer",
         style: "Minimalist",
-        price: 185.00,
+        price: 240.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -2368,7 +2311,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft715/800/1000",
         altText: "Soft Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Minimalist",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -2387,7 +2330,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/soft716/800/1000",
         altText: "Soft Wall Mixer without Band - concealed chrome shower mixer",
         style: "Minimalist",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -2402,7 +2345,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 716,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/soft716/800/1000",
             altText: "Soft Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -2419,7 +2362,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 717,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/soft717/800/1000",
             altText: "Soft Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -2452,7 +2395,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald801/800/1000",
         altText: "Donald Bib Cock - polished chrome utility faucet",
         style: "Industrial",
-        price: 75.00,
+        price: 680.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -2471,7 +2414,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald802/800/1000",
         altText: "Donald Longbody Bib Cock - chrome faucet with extended body",
         style: "Industrial",
-        price: 95.00,
+        price: 785.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -2490,7 +2433,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald803/800/1000",
         altText: "Donald Angle Cock - polished chrome angle valve",
         style: "Industrial",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -2509,7 +2452,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald804/800/1000",
         altText: "Donald Pillar Cock - standard chrome basin faucet",
         style: "Industrial",
-        price: 115.00,
+        price: 900.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -2528,7 +2471,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald805/800/1000",
         altText: "Donald Washing Cock - chrome washing machine valve with connector",
         style: "Industrial",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -2547,7 +2490,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald806/800/1000",
         altText: "Donald Nozzle Cock - swivel spout chrome faucet",
         style: "Industrial",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -2566,7 +2509,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald807/800/1000",
         altText: "Donald Pillar Cock - chrome faucet without nickel base",
         style: "Industrial",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -2585,7 +2528,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald808/800/1000",
         altText: "Donald Concealed 1/2 inch stop cock for plumbing",
         style: "Industrial",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -2604,7 +2547,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald809/800/1000",
         altText: "Donald Concealed 3/4 inch stop cock for main water lines",
         style: "Industrial",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -2623,7 +2566,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald810/800/1000",
         altText: "Donald Sink Cock - high-arc chrome kitchen faucet",
         style: "Industrial",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -2642,7 +2585,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald811/800/1000",
         altText: "Donald Swan Neck - elegant high-arc chrome basin faucet",
         style: "Industrial",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -2661,7 +2604,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald812/800/1000",
         altText: "Donald 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Industrial",
-        price: 110.00,
+        price: 1300.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -2680,7 +2623,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald813/800/1000",
         altText: "Donald 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Industrial",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -2699,7 +2642,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald814/800/1000",
         altText: "Donald Centre Hole - single-hole polished chrome basin mixer",
         style: "Industrial",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -2719,7 +2662,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald815/800/1000",
         altText: "Donald Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Industrial",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -2738,7 +2681,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/donald816/800/1000",
         altText: "Donald Wall Mixer without Band - concealed chrome shower mixer",
         style: "Industrial",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -2753,7 +2696,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 816,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/donald816/800/1000",
             altText: "Donald Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -2770,7 +2713,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 817,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/donald817/800/1000",
             altText: "Donald Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -2803,7 +2746,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark901/800/1000",
         altText: "Spark Bib Cock - polished chrome utility faucet",
         style: "Modern",
-        price: 75.00,
+        price: 780.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -2822,7 +2765,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark902/800/1000",
         altText: "Spark Longbody Bib Cock - chrome faucet with extended body",
         style: "Modern",
-        price: 95.00,
+        price: 870.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -2841,7 +2784,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark903/800/1000",
         altText: "Spark Angle Cock - polished chrome angle valve",
         style: "Modern",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -2860,7 +2803,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark904/800/1000",
         altText: "Spark Pillar Cock - standard chrome basin faucet",
         style: "Modern",
-        price: 115.00,
+        price: 870.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -2879,7 +2822,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark905/800/1000",
         altText: "Spark Washing Cock - chrome washing machine valve with connector",
         style: "Modern",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -2898,7 +2841,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark906/800/1000",
         altText: "Spark Nozzle Cock - swivel spout chrome faucet",
         style: "Modern",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -2917,7 +2860,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark907/800/1000",
         altText: "Spark Pillar Cock - chrome faucet without nickel base",
         style: "Modern",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -2936,7 +2879,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark908/800/1000",
         altText: "Spark Concealed 1/2 inch stop cock for plumbing",
         style: "Modern",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -2955,7 +2898,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark909/800/1000",
         altText: "Spark Concealed 3/4 inch stop cock for main water lines",
         style: "Modern",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -2974,7 +2917,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark910/800/1000",
         altText: "Spark Sink Cock - high-arc chrome kitchen faucet",
         style: "Modern",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -2993,7 +2936,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark911/800/1000",
         altText: "Spark Swan Neck - elegant high-arc chrome basin faucet",
         style: "Modern",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -3012,7 +2955,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark912/800/1000",
         altText: "Spark 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Modern",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -3031,7 +2974,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark913/800/1000",
         altText: "Spark 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Modern",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -3050,7 +2993,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark914/800/1000",
         altText: "Spark Centre Hole - single-hole polished chrome basin mixer",
         style: "Modern",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -3070,7 +3013,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark915/800/1000",
         altText: "Spark Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Modern",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -3089,7 +3032,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/spark916/800/1000",
         altText: "Spark Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -3104,7 +3047,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 916,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/spark916/800/1000",
             altText: "Spark Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -3121,7 +3064,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 917,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/spark917/800/1000",
             altText: "Spark Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -3154,7 +3097,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1001/800/1000",
         altText: "Euro Bib Cock - polished chrome utility faucet",
         style: "Modern",
-        price: 75.00,
+        price: 780.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -3173,7 +3116,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1002/800/1000",
         altText: "Euro Longbody Bib Cock - chrome faucet with extended body",
         style: "Modern",
-        price: 95.00,
+        price: 870.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -3192,7 +3135,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1003/800/1000",
         altText: "Euro Angle Cock - polished chrome angle valve",
         style: "Modern",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -3211,7 +3154,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1004/800/1000",
         altText: "Euro Pillar Cock - standard chrome basin faucet",
         style: "Modern",
-        price: 115.00,
+        price: 870.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -3230,7 +3173,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1005/800/1000",
         altText: "Euro Washing Cock - chrome washing machine valve with connector",
         style: "Modern",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -3249,7 +3192,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1006/800/1000",
         altText: "Euro Nozzle Cock - swivel spout chrome faucet",
         style: "Modern",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -3268,7 +3211,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1007/800/1000",
         altText: "Euro Pillar Cock - chrome faucet without nickel base",
         style: "Modern",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -3287,7 +3230,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1008/800/1000",
         altText: "Euro Concealed 1/2 inch stop cock for plumbing",
         style: "Modern",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -3306,7 +3249,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1009/800/1000",
         altText: "Euro Concealed 3/4 inch stop cock for main water lines",
         style: "Modern",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -3325,7 +3268,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1010/800/1000",
         altText: "Euro Sink Cock - high-arc chrome kitchen faucet",
         style: "Modern",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -3344,7 +3287,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1011/800/1000",
         altText: "Euro Swan Neck - elegant high-arc chrome basin faucet",
         style: "Modern",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -3363,7 +3306,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1012/800/1000",
         altText: "Euro 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Modern",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -3382,7 +3325,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1013/800/1000",
         altText: "Euro 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Modern",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -3401,7 +3344,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1014/800/1000",
         altText: "Euro Centre Hole - single-hole polished chrome basin mixer",
         style: "Modern",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -3421,7 +3364,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1015/800/1000",
         altText: "Euro Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Modern",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -3440,7 +3383,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/euro1016/800/1000",
         altText: "Euro Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -3455,7 +3398,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1016,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/euro1016/800/1000",
             altText: "Euro Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -3472,7 +3415,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1017,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/euro1017/800/1000",
             altText: "Euro Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -3505,7 +3448,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1101/800/1000",
         altText: "Ornamix Bib Cock - polished chrome utility faucet",
         style: "Classic",
-        price: 75.00,
+        price: 780.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -3524,7 +3467,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1102/800/1000",
         altText: "Ornamix Longbody Bib Cock - chrome faucet with extended body",
         style: "Classic",
-        price: 95.00,
+        price: 870.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -3543,7 +3486,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1103/800/1000",
         altText: "Ornamix Angle Cock - polished chrome angle valve",
         style: "Classic",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -3562,7 +3505,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1104/800/1000",
         altText: "Ornamix Pillar Cock - standard chrome basin faucet",
         style: "Classic",
-        price: 115.00,
+        price: 870.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -3581,7 +3524,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1105/800/1000",
         altText: "Ornamix Washing Cock - chrome washing machine valve with connector",
         style: "Classic",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -3600,7 +3543,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1106/800/1000",
         altText: "Ornamix Nozzle Cock - swivel spout chrome faucet",
         style: "Classic",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -3619,7 +3562,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1107/800/1000",
         altText: "Ornamix Pillar Cock - chrome faucet without nickel base",
         style: "Classic",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -3638,7 +3581,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1108/800/1000",
         altText: "Ornamix Concealed 1/2 inch stop cock for plumbing",
         style: "Classic",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -3657,7 +3600,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1109/800/1000",
         altText: "Ornamix Concealed 3/4 inch stop cock for main water lines",
         style: "Classic",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -3676,7 +3619,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1110/800/1000",
         altText: "Ornamix Sink Cock - high-arc chrome kitchen faucet",
         style: "Classic",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -3695,7 +3638,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1111/800/1000",
         altText: "Ornamix Swan Neck - elegant high-arc chrome basin faucet",
         style: "Classic",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -3714,7 +3657,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1112/800/1000",
         altText: "Ornamix 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Classic",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -3733,7 +3676,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1113/800/1000",
         altText: "Ornamix 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Classic",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -3752,7 +3695,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1114/800/1000",
         altText: "Ornamix Centre Hole - single-hole polished chrome basin mixer",
         style: "Classic",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -3772,7 +3715,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1115/800/1000",
         altText: "Ornamix Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Classic",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -3791,7 +3734,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/ornamix1116/800/1000",
         altText: "Ornamix Wall Mixer without Band - concealed chrome shower mixer",
         style: "Classic",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -3806,7 +3749,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1116,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/ornamix1116/800/1000",
             altText: "Ornamix Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -3823,7 +3766,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1117,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/ornamix1117/800/1000",
             altText: "Ornamix Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -3856,7 +3799,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1201/800/1000",
         altText: "M-Flora Bib Cock - polished chrome utility faucet",
         style: "Natural",
-        price: 75.00,
+        price: 760.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -3875,7 +3818,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1202/800/1000",
         altText: "M-Flora Longbody Bib Cock - chrome faucet with extended body",
         style: "Natural",
-        price: 95.00,
+        price: 860.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -3894,7 +3837,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1203/800/1000",
         altText: "M-Flora Angle Cock - polished chrome angle valve",
         style: "Natural",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -3913,7 +3856,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1204/800/1000",
         altText: "M-Flora Pillar Cock - standard chrome basin faucet",
         style: "Natural",
-        price: 115.00,
+        price: 860.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -3932,7 +3875,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1205/800/1000",
         altText: "M-Flora Washing Cock - chrome washing machine valve with connector",
         style: "Natural",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -3951,7 +3894,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1206/800/1000",
         altText: "M-Flora Nozzle Cock - swivel spout chrome faucet",
         style: "Natural",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -3970,7 +3913,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1207/800/1000",
         altText: "M-Flora Pillar Cock - chrome faucet without nickel base",
         style: "Natural",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -3989,7 +3932,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1208/800/1000",
         altText: "M-Flora Concealed 1/2 inch stop cock for plumbing",
         style: "Natural",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -4008,7 +3951,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1209/800/1000",
         altText: "M-Flora Concealed 3/4 inch stop cock for main water lines",
         style: "Natural",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -4027,7 +3970,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1210/800/1000",
         altText: "M-Flora Sink Cock - high-arc chrome kitchen faucet",
         style: "Natural",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -4046,7 +3989,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1211/800/1000",
         altText: "M-Flora Swan Neck - elegant high-arc chrome basin faucet",
         style: "Natural",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -4065,7 +4008,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1212/800/1000",
         altText: "M-Flora 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Natural",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -4084,7 +4027,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1213/800/1000",
         altText: "M-Flora 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Natural",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -4103,7 +4046,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1214/800/1000",
         altText: "M-Flora Centre Hole - single-hole polished chrome basin mixer",
         style: "Natural",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -4123,7 +4066,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1215/800/1000",
         altText: "M-Flora Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Natural",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -4142,7 +4085,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/mflora1216/800/1000",
         altText: "M-Flora Wall Mixer without Band - concealed chrome shower mixer",
         style: "Natural",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -4157,7 +4100,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1216,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/mflora1216/800/1000",
             altText: "M-Flora Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -4174,7 +4117,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1217,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/mflora1217/800/1000",
             altText: "M-Flora Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -4207,7 +4150,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1301/800/1000",
         altText: "Vignette Bib Cock - polished chrome utility faucet",
         style: "Classic",
-        price: 75.00,
+        price: 710.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -4226,7 +4169,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1302/800/1000",
         altText: "Vignette Longbody Bib Cock - chrome faucet with extended body",
         style: "Classic",
-        price: 95.00,
+        price: 810.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -4245,7 +4188,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1303/800/1000",
         altText: "Vignette Angle Cock - polished chrome angle valve",
         style: "Classic",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -4264,7 +4207,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1304/800/1000",
         altText: "Vignette Pillar Cock - standard chrome basin faucet",
         style: "Classic",
-        price: 115.00,
+        price: 840.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -4283,7 +4226,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1305/800/1000",
         altText: "Vignette Washing Cock - chrome washing machine valve with connector",
         style: "Classic",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -4302,7 +4245,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1306/800/1000",
         altText: "Vignette Nozzle Cock - swivel spout chrome faucet",
         style: "Classic",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -4321,7 +4264,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1307/800/1000",
         altText: "Vignette Pillar Cock - chrome faucet without nickel base",
         style: "Classic",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -4340,7 +4283,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1308/800/1000",
         altText: "Vignette Concealed 1/2 inch stop cock for plumbing",
         style: "Classic",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -4359,7 +4302,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1309/800/1000",
         altText: "Vignette Concealed 3/4 inch stop cock for main water lines",
         style: "Classic",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -4378,7 +4321,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1310/800/1000",
         altText: "Vignette Sink Cock - high-arc chrome kitchen faucet",
         style: "Classic",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -4397,7 +4340,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1311/800/1000",
         altText: "Vignette Swan Neck - elegant high-arc chrome basin faucet",
         style: "Classic",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -4416,7 +4359,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1312/800/1000",
         altText: "Vignette 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Classic",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -4435,7 +4378,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1313/800/1000",
         altText: "Vignette 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Classic",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -4454,7 +4397,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1314/800/1000",
         altText: "Vignette Centre Hole - single-hole polished chrome basin mixer",
         style: "Classic",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -4474,7 +4417,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1315/800/1000",
         altText: "Vignette Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Classic",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -4493,7 +4436,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/vignette1316/800/1000",
         altText: "Vignette Wall Mixer without Band - concealed chrome shower mixer",
         style: "Classic",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -4508,7 +4451,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1316,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/vignette1316/800/1000",
             altText: "Vignette Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -4525,7 +4468,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1317,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/vignette1317/800/1000",
             altText: "Vignette Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -4558,7 +4501,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1401/800/1000",
         altText: "Opel Bib Cock - polished chrome utility faucet",
         style: "Avant-Garde",
-        price: 75.00,
+        price: 710.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -4577,7 +4520,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1402/800/1000",
         altText: "Opel Longbody Bib Cock - chrome faucet with extended body",
         style: "Avant-Garde",
-        price: 95.00,
+        price: 810.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -4596,7 +4539,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1403/800/1000",
         altText: "Opel Angle Cock - polished chrome angle valve",
         style: "Avant-Garde",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -4615,7 +4558,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1404/800/1000",
         altText: "Opel Pillar Cock - standard chrome basin faucet",
         style: "Avant-Garde",
-        price: 115.00,
+        price: 840.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -4634,7 +4577,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1405/800/1000",
         altText: "Opel Washing Cock - chrome washing machine valve with connector",
         style: "Avant-Garde",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -4653,7 +4596,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1406/800/1000",
         altText: "Opel Nozzle Cock - swivel spout chrome faucet",
         style: "Avant-Garde",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -4672,7 +4615,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1407/800/1000",
         altText: "Opel Pillar Cock - chrome faucet without nickel base",
         style: "Avant-Garde",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -4691,7 +4634,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1408/800/1000",
         altText: "Opel Concealed 1/2 inch stop cock for plumbing",
         style: "Avant-Garde",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -4710,7 +4653,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1409/800/1000",
         altText: "Opel Concealed 3/4 inch stop cock for main water lines",
         style: "Avant-Garde",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -4729,7 +4672,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1410/800/1000",
         altText: "Opel Sink Cock - high-arc chrome kitchen faucet",
         style: "Avant-Garde",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -4748,7 +4691,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1411/800/1000",
         altText: "Opel Swan Neck - elegant high-arc chrome basin faucet",
         style: "Avant-Garde",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -4767,7 +4710,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1412/800/1000",
         altText: "Opel 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Avant-Garde",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -4786,7 +4729,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1413/800/1000",
         altText: "Opel 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Avant-Garde",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -4805,7 +4748,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1414/800/1000",
         altText: "Opel Centre Hole - single-hole polished chrome basin mixer",
         style: "Avant-Garde",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -4825,7 +4768,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1415/800/1000",
         altText: "Opel Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Avant-Garde",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -4844,7 +4787,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/opel1416/800/1000",
         altText: "Opel Wall Mixer without Band - concealed chrome shower mixer",
         style: "Avant-Garde",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -4859,7 +4802,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1416,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/opel1416/800/1000",
             altText: "Opel Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -4876,7 +4819,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1417,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/opel1417/800/1000",
             altText: "Opel Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
@@ -4909,7 +4852,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1501/800/1000",
         altText: "Croma Bib Cock - polished chrome utility faucet",
         style: "Modern",
-        price: 75.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -4928,7 +4871,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1502/800/1000",
         altText: "Croma Longbody Bib Cock - chrome faucet with extended body",
         style: "Modern",
-        price: 95.00,
+        price: 810.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 5.5\" W" },
@@ -4947,7 +4890,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1503/800/1000",
         altText: "Croma Angle Cock - polished chrome angle valve",
         style: "Modern",
-        price: 60.00,
+        price: 540.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 2.5\" W" },
@@ -4966,7 +4909,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1504/800/1000",
         altText: "Croma Pillar Cock - standard chrome basin faucet",
         style: "Modern",
-        price: 115.00,
+        price: 840.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -4985,7 +4928,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1505/800/1000",
         altText: "Croma Washing Cock - chrome washing machine valve with connector",
         style: "Modern",
-        price: 70.00,
+        price: 685.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3\" W" },
@@ -5004,7 +4947,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1506/800/1000",
         altText: "Croma Nozzle Cock - swivel spout chrome faucet",
         style: "Modern",
-        price: 130.00,
+        price: 730.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 4\" W" },
@@ -5023,7 +4966,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1507/800/1000",
         altText: "Croma Pillar Cock - chrome faucet without nickel base",
         style: "Modern",
-        price: 120.00,
+        price: 1025.00,
         specifications: [
           { label: "Material", value: "Polished Chrome (No Nickel)" },
           { label: "Dimensions", value: "5\" H x 2\" W" },
@@ -5042,7 +4985,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1508/800/1000",
         altText: "Croma Concealed 1/2 inch stop cock for plumbing",
         style: "Modern",
-        price: 50.00,
+        price: 960.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "2.5\" H x 2.5\" W" },
@@ -5061,7 +5004,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1509/800/1000",
         altText: "Croma Concealed 3/4 inch stop cock for main water lines",
         style: "Modern",
-        price: 70.00,
+        price: 1060.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "3\" H x 3\" W" },
@@ -5080,7 +5023,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1510/800/1000",
         altText: "Croma Sink Cock - high-arc chrome kitchen faucet",
         style: "Modern",
-        price: 150.00,
+        price: 1000.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "8\" H x 5\" W" },
@@ -5099,7 +5042,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1511/800/1000",
         altText: "Croma Swan Neck - elegant high-arc chrome basin faucet",
         style: "Modern",
-        price: 210.00,
+        price: 1200.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 4\" W" },
@@ -5118,7 +5061,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1512/800/1000",
         altText: "Croma 2in1 Bib Cock - utility faucet with washing machine outlet",
         style: "Modern",
-        price: 110.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 5\" W" },
@@ -5137,7 +5080,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1513/800/1000",
         altText: "Croma 2in1 Angle Cock - angle valve with washing machine outlet",
         style: "Modern",
-        price: 90.00,
+        price: 1260.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "4\" H x 3.5\" W" },
@@ -5156,7 +5099,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1514/800/1000",
         altText: "Croma Centre Hole - single-hole polished chrome basin mixer",
         style: "Modern",
-        price: 185.00,
+        price: 2400.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "10\" H x 2\" W" },
@@ -5176,7 +5119,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1515/800/1000",
         altText: "Croma Sink Mixer - polished chrome single-lever kitchen faucet",
         style: "Modern",
-        price: 225.00,
+        price: 2725.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "12\" H x 8\" W" },
@@ -5195,7 +5138,7 @@ export const COLLECTIONS: Collection[] = [
         imageUrl: "https://picsum.photos/seed/croma1516/800/1000",
         altText: "Croma Wall Mixer without Band - concealed chrome shower mixer",
         style: "Modern",
-        price: 165.00,
+        price: 3570.00,
         specifications: [
           { label: "Material", value: "Polished Chrome" },
           { label: "Dimensions", value: "6\" H x 6\" W" },
@@ -5210,7 +5153,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1516,
             label: "W/O Band",
-            price: 165.00,
+            price: 3570.00,
             imageUrl: "https://picsum.photos/seed/croma1516/800/1000",
             altText: "Croma Wall Mixer without Band - concealed chrome shower mixer",
             galleryImages: [
@@ -5227,7 +5170,7 @@ export const COLLECTIONS: Collection[] = [
           {
             id: 1517,
             label: "W/ Band",
-            price: 175.00,
+            price: 3760.00,
             imageUrl: "https://picsum.photos/seed/croma1517/800/1000",
             altText: "Croma Wall Mixer with Band - concealed chrome shower mixer",
             galleryImages: [
