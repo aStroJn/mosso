@@ -333,14 +333,14 @@ export const COLLECTIONS: Collection[] = [
     name: "Flora Collection",
     description: "Inspired by the elegance of nature, the Flora Collection brings organic curves and timeless beauty to your home. Each piece is crafted to evoke the gentle flow of water, blending seamlessly with modern and traditional spaces alike.",
     tagline: "Where nature meets design.",
-    heroImageUrl: "https://picsum.photos/seed/flora201/800/1000",
+    heroImageUrl: "products/flora/bibcock/flora-bibcock-one.webp",
     style: "Natural",
     products: [
       {
         id: 201,
         name: "Flora Bib Cock",
         description: "A durable and functional bib cock for utility areas, featuring a smooth quarter-turn operation and the signature Flora chrome finish.",
-        imageUrl: "https://picsum.photos/seed/flora201/800/1000",
+        imageUrl: "products/flora/bibcock/flora-bibcock-one.webp",
         altText: "Flora Bib Cock - polished chrome utility faucet",
         style: "Natural",
         price: 1560.00,
@@ -351,15 +351,15 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Wall-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/flora201g1/800/1000",
-          "https://picsum.photos/seed/flora201g2/800/1000"
+          "products/flora/bibcock/flora-bibcock-two.webp",
+          "products/flora/bibcock/flora-bibcock-three.webp"
         ]
       },
       {
         id: 202,
         name: "Flora Longbody",
         description: "An extended body bib cock designed for installations where additional reach is required, maintaining a clean and functional design.",
-        imageUrl: "https://picsum.photos/seed/flora202/800/1000",
+        imageUrl: "products/flora/longbody/flora-longbody-one.webp",
         altText: "Flora Longbody Bib Cock - chrome faucet with extended body",
         style: "Natural",
         price: 1850.00,
@@ -370,8 +370,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Wall-mounted" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/flora202g1/800/1000",
-          "https://picsum.photos/seed/flora202g2/800/1000"
+          "products/flora/longbody/flora-longbody-two.webp",
+          "products/flora/longbody/flora-longbody-three.webp",
+          "products/flora/longbody/flora-longbody-four.webp"
         ]
       },
       {
@@ -397,7 +398,7 @@ export const COLLECTIONS: Collection[] = [
         id: 204,
         name: "Flora Pillar Cock",
         description: "A classic and elegant pillar cock for washbasins, offering reliable performance with a sleek, low-profile design.",
-        imageUrl: "https://picsum.photos/seed/flora204/800/1000",
+        imageUrl: "products/flora/pillarcock/flora-pillarcock-one.webp",
         altText: "Flora Pillar Cock - standard chrome basin faucet",
         style: "Natural",
         price: 115.00,
@@ -408,8 +409,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Deck-mounted, two-hole" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/flora204g1/800/1000",
-          "https://picsum.photos/seed/flora204g2/800/1000"
+          "products/flora/pillarcock/flora-pillarcock-two.webp",
+          "products/flora/pillarcock/flora-pillarcock-three.webp",
+          "products/flora/pillarcock/flora-pillarcock-four.webp"
         ]
       },
       {
@@ -530,7 +532,7 @@ export const COLLECTIONS: Collection[] = [
         id: 211,
         name: "Flora Swan Neck",
         description: "An elegant swan neck faucet that adds a touch of sophistication to any bathroom. Its graceful curve and polished finish make it a timeless choice.",
-        imageUrl: "https://picsum.photos/seed/flora211/800/1000",
+        imageUrl: "products/flora/swanneck/flora-swanneck-one.webp",
         altText: "Flora Swan Neck - elegant high-arc chrome basin faucet",
         style: "Natural",
         price: 210.00,
@@ -541,8 +543,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Deck-mounted, single-hole" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/flora211g1/800/1000",
-          "https://picsum.photos/seed/flora211g2/800/1000"
+          "products/flora/swanneck/flora-swanneck-two.webp",
+          "products/flora/swanneck/flora-swanneck-three.webp",
+          "products/flora/swanneck/flora-swanneck-four.webp"
         ]
       },
       {
@@ -585,9 +588,9 @@ export const COLLECTIONS: Collection[] = [
       },
       {
         id: 214,
-        name: "Flora Centre Hole",
+        name: "Flora Basin Mixer",
         description: "A single-hole basin mixer that brings clean lines and minimalist beauty to your bathroom countertop.",
-        imageUrl: "https://picsum.photos/seed/flora214/800/1000",
+        imageUrl: "products/flora/basinmixer/flora-basinmixer-one.webp",
         altText: "Flora Centre Hole - single-hole polished chrome basin mixer",
         style: "Natural",
         price: 185.00,
@@ -598,9 +601,9 @@ export const COLLECTIONS: Collection[] = [
           { label: "Installation", value: "Single-hole" }
         ],
         galleryImages: [
-          "https://picsum.photos/seed/flora214g1/800/1000",
-          "https://picsum.photos/seed/flora214g2/800/1000",
-          "https://picsum.photos/seed/flora214g3/800/1000"
+          "products/flora/basinmixer/flora-basinmixer-two.webp",
+          "products/flora/basinmixer/flora-basinmixer-three.webp",
+          "products/flora/basinmixer/flora-basinmixer-four.webp"
         ]
       },
       {

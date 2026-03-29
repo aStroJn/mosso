@@ -7,44 +7,44 @@ import Breadcrumbs from '../components/Breadcrumbs';
 import AnimatedSection from '../components/AnimatedSection';
 
 interface FAQPageProps {
-  navigateTo: (page: Page) => void;
-  toggleTheme: () => void;
+    navigateTo: (page: Page) => void;
+    toggleTheme: () => void;
 }
 
 const faqs = [
     {
-        question: "How long does shipping take?",
-        answer: "Standard shipping typically takes 5-7 business days. Expedited options are available at checkout. International shipping times may vary depending on the destination and customs processing.",
-        category: "Shipping & Delivery"
+        question: "Do I need a professional plumber for installation?",
+        answer: "For MOSSO products, we strictly recommend installation by a certified professional plumber. Our fixtures utilize high-precision brass internal components that require exact torque specifications and specific valve alignments to ensure the lifetime warranty remains valid.",
+        category: "Installation"
     },
     {
-        question: "How can I track my order?",
-        answer: "Once your order has shipped, you will receive an email with a tracking number. You can use this number on the carrier's website to monitor your package's progress.",
-        category: "Orders & Payment"
+        question: "What is the standard rough-in depth for wall-mount faucets?",
+        answer: "Our wall-mount units typically require a rough-in depth of 2.5\" to 3.25\" from the finished wall surface. Please refer to the specific Technical Data Sheet (TDS) provided with your collection for precise millimetric requirements.",
+        category: "Installation"
     },
     {
-        question: "How do I care for my new fixtures?",
-        answer: "Each product comes with specific care instructions. Generally, we recommend gentle cleaning with a soft cloth and mild soap, avoiding abrasive materials and harsh chemicals to preserve the finish.",
-        category: "Products & Care"
+        question: "How do I prevent water spots on Gold-PVD finishes?",
+        answer: "While PVD (Physical Vapor Deposition) is extremely durable, mineral deposits can still form. We recommend a soft wipe-down with a dry cloth after each use. For stubborn spots, a 50/50 solution of white vinegar and water is acceptable, followed by immediate rinsing and drying.",
+        category: "Care & Maintenance"
     },
     {
-        question: "What is your return policy?",
-        answer: "We accept returns within 30 days of purchase for a full refund, provided the item is in its original, uninstalled condition. Please visit our Returns page to initiate the process.",
-        category: "Returns & Exchanges"
+        question: "How do I nurture the natural oxidation of unlacquered brass?",
+        answer: "Our Living Finishes are designed to evolve. We recommend allowing the natural patina process to occur. For regular upkeep, use only pH-neutral soaps and microfiber cloths to preserve the hand-polished luster without stripping away the evolving character of the metal.",
+        category: "Care & Maintenance"
     },
     {
-        question: "What payment methods do you accept?",
-        answer: "We accept all major credit cards (Visa, MasterCard, American Express), as well as PayPal and Apple Pay for a secure and convenient checkout experience.",
-        category: "Orders & Payment"
+        question: "What is covered under the MOSSO Lifetime Guarantee?",
+        answer: "Precision is our promise. All MOSSO fixtures are backed by a limited lifetime warranty on mechanical performance and a 5-year warranty on specialty artisanal finishes.",
+        category: "Warranty"
     },
     {
-        question: "Do you offer a warranty on your products?",
-        answer: "Yes, all MOSSO products come with a limited lifetime warranty covering manufacturing defects. For more details, please see our Warranty information page.",
-        category: "Products & Care"
+        question: "How do I register my product for warranty?",
+        answer: "To register your product, please have your proof of purchase ready and contact our technical concierge team or submit a ticket through our support portal.",
+        category: "Warranty"
     }
 ];
 
-const categories = ["All", "Shipping & Delivery", "Orders & Payment", "Products & Care", "Returns & Exchanges"];
+const categories = ["All", "Installation", "Care & Maintenance", "Warranty", "Technical Support"];
 
 
 const FAQPage: React.FC<FAQPageProps> = ({ navigateTo, toggleTheme }) => {
@@ -72,8 +72,8 @@ const FAQPage: React.FC<FAQPageProps> = ({ navigateTo, toggleTheme }) => {
     }, [searchTerm, activeCategory]);
 
     const breadcrumbItems = [
-      { label: 'Home', page: 'home' as Page },
-      { label: 'Frequently Asked Questions' },
+        { label: 'Home', page: 'home' as Page },
+        { label: 'Frequently Asked Questions' },
     ];
 
     return (
@@ -93,64 +93,175 @@ const FAQPage: React.FC<FAQPageProps> = ({ navigateTo, toggleTheme }) => {
                         currentPage="faq"
                         setIsMobileMenuOpen={setIsMobileMenuOpen}
                     />
-                    <main className="flex-grow mx-auto w-full max-w-4xl pb-12 sm:pb-16 md:pb-24">
-                        <Breadcrumbs items={breadcrumbItems} navigateTo={navigateTo} />
-                        <AnimatedSection>
-                            <div className="mb-12 text-center">
-                                <h1 className="text-4xl font-black tracking-tight text-text-light dark:text-text-dark sm:text-5xl md:text-6xl font-display">Frequently Asked Questions</h1>
-                                <p className="mt-4 text-lg text-text-secondary-light dark:text-text-secondary-dark">Have a question? Find your answer here.</p>
-                            </div>
-                        </AnimatedSection>
-                        
-                        <AnimatedSection>
-                            <div className="mb-10 px-4 py-3">
-                                <div className="relative">
-                                    <span className="material-symbols-outlined pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-text-secondary-light dark:text-text-secondary-dark">search</span>
-                                    <input 
-                                        className="h-14 w-full min-w-0 flex-1 resize-none overflow-hidden rounded-xl border border-border-light dark:border-border-dark bg-secondary-background-light dark:bg-secondary-background-dark pl-12 pr-4 text-base text-text-light dark:text-text-dark placeholder:text-text-secondary-light dark:placeholder:text-text-secondary-dark focus:border-primary focus:outline-none focus:ring-2 focus:ring-primary/50" 
-                                        placeholder="Search for a question..." 
+                    <main className="flex-grow w-full pb-12 sm:pb-16 md:pb-24">
+                        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-8">
+                            <Breadcrumbs items={breadcrumbItems} navigateTo={navigateTo} />
+                        </div>
+
+                        {/* Hero Header */}
+                        <section className="px-4 sm:px-6 lg:px-8 py-16 md:py-24 max-w-7xl mx-auto">
+                            <AnimatedSection>
+                                <div className="flex flex-col md:flex-row justify-between items-end gap-12">
+                                    <div className="max-w-2xl">
+                                        <span className="font-display text-xs uppercase tracking-[0.3em] text-primary mb-6 block font-bold">Concierge & Assistance</span>
+                                        <h1 className="font-display text-5xl md:text-7xl font-light leading-tight mb-8 text-text-light dark:text-text-dark">How Can We Help?</h1>
+                                        <p className="text-text-secondary-light dark:text-text-secondary-dark text-lg max-w-lg leading-relaxed">
+                                            Find technical specifications, installation guides, and maintenance protocols for your MOSSO fixtures. Our commitment to precision extends beyond the product to your ownership experience.
+                                        </p>
+                                    </div>
+                                    <div className="w-full md:w-1/3 aspect-[4/3] relative overflow-hidden rounded-lg border border-border-light dark:border-border-dark">
+                                        <img
+                                            alt="Architectural detail"
+                                            className="object-cover w-full h-full opacity-80 grayscale hover:grayscale-0 transition-all duration-1000"
+                                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBk6J8hqciJDW5Q_G0STnZfKERZP6yWwaTzVmyEiRlIEQEaXK6jKYsTSuhKpl1tlHjxnK36LN2Xs1Y6lMrob3prbrflQ_oQJzDTZlTLsLI69EzTfFPlbwQKKveZrKvaOxWILezro1b30JS2UJDEllJeNeHqPNF667vLy6230zQezwbhNwh7ga6XI9lijoLgdW8pFE4NxaexUXIcMiIK10vMHfER4N0glBynitC1lwT57PI6PWNy-9OZB9amuvEatA3pnpTIgr_TNEEf"
+                                        />
+                                    </div>
+                                </div>
+                            </AnimatedSection>
+                        </section>
+
+                        {/* Search Bar Overlay */}
+                        <div className="px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto -mt-6 md:-mt-12 relative z-10">
+                            <AnimatedSection>
+                                <div className="bg-secondary-background-light dark:bg-secondary-background-dark p-6 md:p-8 flex items-center gap-6 rounded-xl border border-border-light dark:border-border-dark shadow-xl">
+                                    <span className="material-symbols-outlined text-primary text-3xl">search</span>
+                                    <input
+                                        className="bg-transparent border-none focus:ring-0 text-xl font-light w-full placeholder:text-text-secondary-light/40 dark:text-text-dark"
+                                        placeholder="Search for installation guides, parts, or warranty details..."
+                                        type="text"
                                         value={searchTerm}
                                         onChange={(e) => setSearchTerm(e.target.value)}
+
                                     />
                                 </div>
-                            </div>
-                        </AnimatedSection>
+                            </AnimatedSection>
+                        </div>
 
-                        <AnimatedSection>
-                            <div className="mb-12 flex flex-wrap items-center justify-center gap-3 px-3">
-                                {categories.map(category => (
-                                    <button key={category} onClick={() => setActiveCategory(category)} className={`flex h-10 shrink-0 cursor-pointer items-center justify-center gap-x-2 rounded-full px-5 text-sm font-medium transition-colors ${activeCategory === category ? 'bg-primary text-white' : 'bg-secondary-background-light dark:bg-secondary-background-dark text-text-secondary-light dark:text-text-secondary-dark hover:bg-primary/10'}`}>
-                                        {category}
-                                    </button>
-                                ))}
+                        {/* FAQ Categories Bento */}
+                        <section className="px-4 sm:px-6 lg:px-8 py-20 md:py-32 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-12">
+                            {/* Category Sidebar */}
+                            <div className="md:col-span-3 space-y-8">
+                                <div className="sticky top-40">
+                                    <h3 className="font-display text-2xl mb-8 font-bold text-text-light dark:text-text-dark">Categories</h3>
+                                    <ul className="space-y-6 font-display text-sm tracking-widest uppercase">
+                                        {categories.map(category => (
+                                            <li key={category}>
+                                                <button
+                                                    onClick={() => setActiveCategory(category)}
+                                                    className={`flex items-center gap-4 group transition-colors ${activeCategory === category ? 'text-primary' : 'text-text-secondary-light dark:text-text-secondary-dark hover:text-primary'}`}
+                                                >
+                                                    <span className={`h-[1px] bg-primary transition-all ${activeCategory === category ? 'w-8' : 'w-0 group-hover:w-8'}`}></span>
+                                                    {category}
+                                                </button>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </div>
-                        </AnimatedSection>
 
-                        <AnimatedSection>
-                            <div className="flex flex-col gap-4 p-4">
-                                {filteredFaqs.length > 0 ? filteredFaqs.map((faq, index) => (
-                                    <details key={index} className="group flex flex-col rounded-lg bg-secondary-background-light dark:bg-secondary-background-dark border border-border-light dark:border-border-dark p-2" open={index === 0}>
-                                        <summary className="flex cursor-pointer list-none items-center justify-between gap-6 p-3">
-                                            <p className="text-base font-bold text-text-light dark:text-text-dark">{faq.question}</p>
-                                            <span className="material-symbols-outlined text-text-light dark:text-text-dark transition-transform group-open:rotate-180">expand_more</span>
-                                        </summary>
-                                        <div className="px-3 pb-3 text-sm text-text-secondary-light dark:text-text-secondary-dark leading-relaxed">
-                                            <p>{faq.answer}</p>
+                            {/* FAQ Content */}
+                            <div className="md:col-span-9 space-y-24">
+                                {categories.filter(c => c !== 'All').map((category, catIndex) => {
+                                    const categoryFaqs = filteredFaqs.filter(f => f.category === category);
+                                    if (activeCategory !== 'All' && activeCategory !== category) return null;
+                                    if (categoryFaqs.length === 0) return null;
+
+                                    return (
+                                        <AnimatedSection key={category}>
+                                            <div className="space-y-12" id={category.toLowerCase().replace(/\s+/g, '-')}>
+                                                <div className="flex items-center gap-6">
+                                                    <span className="text-4xl font-display italic text-primary/20">{String(catIndex + 1).padStart(2, '0')}</span>
+                                                    <h2 className="text-3xl font-display tracking-wide uppercase font-bold text-text-light dark:text-text-dark">{category}</h2>
+                                                </div>
+
+                                                {category === "Care & Maintenance" && (
+                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                                                        <div className="bg-secondary-background-light dark:bg-secondary-background-dark p-8 md:p-12 space-y-4 rounded-xl border border-border-light dark:border-border-dark">
+                                                            <span className="material-symbols-outlined text-primary text-4xl">clean_hands</span>
+                                                            <h4 className="font-display text-xl font-bold text-text-light dark:text-text-dark">The Patina Process</h4>
+                                                            <p className="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">Our Living Finishes are designed to evolve. Learn how to nurture the natural oxidation of unlacquered brass.</p>
+                                                        </div>
+                                                        <div className="bg-secondary-background-light dark:bg-secondary-background-dark p-8 md:p-12 space-y-4 rounded-xl border border-border-light dark:border-border-dark">
+                                                            <span className="material-symbols-outlined text-primary text-4xl">warning</span>
+                                                            <h4 className="font-display text-xl font-bold text-text-light dark:text-text-dark">Cleaning Protocol</h4>
+                                                            <p className="text-text-secondary-light dark:text-text-secondary-dark text-sm leading-relaxed">Avoid abrasive chemicals. Use only pH-neutral soaps and microfiber cloths to preserve the hand-polished luster.</p>
+                                                        </div>
+                                                    </div>
+                                                )}
+
+                                                <div className="space-y-1 border-t border-border-light dark:border-border-dark mt-8">
+                                                    {categoryFaqs.map((faq, index) => (
+                                                        <details key={index} className="group py-8 border-b border-border-light/50 dark:border-border-dark/50">
+                                                            <summary className="flex justify-between items-center cursor-pointer list-none">
+                                                                <span className="text-xl font-display font-medium text-text-light dark:text-text-dark group-open:text-primary transition-colors pr-6">
+                                                                    {faq.question}
+                                                                </span>
+                                                                <span className="material-symbols-outlined text-primary group-open:rotate-45 transition-transform">add</span>
+                                                            </summary>
+                                                            <div className="mt-6 text-text-secondary-light dark:text-text-secondary-dark leading-relaxed max-w-3xl">
+                                                                {faq.answer}
+                                                            </div>
+                                                        </details>
+                                                    ))}
+                                                </div>
+                                            </div>
+                                        </AnimatedSection>
+                                    );
+                                })}
+
+                                {filteredFaqs.length === 0 && (
+                                    <div className="text-center py-20">
+                                        <p className="text-text-secondary-light dark:text-text-secondary-dark text-lg">No questions found matching your search.</p>
+                                        <button onClick={() => { setSearchTerm(''); setActiveCategory('All'); }} className="mt-4 text-primary font-bold hover:underline">Clear all filters</button>
+                                    </div>
+                                )}
+
+                                {/* Warranty Section */}
+                                {(activeCategory === 'All' || activeCategory === 'Warranty') && (
+                                    <AnimatedSection>
+                                        <div className="bg-secondary-background-light dark:bg-secondary-background-dark p-10 md:p-16 border-l-4 border-primary rounded-r-xl shadow-lg mt-12" id="warranty">
+                                            <h2 className="text-3xl font-display tracking-wide uppercase mb-8 font-bold text-text-light dark:text-text-dark">Our Lifetime Guarantee</h2>
+                                            <p className="text-text-secondary-light dark:text-text-secondary-dark text-lg leading-relaxed mb-12 max-w-2xl">
+                                                Precision is our promise. All MOSSO fixtures are backed by a limited lifetime warranty on mechanical performance and a 5-year warranty on specialty artisanal finishes.
+                                            </p>
+                                            <button
+                                                onClick={() => window.open('https://wa.me/918076889423?text=Hello%2C%20I%20would%20like%20to%20register%20my%20MOSSO%20product%20for%20warranty.', '_blank')}
+                                                className="bg-primary px-10 py-5 font-display text-xs font-bold uppercase tracking-[0.2em] text-white hover:brightness-110 transition-all rounded-lg shadow-lg hover:scale-105"
+                                            >
+                                                Register Your Product
+                                            </button>
                                         </div>
-                                    </details>
-                                )) : (
-                                    <p className="text-center text-text-secondary-light dark:text-text-secondary-dark">No questions found. Try a different search or filter.</p>
+                                    </AnimatedSection>
                                 )}
                             </div>
-                        </AnimatedSection>
+                        </section>
 
-                        <AnimatedSection>
-                            <div className="mt-16 rounded-xl bg-secondary-background-light dark:bg-secondary-background-dark border border-border-light dark:border-border-dark p-8 text-center sm:mt-24">
-                                <h3 className="text-2xl font-bold text-text-light dark:text-text-dark font-display">Can't find your answer?</h3>
-                                <p className="mt-2 text-text-secondary-light dark:text-text-secondary-dark">We're here to help. Reach out to our support team for any questions.</p>
-                                <button className="mt-6 inline-block rounded-lg bg-primary px-8 py-3 text-sm font-bold text-white transition-transform hover:scale-105">Contact Us</button>
+                        {/* Contact Section */}
+                        <section className="bg-secondary-background-light dark:bg-secondary-background-dark py-24 md:py-32 px-4 sm:px-6 lg:px-8 relative overflow-hidden rounded-3xl mx-4 sm:mx-6 lg:mx-8 border border-border-light dark:border-border-dark mb-12">
+                            <AnimatedSection>
+                                <div className="max-w-4xl mx-auto text-center relative z-10">
+                                    <h2 className="font-display text-4xl md:text-5xl mb-6 font-bold text-text-light dark:text-text-dark">Still have questions?</h2>
+                                    <p className="text-text-secondary-light dark:text-text-secondary-dark mb-12 max-w-xl mx-auto">Our technical concierge team is available for deep-dive consultations regarding custom installations or large-scale architectural projects.</p>
+                                    <div className="flex justify-center">
+                                        <button
+                                            onClick={() => window.open('https://wa.me/918076889423?text=Hello%2C%20I%20want%20to%20submit%20a%20support%20ticket%20for%20MOSSO.', '_blank')}
+                                            className="bg-primary text-white px-12 py-5 font-display text-xs uppercase tracking-widest font-bold hover:brightness-110 transition-all rounded-lg shadow-lg hover:scale-105"
+                                        >
+                                            submit your ticket
+                                        </button>
+                                    </div>
+                                </div>
+                            </AnimatedSection>
+
+                            {/* Background Decoration */}
+                            <div className="absolute top-0 right-0 w-1/3 h-full opacity-10 dark:opacity-5 grayscale pointer-events-none">
+                                <img
+                                    alt="Interior detail"
+                                    className="w-full h-full object-cover"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqGEmvh_dHMWIQ3uhnQnxN-5TpdqjFTuBgCmffbjPxsvBiCfQkJ0cRPRi2vUyGHMphQb7oqAh1VNEwvI4WqnHjOif5po895b9OpYtDsfBLvvD8ziosxbZfM5R9mzqtbMACkjM_UcFOnAh7ojDLyAItxYJn_TyT0hJRHwfysJubW1OIM7vlSfDf7VcxfMqVu0LtOPYIpvXQW6GJoL8oTX4G2TrdHOJlzU1pvrOndQkSlEKgK2DvcGfLXl7tXk1qKS3HUR9hTEuCi6OA"
+                                />
                             </div>
-                        </AnimatedSection>
+                        </section>
                     </main>
                 </div>
             </div>

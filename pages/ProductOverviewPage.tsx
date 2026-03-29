@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect, useRef, useMemo, useCallback } from 'react';
 import { Page, Product, ProductVariant } from '../types';
 import { PRODUCTS, COLLECTIONS } from '../constants';
@@ -383,7 +382,7 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                       </span>
                     </div>
                   </div>
-                  
+
                   {product.variants && product.variants.length > 0 && (
                     <div className="mt-8">
                       <h3 className="text-sm font-semibold text-text-secondary-light dark:text-text-secondary-dark uppercase tracking-wider mb-3">Model / Variant</h3>
@@ -395,11 +394,10 @@ const ProductOverviewPage: React.FC<ProductOverviewPageProps> = ({ navigateTo, t
                               setSelectedVariant(variant);
                               setCurrentIndex(0); // Reset image gallery to first image of new variant
                             }}
-                            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 border ${
-                              selectedVariant?.id === variant.id
+                            className={`px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 border ${selectedVariant?.id === variant.id
                                 ? 'border-primary bg-primary text-white shadow-md'
                                 : 'border-border-light dark:border-border-dark text-text-light dark:text-text-dark hover:border-primary/50 hover:bg-black/5 dark:hover:bg-white/5'
-                            }`}
+                              }`}
                           >
                             {variant.label}
                           </button>

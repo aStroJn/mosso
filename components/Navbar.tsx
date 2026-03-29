@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const { wishlist } = useWishlist();
   const { cartCount } = useCart();
   const isHomePage = currentPage === 'home';
-  
+
   const getNavLinkClasses = (page: string) => {
     // 'collections' link is bold only when exactly on the collections listing page
     // 'products' mega-menu trigger is never auto-bolded
@@ -46,6 +46,22 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
   const featuredCollections = useMemo(() => COLLECTIONS.filter(c => [1, 2, 7, 8].includes(c.id)), []);
   const [featuredIndex, setFeaturedIndex] = useState(0);
   const [hoveredCollection, setHoveredCollection] = useState<Collection | null>(null);
+  const [isProductsOpen, setIsProductsOpen] = useState(false);
+  const [hoverTimeout, setHoverTimeout] = useState<NodeJS.Timeout | null>(null);
+
+  const handleProductsEnter = useCallback(() => {
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    const timeout = setTimeout(() => {
+      setIsProductsOpen(true);
+    }, 300);
+    setHoverTimeout(timeout);
+  }, [hoverTimeout]);
+
+  const handleProductsLeave = useCallback(() => {
+    if (hoverTimeout) clearTimeout(hoverTimeout);
+    setHoverTimeout(null);
+    setIsProductsOpen(false);
+  }, [hoverTimeout]);
 
   useEffect(() => {
     if (featuredCollections.length < 2) return;
@@ -78,12 +94,15 @@ const Navbar: React.FC<NavbarProps> = ({ navigateTo, toggleTheme, currentPage, s
           <a className={getNavLinkClasses('home')} onClick={() => navigateTo('home')}>Home</a>
           <a className={getNavLinkClasses('collections')} onClick={() => navigateTo('collections')}>Collections</a>
 
-          <div className="group">
-            <a className={`${getNavLinkClasses('products')} leading-normal inline-flex items-center gap-1`}>
-              Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 group-hover:rotate-180`}>expand_more</span>
+          <div
+            onMouseEnter={handleProductsEnter}
+            onMouseLeave={handleProductsLeave}
+          >
+            <a className={`${getNavLinkClasses('products')} leading-normal inline-flex items-center gap-1 cursor-pointer`}>
+              Products <span className={`material-symbols-outlined text-base ${iconColorClass} transition-transform duration-200 ${isProductsOpen ? 'rotate-180' : ''}`}>expand_more</span>
             </a>
 
-            <div className="absolute top-[80%] right-0 w-[calc(100vw-2rem)] md:w-[46rem] lg:w-[60rem] xl:w-[64rem] max-w-full z-30 pt-4 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 transform -translate-y-2 group-hover:translate-y-0 text-left">
+            <div className={`absolute top-[80%] right-0 w-[calc(100vw-2rem)] md:w-[46rem] lg:w-[60rem] xl:w-[64rem] max-w-full z-30 pt-4 ${isProductsOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'} transition-all duration-300 text-left`}>
               <div className="bg-secondary-background-light dark:bg-secondary-background-dark shadow-2xl rounded-xl overflow-hidden ring-1 ring-black/5 dark:ring-white/10 whitespace-normal">
                 <div className="grid grid-cols-3">
                   <div className="col-span-2 flex gap-12 p-8">
